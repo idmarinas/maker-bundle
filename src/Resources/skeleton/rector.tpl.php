@@ -31,17 +31,34 @@ return static function (ContainerConfigurator $containerConfigurator): void
     $containerConfigurator->import(SetList::PHP_74);
     $containerConfigurator->import(SetList::PHP_80);
     $containerConfigurator->import(SetList::PHP_81);
+    $containerConfigurator->import(SetList::FRAMEWORK_EXTRA_BUNDLE_40);
+    $containerConfigurator->import(SetList::FRAMEWORK_EXTRA_BUNDLE_50);
 
     //-- Symfony Framework
+    $containerConfigurator->import(SymfonySetList::SYMFONY_40);
+    $containerConfigurator->import(SymfonySetList::SYMFONY_41);
+    $containerConfigurator->import(SymfonySetList::SYMFONY_42);
+    $containerConfigurator->import(SymfonySetList::SYMFONY_43);
     $containerConfigurator->import(SymfonySetList::SYMFONY_44);
-    $containerConfigurator->import(SymfonySetList::SYMFONY_50);
+    $containerConfigurator->import(SymfonySetList::SYMFONY_51);
+    $containerConfigurator->import(SymfonySetList::SYMFONY_52);
+    $containerConfigurator->import(SymfonySetList::SYMFONY_53);
+    $containerConfigurator->import(SymfonySetList::SYMFONY_54);
+    $containerConfigurator->import(SymfonySetList::SYMFONY_CODE_QUALITY);
+    $containerConfigurator->import(SensiolabsSetList::FRAMEWORK_EXTRA_61);
     $containerConfigurator->import(TwigSetList::TWIG_240);
+    $containerConfigurator->import(TwigSetList::TWIG_UNDERSCORE_TO_NAMESPACE);
+    $containerConfigurator->import(DoctrineSetList::DOCTRINE_25);
+    $containerConfigurator->import(DoctrineSetList::DOCTRINE_ORM_29);
+    $containerConfigurator->import(DoctrineSetList::DOCTRINE_CODE_QUALITY);
+    $containerConfigurator->import(DoctrineSetList::DOCTRINE_COMMON_20);
     $containerConfigurator->import(DoctrineSetList::DOCTRINE_DBAL_210);
     $containerConfigurator->import(DoctrineSetList::DOCTRINE_DBAL_211);
     $containerConfigurator->import(DoctrineSetList::DOCTRINE_DBAL_30);
 
     //-- Skip some rules/files ...
     $parameters->set(Option::SKIP, [
+        ShortenElseIfRector::class,
         CallableThisArrayToAnonymousFunctionRector::class,
         AbsolutizeRequireAndIncludePathRector::class
     ]);
