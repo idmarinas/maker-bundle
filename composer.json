@@ -1,7 +1,6 @@
 {
     "name": "idmarinas/maker-bundle",
     "description": "",
-    "version": "1.0.0",
     "type": "symfony-bundle",
     "license": "BSD-3-Clause",
     "keywords": [],
