@@ -47,7 +47,8 @@ final class MakeBundle extends AbstractMaker
     public function configureCommand(Command $command, InputConfiguration $inputConf)
     {
         $command
-            ->addArgument('namespace', InputArgument::OPTIONAL, sprintf('Choose a namespace for your Bundle (e.g. <fg=yellow>My\Bundle\%s</>)', Str::asClassName(Str::getRandomTerm(), 'Bundle')))
+            ->addArgument('namespace', InputArgument::OPTIONAL, sprintf('Choose a namespace for your Bundle (e.g. <fg=yellow>MyCompany\Bundle\%s</>)', Str::asClassName(Str::getRandomTerm(), 'Bundle')))
+            ->addArgument('vendor', InputArgument::OPTIONAL, 'Choose a namespace for your Bundle (e.g. <fg=yellow>MyCompany\%s</>)')
             ->setHelp('
 The <info>%command.name%</info> command generates a new directory with the necesary structure for a Bundle.
 
@@ -59,7 +60,7 @@ If the argument is missing, the command will ask for the namespace for Bundle.')
     {
         $bundleClassNameDetails = $generator->createClassNameDetails(
             $input->getArgument('namespace'),
-            '',
+            $input->getArgument('vendor'),
             'Bundle'
         );
         $bundleDetails         = $this->getBundleNameDetails($bundleClassNameDetails->getRelativeName());
@@ -107,6 +108,7 @@ If the argument is missing, the command will ask for the namespace for Bundle.')
 
     public function configureDependencies(DependencyBuilder $dependencies)
     {
+        //-- Not need
     }
 
     private function templatePath(string $templateName): string
