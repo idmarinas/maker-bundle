@@ -99,8 +99,6 @@ If the argument is missing, the command will ask for the namespace for Bundle.')
             'class_name' => $bundleName,
         ]);
 
-        // $generator->generateFile();
-
         $generator->writeChanges();
 
         $this->writeSuccessMessage($io);
