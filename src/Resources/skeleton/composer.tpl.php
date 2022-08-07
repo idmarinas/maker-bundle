@@ -16,7 +16,7 @@
     "support": {
         "issues": "https://github.com/<?= $composer_name ?>/issues"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
         "php": "^7.4 | ^8.0 | ^8.1",
@@ -28,7 +28,7 @@
         "matthiasnoback/symfony-dependency-injection-test": "^4.2",
         "nyholm/symfony-bundle-test": "^1.7",
         "phpunit/phpunit": "^9.5",
-        "rector/rector": "^0.12.12",
+        "rector/rector": "^0.13",
         "symfony/phpunit-bridge": "^5.3",
         "symfony/test-pack": "^1.0"
     },
