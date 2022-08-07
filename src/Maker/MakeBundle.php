@@ -98,6 +98,7 @@ If the argument is missing, the command will ask for the namespace for Bundle.')
             'composer_name' => $composerName,
             'class_name' => $bundleName,
         ]);
+        $generator->generateFile("{$bundlePath}/tests/.gitkeep", $this->templatePath('gitkeep.tpl.php'));
 
         $generator->writeChanges();
 
