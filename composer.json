@@ -22,7 +22,7 @@
         "symfony/config": "^4.4 | ^5.4",
         "symfony/maker-bundle": "^1.0",
         "symfony/dependency-injection": "^4.4 | ^5.4",
-        "symfony/string": "^5.0"
+        "symfony/string": "^5.4"
     },
     "require-dev": {
         "matthiasnoback/symfony-config-test": "^4.2",
