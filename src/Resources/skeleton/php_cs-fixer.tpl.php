@@ -16,6 +16,7 @@ return $config
         '@PSR2'               => true,
         '@Symfony'            => true,
         '@PHP73Migration'     => true,
+        '@PHP74Migration'     => true,
         // Each line of multi-line DocComments must have an asterisk [PSR-5] and must be aligned with the first one.
         'align_multiline_comment' => true,
         // Each element of an array must be indented exactly once.

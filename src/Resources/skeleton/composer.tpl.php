@@ -19,9 +19,9 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
-        "php": "^7.4 | ^8.0 | ^8.1",
-        "symfony/config": "^4.4 | ^5.4",
-        "symfony/dependency-injection": "^4.4 | ^5.4"
+        "php": "^7.4 | ^8.0",
+        "symfony/config": "^4.4 | ^5.4 | ^6.0",
+        "symfony/dependency-injection": "^4.4 | ^5.4 | ^6.0"
     },
     "require-dev": {
         "matthiasnoback/symfony-config-test": "^4.2",
