@@ -19,17 +19,17 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
-        "php": "^7.4 | ^8.0",
-        "symfony/config": "^4.4 | ^5.4 | ^6.0",
-        "symfony/dependency-injection": "^4.4 | ^5.4 | ^6.0"
+        "php": "^8.0",
+        "symfony/config": "^5.4 | ^6.0 | ^7.0",
+        "symfony/dependency-injection": "^5.4 | ^6.0 | ^7.0"
     },
     "require-dev": {
         "matthiasnoback/symfony-config-test": "^4.2",
         "matthiasnoback/symfony-dependency-injection-test": "^4.2",
         "nyholm/symfony-bundle-test": "^1.7",
         "phpunit/phpunit": "^9.5",
-        "rector/rector": "^0.13",
-        "symfony/phpunit-bridge": "^5.3",
+        "rector/rector": "^0.15",
+        "symfony/phpunit-bridge": "^6.0",
         "symfony/test-pack": "^1.0"
     },
     "config": {
