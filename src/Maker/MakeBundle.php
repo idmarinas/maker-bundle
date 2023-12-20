@@ -66,7 +66,7 @@ If the argument is missing, the command will ask for the namespace for Bundle.')
         $bundleDetails         = $this->getBundleNameDetails($bundleClassNameDetails->getRelativeName());
         $bundleName            = $bundleDetails['bundle_name'];
         $bundleNameExtension   = u($bundleName)->replace('Bundle', 'Extension');
-        $bundleNamePrefix      = $bundleDetails['bundle_name_prefix'];
+        $bundleNamePrefix      = $input->getArgument('vendor');
         $bundlePath            = $this->parameter->get('idmarinas_bundle.maker.dir_bundles').'/'.$bundleName;
         $composerName = u($bundleNamePrefix)->lower().'/'.u($bundleClassNameDetails->getShortName())->snake()->replace('_', '-');
 
