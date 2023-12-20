@@ -24,8 +24,9 @@
         "symfony/dependency-injection": "^5.4 | ^6.0 | ^7.0"
     },
     "require-dev": {
-        "matthiasnoback/symfony-config-test": "^4.2",
-        "matthiasnoback/symfony-dependency-injection-test": "^4.2",
+        "fakerphp/faker": "^1.23",
+        "matthiasnoback/symfony-config-test": "^4.2 | ^5.0",
+        "matthiasnoback/symfony-dependency-injection-test": "^4.2 | ^5.0",
         "nyholm/symfony-bundle-test": "^1.7",
         "phpunit/phpunit": "^9.5",
         "rector/rector": "^0.15",
