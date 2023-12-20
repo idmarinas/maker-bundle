@@ -1,54 +1,41 @@
 <?= "<?php\n" ?>
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 use Rector\CodeQuality\Rector\Array_\CallableThisArrayToAnonymousFunctionRector;
-use Rector\CodeQuality\Rector\Include_\AbsolutizeRequireAndIncludePathRector;
 use Rector\CodeQuality\Rector\If_\ShortenElseIfRector;
-use Rector\Symfony\Set\SymfonySetList;
-use Rector\Core\ValueObject\PhpVersion;
-use Rector\Doctrine\Set\DoctrineSetList;
-use Rector\Set\ValueObject\SetList;
-use Rector\Symfony\Set\TwigSetList;
+use Rector\CodeQuality\Rector\Include_\AbsolutizeRequireAndIncludePathRector;
 use Rector\Config\RectorConfig;
+use Rector\Core\ValueObject\PhpVersion;
+use Rector\Set\ValueObject\LevelSetList;
+use Rector\Set\ValueObject\SetList;
+use Rector\Symfony\Set\SymfonyLevelSetList;
+use Rector\Symfony\Set\SymfonySetList;
 
 return static function (RectorConfig $rectorConfig): void
 {
     $rectorConfig->paths([
-        __DIR__ . '/src',
-        __DIR__ . '/tests',
+        __DIR__.'/src',
+        __DIR__.'/tests',
     ]);
 
-    $rectorConfig->phpVersion(PhpVersion::PHP_74);
+    $rectorConfig->phpVersion(PhpVersion::PHP_80);
     $rectorConfig->importNames(true, false);
-    $rectorConfig->symfonyContainerXml(__DIR__ . '/var/cache/dev/coreLotgd_Core_KernelDevDebugContainer.xml');
 
     $rectorConfig->import(SetList::DEAD_CODE);
     $rectorConfig->import(SetList::CODE_QUALITY);
-    $rectorConfig->import(SetList::PHP_74);
-    $rectorConfig->import(SetList::PHP_80);
+    $rectorConfig->import(LevelSetList::UP_TO_PHP_80);
     $rectorConfig->import(SetList::PHP_81);
-    $rectorConfig->import(SetList::FRAMEWORK_EXTRA_BUNDLE_40);
-    $rectorConfig->import(SetList::FRAMEWORK_EXTRA_BUNDLE_50);
+    $rectorConfig->import(SetList::PHP_82);
 
-    //-- Symfony Framework
-    $rectorConfig->import(SymfonySetList::SYMFONY_40);
-    $rectorConfig->import(SymfonySetList::SYMFONY_41);
-    $rectorConfig->import(SymfonySetList::SYMFONY_42);
-    $rectorConfig->import(SymfonySetList::SYMFONY_43);
-    $rectorConfig->import(SymfonySetList::SYMFONY_44);
-    $rectorConfig->import(TwigSetList::TWIG_240);
-    $rectorConfig->import(DoctrineSetList::DOCTRINE_25);
-    $rectorConfig->import(DoctrineSetList::DOCTRINE_ORM_29);
-    $rectorConfig->import(DoctrineSetList::DOCTRINE_CODE_QUALITY);
-    $rectorConfig->import(DoctrineSetList::DOCTRINE_COMMON_20);
-    $rectorConfig->import(DoctrineSetList::DOCTRINE_DBAL_210);
-    $rectorConfig->import(DoctrineSetList::DOCTRINE_DBAL_211);
+    // -- Symfony Framework
+    $rectorConfig->import(SymfonyLevelSetList::UP_TO_SYMFONY_54);
+    $rectorConfig->import(SymfonySetList::SYMFONY_CODE_QUALITY);
 
     //-- Skip some rules/files ...
     $rectorConfig->skip([
         ShortenElseIfRector::class,
         CallableThisArrayToAnonymousFunctionRector::class,
-        AbsolutizeRequireAndIncludePathRector::class
+        AbsolutizeRequireAndIncludePathRector::class,
     ]);
 };
