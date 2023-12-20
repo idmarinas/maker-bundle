@@ -19,9 +19,9 @@
     "prefer-stable": true,
     "require": {
         "php": "^7.4 | ^8.0",
-        "symfony/config": "^4.4 | ^5.4 | ^6.0",
-        "symfony/dependency-injection": "^4.4 | ^5.4 | ^6.0",
-        "symfony/string": "^5.4 | ^6.0"
+        "symfony/config": "^4.4 | ^5.4 | ^6.0 | ^7.0",
+        "symfony/dependency-injection": "^4.4 | ^5.4 | ^6.0 | ^7.0",
+        "symfony/string": "^5.4 | ^6.0 | ^7.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.21",
