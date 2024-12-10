@@ -50,7 +50,7 @@ final class MakeBundle extends AbstractMaker
             ->addArgument('namespace', InputArgument::OPTIONAL, sprintf('Choose a namespace for your Bundle (e.g. <fg=yellow>MyCompany\Bundle\%s</>)', Str::asClassName(Str::getRandomTerm(), 'Bundle')))
             ->addArgument('vendor', InputArgument::OPTIONAL, 'Choose a namespace for your Bundle (e.g. <fg=yellow>MyCompany</>)')
             ->setHelp('
-The <info>%command.name%</info> command generates a new directory with the necesary structure for a Bundle.
+The <info>%command.name%</info> command generates a new directory with the necessary structure for a Bundle.
 
 If the argument is missing, the command will ask for the namespace for Bundle.')
         ;
