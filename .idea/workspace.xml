@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01c114bc-728c-4c8c-8dad-f37bada171ed" name="Changes" comment="Updated">
-      <change beforePath="$PROJECT_DIR$/.idea/IdmMakerBundle.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IdmMakerBundle.iml" afterDir="false" />
+    <list default="true" id="01c114bc-728c-4c8c-8dad-f37bada171ed" name="Changes" comment="Updated compatibility">
+      <change beforePath="$PROJECT_DIR$/.idea/IdmMakerBundle.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IDMarinas Maker Bundle.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +20,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "idmarinas"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/idmarinas/maker-bundle.git",
+    "accountId": "5d2d0cdd-9d10-48a8-bcea-15f9cc65ca8a"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -101,9 +113,9 @@
       <path value="$PROJECT_DIR$/vendor/masterminds/html5" />
     </include_path>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2Zo4r0DWUnS2RD422JqxAp6UnGT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -115,9 +127,10 @@
     "PHPUnit.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Users/idmarinas/Documents/Proyectos_Web/idmarinas/Projects/Bundles/IdmMakerBundle",
+    "last_opened_file_path": "H:/IdmMakerBundle",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -136,7 +149,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-php-predefined-ba97393d7c68-74080bdb84d3-com.jetbrains.php.sharedIndexes-PS-233.11799.232" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PS-243.21565.202" />
+        <option value="bundled-php-predefined-a98d8de5180a-5fbe0c30323e-com.jetbrains.php.sharedIndexes-PS-243.21565.202" />
       </set>
     </attachedChunks>
   </component>
@@ -148,7 +162,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1703075292465</updated>
-      <workItem from="1703075293521" duration="571000" />
+      <workItem from="1703075293521" duration="1031000" />
+      <workItem from="1704303043846" duration="10000" />
+      <workItem from="1733410884375" duration="43000" />
     </task>
     <task id="LOCAL-00001" summary="Add Symfony 7.0 compatibility">
       <option name="closed" value="true" />
@@ -214,7 +230,39 @@
       <option name="project" value="LOCAL" />
       <updated>1703075817154</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Updated">
+      <option name="closed" value="true" />
+      <created>1703075873005</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1703075873005</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Updated">
+      <option name="closed" value="true" />
+      <created>1703076066090</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1703076066090</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Updated">
+      <option name="closed" value="true" />
+      <created>1703076071812</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1703076071812</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Updated compatibility">
+      <option name="closed" value="true" />
+      <created>1703076183139</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1703076183139</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +275,7 @@
     <MESSAGE value="Update bundleNamePrefix" />
     <MESSAGE value="Remove support for PHP 7.4 and Symfony 4.4" />
     <MESSAGE value="Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated" />
+    <MESSAGE value="Updated compatibility" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated compatibility" />
   </component>
 </project>
