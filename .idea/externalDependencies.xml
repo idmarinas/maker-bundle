@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalDependencies">
+    <plugin id="Docker" />
+    <plugin id="com.jetbrains.php" />
+    <plugin id="org.jetbrains.plugins.phpstorm-docker" />
+    <plugin id="ru.adelf.idea.dotenv" />
+  </component>
+</project>
