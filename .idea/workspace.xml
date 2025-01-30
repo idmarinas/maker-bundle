@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="docs: add useful commands documentation file">
+    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.github/FUNDING.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/FUNDING.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/labeler.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/labeler.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/label.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/label.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/php.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/php.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/IDMarinas Maker Bundle.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IDMarinas Maker Bundle.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php-test-framework.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rector.php" beforeDir="false" afterPath="$PROJECT_DIR$/rector.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/IdmMakerBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/IdmMakerBundle.php" afterDir="false" />
     </list>
@@ -273,6 +265,9 @@
     "settings.editor.selected.configurable": "web-ide.project.structure",
     "vue.rearranger.settings.migration": "true",
     "writerside.last.selected.productIDMarinas Template Bundle": "itb"
+  },
+  "keyToStringList": {
+    "stardust.markdown.MarkdownSplitEditorSuppressor:keyList": []
   }
 }]]></component>
   <component name="RecentsManager">
@@ -420,55 +415,7 @@
       <workItem from="1737650778194" duration="25000" />
       <workItem from="1737652877507" duration="422000" />
       <workItem from="1737665407829" duration="101000" />
-      <workItem from="1738259030339" duration="2025000" />
-    </task>
-    <task id="LOCAL-00084" summary="feat(docs): added files for generate docs">
-      <option name="closed" value="true" />
-      <created>1735845070454</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1735845070454</updated>
-    </task>
-    <task id="LOCAL-00085" summary="feat(workflow): add Writerside directory to the PHP workflow ignore list">
-      <option name="closed" value="true" />
-      <created>1735845183987</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1735845183987</updated>
-    </task>
-    <task id="LOCAL-00086" summary="feat(workflow): add build documentation workflow">
-      <option name="closed" value="true" />
-      <created>1735849192627</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1735849192627</updated>
-    </task>
-    <task id="LOCAL-00087" summary="feat(config): add additional paths to Rector configuration&#10;&#10;- Include app/src, factories, and fixtures directories for analysis.">
-      <option name="closed" value="true" />
-      <created>1735853013473</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1735853013473</updated>
-    </task>
-    <task id="LOCAL-00088" summary="feat(docker): add common PHP configuration file to compose.yaml">
-      <option name="closed" value="true" />
-      <created>1735853191371</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1735853191371</updated>
-    </task>
-    <task id="LOCAL-00089" summary="fix: update bootstrap path in phpunit configuration file&#10;&#10;Changed the bootstrap path from './vendor/autoload.php' to &#10;'tests/bootstrap.php' in the phpunit.xml.dist file.">
-      <option name="closed" value="true" />
-      <created>1735854078738</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1735854078738</updated>
+      <workItem from="1738259030339" duration="2799000" />
     </task>
     <task id="LOCAL-00090" summary="fix(console): replace TestKernel with App Kernel in console script">
       <option name="closed" value="true" />
@@ -814,7 +761,55 @@
       <option name="project" value="LOCAL" />
       <updated>1738261004174</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="ide(config): added/updated automatically">
+      <option name="closed" value="true" />
+      <created>1738261134431</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1738261134431</updated>
+    </task>
+    <task id="LOCAL-00134" summary="chore: update LICENSE to reflect current copyright holder and year">
+      <option name="closed" value="true" />
+      <created>1738261155281</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1738261155281</updated>
+    </task>
+    <task id="LOCAL-00135" summary="updated(dependencies): for phpunit.xml.dist">
+      <option name="closed" value="true" />
+      <created>1738261172666</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1738261172666</updated>
+    </task>
+    <task id="LOCAL-00136" summary="ide(config): added/updated automatically">
+      <option name="closed" value="true" />
+      <created>1738261215499</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1738261215499</updated>
+    </task>
+    <task id="LOCAL-00137" summary="feat(docs): add README.md for IDMarinas Maker Bundle">
+      <option name="closed" value="true" />
+      <created>1738261748154</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1738261748154</updated>
+    </task>
+    <task id="LOCAL-00138" summary="feat: update short description in README.md to reflect project purpose">
+      <option name="closed" value="true" />
+      <created>1738261831963</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1738261831963</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -837,10 +832,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="tests(feat): added test routes" />
-    <MESSAGE value="feat(Kernel): update extra config handling and modify copyright date&#10;&#10;- Changed the method `addExtraConfigFile` to `addExtraConfig` &#10;  supporting both string and array inputs for extra configuration.&#10;- Updated the copyright modification date in the file header." />
-    <MESSAGE value="feat(tests): update BundleInitializationTest configuration method&#10;&#10;- Changed method name from `addExtraConfigFile` to `addExtraConfig`&#10;- Added example usage for `addExtraConfig` with array syntax" />
-    <MESSAGE value="chore(ide): added/updated by IDE" />
     <MESSAGE value="feat: add symfony/maker-bundle and update Kernel.php for loading config" />
     <MESSAGE value="feat: add scripts for loading fixtures in test and dev environments&#10;&#10;chore: remove dev cache folder from project structure in IDE configuration" />
     <MESSAGE value="feat(security): add firewalls and role hierarchy configuration" />
@@ -854,7 +845,6 @@
     <MESSAGE value="ci: update PHP workflow to use ubuntu-latest for the operating system" />
     <MESSAGE value="fix(remove): removed all empty options" />
     <MESSAGE value="updated(dependencies): for composer.json" />
-    <MESSAGE value="ide(config): added/updated automatically" />
     <MESSAGE value="fix: corrected package name in GitHub issues link in buildprofiles.xml" />
     <MESSAGE value="fix: update .gitattributes for export-ignore settings and line endings&#10;&#10;- Changed text normalization to LF.&#10;- Added export-ignore rules for various directories and files." />
     <MESSAGE value="fix: update .gitignore to include necessary files and folders&#10;&#10;- Removed unnecessary entries for Composer and other systems.&#10;- Added back specific files like phpunit.xml.dist and composer.lock.&#10;- Ensured proper structure for Symfony and VisualStudioCode files." />
@@ -862,7 +852,12 @@
     <MESSAGE value="docs: add initial TODO list to track upcoming tasks" />
     <MESSAGE value="feat: add useful tips for CI workflows in TIPS.md&#10;&#10;- Added a section explaining how to skip CI workflows by using specific &#10;  strings in commit messages." />
     <MESSAGE value="docs: add useful commands documentation file" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: add useful commands documentation file" />
+    <MESSAGE value="chore: update LICENSE to reflect current copyright holder and year" />
+    <MESSAGE value="updated(dependencies): for phpunit.xml.dist" />
+    <MESSAGE value="ide(config): added/updated automatically" />
+    <MESSAGE value="feat(docs): add README.md for IDMarinas Maker Bundle" />
+    <MESSAGE value="feat: update short description in README.md to reflect project purpose" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update short description in README.md to reflect project purpose" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
