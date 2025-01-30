@@ -5,7 +5,7 @@
 
 </div>
 
-> Short description for Bundle
+> A simple way to create the files for my bundles and some other things
 
 <br />
 
