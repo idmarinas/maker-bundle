@@ -1,6 +1,6 @@
 <?= "<?php\n" ?>
 
-namespace App\Repository\User;
+namespace <?= $namespace; ?>;
 
 use App\Entity\User\User;
 use Doctrine\Persistence\ManagerRegistry;

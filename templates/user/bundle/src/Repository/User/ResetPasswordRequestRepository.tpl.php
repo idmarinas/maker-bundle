@@ -1,6 +1,6 @@
 <?= "<?php\n" ?>
 
-namespace App\Repository\User;
+namespace <?= $namespace; ?>;
 
 use App\Entity\User\ResetPasswordRequest;
 use Doctrine\Persistence\ManagerRegistry;

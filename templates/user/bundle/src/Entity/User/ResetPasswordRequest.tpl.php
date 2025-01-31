@@ -1,6 +1,6 @@
 <?= "<?php\n" ?>
 
-namespace App\Entity\User;
+namespace <?= $namespace; ?>;
 
 use App\Repository\User\ResetPasswordRequestRepository;
 use DateTimeInterface;
