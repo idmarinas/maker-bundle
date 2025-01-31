@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="refactor: update rector configuration for improved code quality and sets&#10;&#10;- Replaced the previous configuration method with a new fluent interface.&#10;- Updated paths to include additional directories: app/src, factories, and fixtures.&#10;- Set PHP version to 8.2 and included various quality sets.&#10;- Removed unused imports automatically.&#10;- Added type coverage level and specific rules for better code quality.">
+    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="fix(docs): update composer require command to include --dev flag&#10;&#10;Updated the README.md to reflect the correct usage of the &#10;composer require command for the idmarinas/maker-bundle, &#10;changing it to include the --dev flag in the relevant sections.">
       <change afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/FUNDING.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/FUNDING.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/labeler.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/labeler.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/label.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/label.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/php.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/php.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/IDMarinas Maker Bundle.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IDMarinas Maker Bundle.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -453,31 +450,7 @@
       <workItem from="1737665407829" duration="101000" />
       <workItem from="1738259030339" duration="2799000" />
       <workItem from="1738261881369" duration="8826000" />
-      <workItem from="1738327556382" duration="484000" />
-    </task>
-    <task id="LOCAL-00097" summary="test: enhance BundleInitializationTest with kernel configuration options&#10;&#10;- Added a method to create the kernel with customizable options.&#10;- Updated the testInitBundle method to utilize the new kernel creation.&#10;- Included code examples for extending kernel configurations.">
-      <option name="closed" value="true" />
-      <created>1735929984373</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1735929984373</updated>
-    </task>
-    <task id="LOCAL-00098" summary="refactor(config): rename service.php to services.php">
-      <option name="closed" value="true" />
-      <created>1735930136348</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1735930136348</updated>
-    </task>
-    <task id="LOCAL-00099" summary="refactor(config): rename service.php to services.php">
-      <option name="closed" value="true" />
-      <created>1735930156294</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1735930156294</updated>
+      <workItem from="1738327556382" duration="4578000" />
     </task>
     <task id="LOCAL-00100" summary="tests(feat): added test routes">
       <option name="closed" value="true" />
@@ -847,7 +820,31 @@
       <option name="project" value="LOCAL" />
       <updated>1738327969377</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="ide(config): added/updated automatically">
+      <option name="closed" value="true" />
+      <created>1738328074141</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1738328074141</updated>
+    </task>
+    <task id="LOCAL-00147" summary="updated(dependencies): for composer.json">
+      <option name="closed" value="true" />
+      <created>1738328341664</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1738328341664</updated>
+    </task>
+    <task id="LOCAL-00148" summary="fix(docs): update composer require command to include --dev flag&#10;&#10;Updated the README.md to reflect the correct usage of the &#10;composer require command for the idmarinas/maker-bundle, &#10;changing it to include the --dev flag in the relevant sections.">
+      <option name="closed" value="true" />
+      <created>1738330461644</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1738330461644</updated>
+    </task>
+    <option name="localTasksCounter" value="149" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -873,13 +870,11 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feat(workflow): update pull request triggers and tags ignored&#10;&#10;- Added support for branches 'master' and 'main' in pull request triggers.&#10;- Expanded the list of ignored tags to include 'meta', 'docker configuration', &#10;  and 'deployer configuration'." />
     <MESSAGE value="updated(dependencies): for .github/labeler.yml" />
     <MESSAGE value="updated(dependencies): for app/config/packages/doctrine.php" />
     <MESSAGE value="chore(workflows): update checkout action to v4 in php.yml" />
     <MESSAGE value="ci: update PHP workflow to use ubuntu-latest for the operating system" />
     <MESSAGE value="fix(remove): removed all empty options" />
-    <MESSAGE value="updated(dependencies): for composer.json" />
     <MESSAGE value="fix: corrected package name in GitHub issues link in buildprofiles.xml" />
     <MESSAGE value="fix: update .gitattributes for export-ignore settings and line endings&#10;&#10;- Changed text normalization to LF.&#10;- Added export-ignore rules for various directories and files." />
     <MESSAGE value="fix: update .gitignore to include necessary files and folders&#10;&#10;- Removed unnecessary entries for Composer and other systems.&#10;- Added back specific files like phpunit.xml.dist and composer.lock.&#10;- Ensured proper structure for Symfony and VisualStudioCode files." />
@@ -892,13 +887,15 @@
     <MESSAGE value="feat(docs): add README.md for IDMarinas Maker Bundle" />
     <MESSAGE value="feat: update short description in README.md to reflect project purpose" />
     <MESSAGE value="feat: add sonar-project.properties for project configuration and metadata" />
-    <MESSAGE value="ide(config): added/updated automatically" />
     <MESSAGE value="feat(config): moved all configuration of bundle to IdmMakerBundle.php" />
     <MESSAGE value="feat(docker): add PHP configuration files and Dockerfile" />
     <MESSAGE value="feat(console): add console entry point for Symfony application" />
     <MESSAGE value="feat(docker): add initial compose.yaml configuration for PHP service" />
     <MESSAGE value="refactor: update rector configuration for improved code quality and sets&#10;&#10;- Replaced the previous configuration method with a new fluent interface.&#10;- Updated paths to include additional directories: app/src, factories, and fixtures.&#10;- Set PHP version to 8.2 and included various quality sets.&#10;- Removed unused imports automatically.&#10;- Added type coverage level and specific rules for better code quality." />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: update rector configuration for improved code quality and sets&#10;&#10;- Replaced the previous configuration method with a new fluent interface.&#10;- Updated paths to include additional directories: app/src, factories, and fixtures.&#10;- Set PHP version to 8.2 and included various quality sets.&#10;- Removed unused imports automatically.&#10;- Added type coverage level and specific rules for better code quality." />
+    <MESSAGE value="ide(config): added/updated automatically" />
+    <MESSAGE value="updated(dependencies): for composer.json" />
+    <MESSAGE value="fix(docs): update composer require command to include --dev flag&#10;&#10;Updated the README.md to reflect the correct usage of the &#10;composer require command for the idmarinas/maker-bundle, &#10;changing it to include the --dev flag in the relevant sections." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(docs): update composer require command to include --dev flag&#10;&#10;Updated the README.md to reflect the correct usage of the &#10;composer require command for the idmarinas/maker-bundle, &#10;changing it to include the --dev flag in the relevant sections." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
