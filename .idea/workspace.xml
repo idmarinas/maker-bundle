@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="fix(docs): update composer require command to include --dev flag&#10;&#10;Updated the README.md to reflect the correct usage of the &#10;composer require command for the idmarinas/maker-bundle, &#10;changing it to include the --dev flag in the relevant sections.">
+    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="ide(config): added/updated automatically">
       <change afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/FUNDING.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/FUNDING.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/labeler.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/labeler.yml" afterDir="false" />
@@ -450,15 +450,7 @@
       <workItem from="1737665407829" duration="101000" />
       <workItem from="1738259030339" duration="2799000" />
       <workItem from="1738261881369" duration="8826000" />
-      <workItem from="1738327556382" duration="4578000" />
-    </task>
-    <task id="LOCAL-00100" summary="tests(feat): added test routes">
-      <option name="closed" value="true" />
-      <created>1735933140295</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1735933140295</updated>
+      <workItem from="1738327556382" duration="7942000" />
     </task>
     <task id="LOCAL-00101" summary="feat(Kernel): update extra config handling and modify copyright date&#10;&#10;- Changed the method `addExtraConfigFile` to `addExtraConfig` &#10;  supporting both string and array inputs for extra configuration.&#10;- Updated the copyright modification date in the file header.">
       <option name="closed" value="true" />
@@ -844,7 +836,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738330461644</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary="ide(config): added/updated automatically">
+      <option name="closed" value="true" />
+      <created>1738337025526</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1738337025526</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -892,10 +892,10 @@
     <MESSAGE value="feat(console): add console entry point for Symfony application" />
     <MESSAGE value="feat(docker): add initial compose.yaml configuration for PHP service" />
     <MESSAGE value="refactor: update rector configuration for improved code quality and sets&#10;&#10;- Replaced the previous configuration method with a new fluent interface.&#10;- Updated paths to include additional directories: app/src, factories, and fixtures.&#10;- Set PHP version to 8.2 and included various quality sets.&#10;- Removed unused imports automatically.&#10;- Added type coverage level and specific rules for better code quality." />
-    <MESSAGE value="ide(config): added/updated automatically" />
     <MESSAGE value="updated(dependencies): for composer.json" />
     <MESSAGE value="fix(docs): update composer require command to include --dev flag&#10;&#10;Updated the README.md to reflect the correct usage of the &#10;composer require command for the idmarinas/maker-bundle, &#10;changing it to include the --dev flag in the relevant sections." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(docs): update composer require command to include --dev flag&#10;&#10;Updated the README.md to reflect the correct usage of the &#10;composer require command for the idmarinas/maker-bundle, &#10;changing it to include the --dev flag in the relevant sections." />
+    <MESSAGE value="ide(config): added/updated automatically" />
+    <option name="LAST_COMMIT_MESSAGE" value="ide(config): added/updated automatically" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
