@@ -1,0 +1,35 @@
+framework:
+    rate_limiter:
+        idm_user.login.username_ip.main:
+            policy: token_bucket
+            limit: 5
+            rate:
+                interval: '5 minutes'
+        idm_user.login.ip.main:
+            policy: sliding_window
+            limit: 25
+            interval: '15 minutes'
+
+        idm_user.login.username_ip.admin:
+            policy: token_bucket
+            limit: 3
+            rate:
+                interval: '10 minutes'
+        idm_user.login.ip.admin:
+            policy: sliding_window
+            limit: 10
+            interval: '20 minutes'
+
+services:
+    idm_user.rate_limiter.login.main:
+        class: Symfony\Component\Security\Http\RateLimiter\DefaultLoginRateLimiter
+        arguments:
+            $globalFactory: '@limiter.idm_user.login.ip.main'
+            $localFactory: '@limiter.idm_user.login.username_ip.main'
+            $secret: '%kernel.secret%'
+    idm_user.rate_limiter.login.admin:
+        class: Symfony\Component\Security\Http\RateLimiter\DefaultLoginRateLimiter
+        arguments:
+            $globalFactory: '@limiter.idm_user.login.ip.admin'
+            $localFactory: '@limiter.idm_user.login.username_ip.admin'
+            $secret: '%kernel.secret%'
