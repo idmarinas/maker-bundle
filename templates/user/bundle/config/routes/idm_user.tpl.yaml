@@ -1,0 +1,19 @@
+# Import all routes
+idm_user:
+    resource: '@IdmUserBundle/config/routes.php'
+
+# # Import login route
+# idm_user_login:
+#     resource: '@IdmUserBundle/config/routes/login.php'
+
+# # Import profile route
+# imd_user_profile:
+#     resource: '@IdmUserBundle/config/routes/profile.php'
+
+# # Import registration route
+# imd_user_registration:
+#     resource: '@IdmUserBundle/config/routes/registration.php'
+
+# # Import reset password route
+# imd_user_reset_password:
+#     resource: '@IdmUserBundle/config/routes/reset_password.php'
