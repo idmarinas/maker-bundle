@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 01/02/2025, 12:47
+ * Last modified by "IDMarinas" on 02/02/2025, 19:36
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -20,7 +20,6 @@
 namespace App;
 
 use Exception;
-use Symfony\Bundle\FrameworkBundle\Controller\TemplateController;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;
@@ -45,14 +44,14 @@ final class Kernel extends BaseKernel
 			$routes->import($route);
 		}
 
-		$routes
-			->add('app_home', '/')
-			->methods(['GET'])
-			->controller(TemplateController::class)
-			//->defaults([
-			//	'template' => 'path/to/template.html.twig',
-			//])
-		;
+//		$routes
+//			->add('app_home', '/')
+//			->methods(['GET'])
+//			->controller(TemplateController::class)
+//			//->defaults([
+//			//	'template' => 'path/to/template.html.twig',
+//			//])
+//		;
 	}
 
 	public function addExtraBundle (string $bundleName): self
