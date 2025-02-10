@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/config/factories.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/config/fixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/build-docs.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/sonar-cloud.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/FUNDING.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/FUNDING.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/labeler.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/labeler.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/label.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/label.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/php.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/php.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php-test-framework.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +85,33 @@
                   <option name="darkRed" value="231" />
                   <option name="green" value="142" />
                   <option name="red" value="255" />
+                </RgbState>
+              </option>
+            </ColorState>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Writerside/imb.tree">
+          <value>
+            <ColorState>
+              <option name="customOrder" value="3" />
+              <option name="first">
+                <RgbState>
+                  <option name="blue" value="200" />
+                  <option name="darkBlue" value="147" />
+                  <option name="darkGreen" value="69" />
+                  <option name="darkRed" value="143" />
+                  <option name="green" value="60" />
+                  <option name="red" value="214" />
+                </RgbState>
+              </option>
+              <option name="second">
+                <RgbState>
+                  <option name="blue" value="185" />
+                  <option name="darkBlue" value="227" />
+                  <option name="darkGreen" value="114" />
+                  <option name="darkRed" value="181" />
+                  <option name="green" value="130" />
+                  <option name="red" value="245" />
                 </RgbState>
               </option>
             </ColorState>
@@ -280,40 +306,37 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.Dev - PHP.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.Test.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm&quot;: &quot;Docker Compose&quot;,
-    &quot;credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm&quot;: &quot;Docker Compose&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;2.x&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/Bundles/maker-bundle/config&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
-    &quot;writerside.last.selected.productIDMarinas Template Bundle&quot;: &quot;itb&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;stardust.markdown.MarkdownSplitEditorSuppressor:keyList&quot;: []
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.Dev - PHP.executor": "Run",
+    "PHPUnit.Test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "code.cleanup.on.save": "true",
+    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm": "Docker Compose",
+    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm": "Docker Compose",
+    "git-widget-placeholder": "2.x",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "F:/Bundles/maker-bundle",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "php.override.implement.member.chooser.php.doc": "NONE",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "web-ide.project.structure",
+    "vue.rearranger.settings.migration": "true",
+    "writerside.last.selected.productIDMarinas Template Bundle": "itb"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Bundles\maker-bundle" />
       <recent name="F:\Bundles\maker-bundle\config" />
       <recent name="F:\Bundles\maker-bundle\templates\user\bundle" />
       <recent name="F:\Bundles\template-bundle\app\config\packages" />
       <recent name="F:\Bundles\template-bundle\.docker\php\conf.d" />
-      <recent name="F:\Bundles\template-bundle\.github\workflows" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Bundles\maker-bundle\app\config" />
@@ -321,7 +344,7 @@
       <recent name="F:\Bundles\template-bundle" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.Dev - PHP">
+  <component name="RunManager" selected="PHPUnit.Test">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine parameters="-d xdebug.mode=coverage" />
       <TestRunner scope="XML" />
@@ -457,103 +480,12 @@
       <workItem from="1738259030339" duration="2799000" />
       <workItem from="1738261881369" duration="8826000" />
       <workItem from="1738327556382" duration="19538000" />
-      <workItem from="1738403290638" duration="6019000" />
-    </task>
-    <task id="LOCAL-00109" summary="feat(security): add firewalls and role hierarchy configuration">
-      <option name="closed" value="true" />
-      <created>1736162326910</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1736162326910</updated>
-    </task>
-    <task id="LOCAL-00110" summary="docs: update PHP and Symfony compatibility requirements in README">
-      <option name="closed" value="true" />
-      <created>1736165211045</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1736165211045</updated>
-    </task>
-    <task id="LOCAL-00111" summary="fix(labels): update short names for Symfony Flex labels&#10;&#10;- Changed short-name from &quot;With Flex&quot; to &quot;Flex&quot;&#10;- Changed short-name from &quot;With Out Flex&quot; to &quot;No-Flex&quot;">
-      <option name="closed" value="true" />
-      <created>1736165357187</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1736165357187</updated>
-    </task>
-    <task id="LOCAL-00112" summary="feat(bundles): add MakerBundle to the application configuration">
-      <option name="closed" value="true" />
-      <created>1736455568365</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1736455568365</updated>
-    </task>
-    <task id="LOCAL-00113" summary="feat(workflow): update pull request triggers and tags ignored&#10;&#10;- Added support for branches 'master' and 'main' in pull request triggers.&#10;- Expanded the list of ignored tags to include 'meta', 'docker configuration', &#10;  and 'deployer configuration'.">
-      <option name="closed" value="true" />
-      <created>1737053700962</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1737053700962</updated>
-    </task>
-    <task id="LOCAL-00114" summary="updated(dependencies): for .github/labeler.yml">
-      <option name="closed" value="true" />
-      <created>1737053712675</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1737053712675</updated>
-    </task>
-    <task id="LOCAL-00115" summary="updated(dependencies): for app/config/packages/doctrine.php">
-      <option name="closed" value="true" />
-      <created>1737548827100</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1737548827100</updated>
-    </task>
-    <task id="LOCAL-00116" summary="ide(config): added/updated automatically">
-      <option name="closed" value="true" />
-      <created>1737548839504</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1737548839504</updated>
-    </task>
-    <task id="LOCAL-00117" summary="chore(workflows): update checkout action to v4 in php.yml">
-      <option name="closed" value="true" />
-      <created>1737645872881</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1737645872881</updated>
-    </task>
-    <task id="LOCAL-00118" summary="ci: update PHP workflow to use ubuntu-latest for the operating system">
-      <option name="closed" value="true" />
-      <created>1737645882977</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1737645882977</updated>
-    </task>
-    <task id="LOCAL-00119" summary="ide(config): added/updated automatically">
-      <option name="closed" value="true" />
-      <created>1737645889955</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1737645889955</updated>
-    </task>
-    <task id="LOCAL-00120" summary="fix(remove): removed all empty options">
-      <option name="closed" value="true" />
-      <created>1737646709799</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1737646709799</updated>
+      <workItem from="1738403290638" duration="7211000" />
+      <workItem from="1738515177761" duration="4175000" />
+      <workItem from="1738581187242" duration="1173000" />
+      <workItem from="1738582590148" duration="443000" />
+      <workItem from="1738670585177" duration="1503000" />
+      <workItem from="1739207820611" duration="1345000" />
     </task>
     <task id="LOCAL-00121" summary="updated(dependencies): for composer.json">
       <option name="closed" value="true" />
@@ -851,7 +783,103 @@
       <option name="project" value="LOCAL" />
       <updated>1738357927996</updated>
     </task>
-    <option name="localTasksCounter" value="158" />
+    <task id="LOCAL-00158" summary="feat(security): add SecurityTrait for user authentication configuration&#10;&#10;- Introduced a new trait `SecurityTrait` to manage security configuration&#10;  for user authentication within the Maker Bundle. This trait includes&#10;  methods to update the security settings for providers, firewalls, and&#10;  password hashers, enhancing the flexibility of user management.">
+      <option name="closed" value="true" />
+      <created>1738410019014</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1738410019014</updated>
+    </task>
+    <task id="LOCAL-00159" summary="ide(config): added/updated automatically">
+      <option name="closed" value="true" />
+      <created>1738410037907</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1738410037907</updated>
+    </task>
+    <task id="LOCAL-00160" summary="feat(user-bundle): add MakerUserBundleFiles for user bundle generation">
+      <option name="closed" value="true" />
+      <created>1738410206164</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1738410206165</updated>
+    </task>
+    <task id="LOCAL-00161" summary="update(funding): remove unused sponsorship platforms and clean up file">
+      <option name="closed" value="true" />
+      <created>1738410249979</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1738410249979</updated>
+    </task>
+    <task id="LOCAL-00162" summary="updated(dependencies): for .github/labeler.yml">
+      <option name="closed" value="true" />
+      <created>1738410262955</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1738410262955</updated>
+    </task>
+    <task id="LOCAL-00163" summary="fix(workflow): update pull request labeler configuration&#10;&#10;- Changed the workflow name to &quot;Pull Request Labeler&quot;.&#10;- Updated the trigger to use `pull_request_target`.&#10;- Renamed job from `label` to `labeler`.&#10;- Added permissions for contents and pull requests.&#10;- Updated action version to `v5`.">
+      <option name="closed" value="true" />
+      <created>1738410273608</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1738410273608</updated>
+    </task>
+    <task id="LOCAL-00164" summary="feat(templates): add bug report and feature request issue templates">
+      <option name="closed" value="true" />
+      <created>1738410309295</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1738410309295</updated>
+    </task>
+    <task id="LOCAL-00165" summary="feat(config): add initial configuration files for Symfony">
+      <option name="closed" value="true" />
+      <created>1738410416523</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1738410416523</updated>
+    </task>
+    <task id="LOCAL-00166" summary="feat(config): add initial configuration files for Symfony">
+      <option name="closed" value="true" />
+      <created>1738410442977</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1738410442977</updated>
+    </task>
+    <task id="LOCAL-00167" summary="feat(config): add initial configuration files for Symfony">
+      <option name="closed" value="true" />
+      <created>1738410464162</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1738410464162</updated>
+    </task>
+    <task id="LOCAL-00168" summary="feat(kernel): add initial Kernel class for application structure">
+      <option name="closed" value="true" />
+      <created>1738410498938</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1738410498938</updated>
+    </task>
+    <task id="LOCAL-00169" summary="fix: remove unused TemplateController from Kernel.php">
+      <option name="closed" value="true" />
+      <created>1738522076882</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1738522076882</updated>
+    </task>
+    <option name="localTasksCounter" value="170" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -877,15 +905,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="fix: update .gitignore to include necessary files and folders&#10;&#10;- Removed unnecessary entries for Composer and other systems.&#10;- Added back specific files like phpunit.xml.dist and composer.lock.&#10;- Ensured proper structure for Symfony and VisualStudioCode files." />
-    <MESSAGE value="style(editorconfig): updated indentation and formatting rules" />
-    <MESSAGE value="docs: add initial TODO list to track upcoming tasks" />
-    <MESSAGE value="feat: add useful tips for CI workflows in TIPS.md&#10;&#10;- Added a section explaining how to skip CI workflows by using specific &#10;  strings in commit messages." />
-    <MESSAGE value="docs: add useful commands documentation file" />
-    <MESSAGE value="chore: update LICENSE to reflect current copyright holder and year" />
-    <MESSAGE value="updated(dependencies): for phpunit.xml.dist" />
-    <MESSAGE value="feat(docs): add README.md for IDMarinas Maker Bundle" />
-    <MESSAGE value="feat: update short description in README.md to reflect project purpose" />
     <MESSAGE value="feat: add sonar-project.properties for project configuration and metadata" />
     <MESSAGE value="feat(config): moved all configuration of bundle to IdmMakerBundle.php" />
     <MESSAGE value="feat(docker): add PHP configuration files and Dockerfile" />
@@ -896,13 +915,22 @@
     <MESSAGE value="fix(docs): update composer require command to include --dev flag&#10;&#10;Updated the README.md to reflect the correct usage of the &#10;composer require command for the idmarinas/maker-bundle, &#10;changing it to include the --dev flag in the relevant sections." />
     <MESSAGE value="feat(user): add user management entities and controllers templates" />
     <MESSAGE value="feat: add .gitkeep files in factories and fixtures directories" />
-    <MESSAGE value="ide(config): added/updated automatically" />
     <MESSAGE value="feat(traits): add MakeHelpFileTrait for help file retrieval functionality" />
     <MESSAGE value="feat(routes): add idm_user routes configuration template file&#10;&#10;- Introduced a new YAML configuration file for user routes in the IdmUserBundle.&#10;- This file imports various route resources for login, profile, registration, and password reset functionalities." />
     <MESSAGE value="delete: removed empty test directory" />
     <MESSAGE value="feat(rate-limiter): add configuration for user login rate limiting" />
     <MESSAGE value="refactor(user): update namespaces in user-related templates&#10;&#10;- Updated namespaces in the following files to use dynamic &#10;  `&lt;?= $namespace; ?&gt;` instead of hardcoded `App\Entity\User`:&#10;  - UserCrudController.tpl.php&#10;  - Connections.tpl.php&#10;  - ConnectionsLog.tpl.php&#10;  - ResetPasswordRequest.tpl.php&#10;  - ResetPasswordRequestLog.tpl.php&#10;  - Log.tpl.php&#10;  - User.tpl.php&#10;  - Premium.tpl.php&#10;  - PremiumLog.tpl.php&#10;  - UserRepository.tpl.php&#10;  - ResetPasswordRequestRepository.tpl.php&#10;&#10;ide(config): added/updated automatically." />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(user): update namespaces in user-related templates&#10;&#10;- Updated namespaces in the following files to use dynamic &#10;  `&lt;?= $namespace; ?&gt;` instead of hardcoded `App\Entity\User`:&#10;  - UserCrudController.tpl.php&#10;  - Connections.tpl.php&#10;  - ConnectionsLog.tpl.php&#10;  - ResetPasswordRequest.tpl.php&#10;  - ResetPasswordRequestLog.tpl.php&#10;  - Log.tpl.php&#10;  - User.tpl.php&#10;  - Premium.tpl.php&#10;  - PremiumLog.tpl.php&#10;  - UserRepository.tpl.php&#10;  - ResetPasswordRequestRepository.tpl.php&#10;&#10;ide(config): added/updated automatically." />
+    <MESSAGE value="feat(security): add SecurityTrait for user authentication configuration&#10;&#10;- Introduced a new trait `SecurityTrait` to manage security configuration&#10;  for user authentication within the Maker Bundle. This trait includes&#10;  methods to update the security settings for providers, firewalls, and&#10;  password hashers, enhancing the flexibility of user management." />
+    <MESSAGE value="ide(config): added/updated automatically" />
+    <MESSAGE value="feat(user-bundle): add MakerUserBundleFiles for user bundle generation" />
+    <MESSAGE value="update(funding): remove unused sponsorship platforms and clean up file" />
+    <MESSAGE value="updated(dependencies): for .github/labeler.yml" />
+    <MESSAGE value="fix(workflow): update pull request labeler configuration&#10;&#10;- Changed the workflow name to &quot;Pull Request Labeler&quot;.&#10;- Updated the trigger to use `pull_request_target`.&#10;- Renamed job from `label` to `labeler`.&#10;- Added permissions for contents and pull requests.&#10;- Updated action version to `v5`." />
+    <MESSAGE value="feat(templates): add bug report and feature request issue templates" />
+    <MESSAGE value="feat(config): add initial configuration files for Symfony" />
+    <MESSAGE value="feat(kernel): add initial Kernel class for application structure" />
+    <MESSAGE value="fix: remove unused TemplateController from Kernel.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: remove unused TemplateController from Kernel.php" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
