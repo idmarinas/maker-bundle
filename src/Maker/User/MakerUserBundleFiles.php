@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 10/02/2025, 21:08
+ * Last modified by "IDMarinas" on 10/02/2025, 21:39
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -21,6 +21,7 @@ namespace Idm\Bundle\Maker\Maker\User;
 
 use Exception;
 use Idm\Bundle\Maker\Maker\User\MakerUserBundleFiles\SecurityTrait;
+use Idm\Bundle\Maker\Traits\GenerateClassTrait;
 use Idm\Bundle\Maker\Traits\MakeHelpFileTrait;
 use Idm\Bundle\User\IdmUserBundle;
 use Symfony\Bundle\MakerBundle\ConsoleStyle;
@@ -39,6 +40,7 @@ use Symfony\Component\Yaml\Yaml;
 final class MakerUserBundleFiles extends AbstractMaker
 {
 	use MakeHelpFileTrait;
+	use GenerateClassTrait;
 	use SecurityTrait;
 
 	public function __construct (private readonly FileManager $fileManager) {}
@@ -79,9 +81,6 @@ final class MakerUserBundleFiles extends AbstractMaker
 	 */
 	public function generate (InputInterface $input, ConsoleStyle $io, Generator $generator): void
 	{
-		/* @var array<string, ClassNameDetails> $generatedClasses */
-		$generatedClasses = [];
-
 		// Sources
 		$sources = [
 			// Entities
@@ -100,17 +99,8 @@ final class MakerUserBundleFiles extends AbstractMaker
 			'UserCrudController'             => 'Controller\\Admin\\User',
 		];
 
-		foreach ($sources as $name => $namespace) {
-			$class = $generator->createClassNameDetails($name, $namespace);
-			$generatedClasses[$name] = $class;
-
-			$generator->generateClass(
-				$class->getFullName(),
-				self::tplBundle(
-					sprintf('src\\%s\\%s.tpl.php', $namespace, $name)
-				)
-			);
-		}
+		/* @var array<string, ClassNameDetails> $generatedClasses */
+		$generatedClasses = $this->generateClasses($sources, $generator, [$this, 'tplBundle']);
 
 		// Config files
 		$this->tplConfigRateLimiterYaml();
