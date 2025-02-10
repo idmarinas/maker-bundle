@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="ide(config): added/updated automatically">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/build-docs.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/workflows/sonar-cloud.yml" afterDir="false" />
+    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/php.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/php.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Maker/User/MakerUserBundleFiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maker/User/MakerUserBundleFiles.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,7 +275,6 @@
       <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/vendor/symfony/translation" />
       <path value="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/psr/clock" />
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
@@ -343,7 +341,7 @@
       <recent name="F:\Bundles\template-bundle" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.Test">
+  <component name="RunManager" selected="Docker.Dev - PHP">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine parameters="-d xdebug.mode=coverage" />
       <TestRunner scope="XML" />
@@ -484,71 +482,7 @@
       <workItem from="1738581187242" duration="1173000" />
       <workItem from="1738582590148" duration="443000" />
       <workItem from="1738670585177" duration="1503000" />
-      <workItem from="1739207820611" duration="2465000" />
-    </task>
-    <task id="LOCAL-00123" summary="ide(config): added/updated automatically">
-      <option name="closed" value="true" />
-      <created>1737653149980</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1737653149980</updated>
-    </task>
-    <task id="LOCAL-00124" summary="updated(dependencies): for composer.json">
-      <option name="closed" value="true" />
-      <created>1737665448023</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1737665448023</updated>
-    </task>
-    <task id="LOCAL-00125" summary="ide(config): added/updated automatically">
-      <option name="closed" value="true" />
-      <created>1737665461032</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1737665461033</updated>
-    </task>
-    <task id="LOCAL-00126" summary="fix: corrected package name in GitHub issues link in buildprofiles.xml">
-      <option name="closed" value="true" />
-      <created>1737665468297</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1737665468297</updated>
-    </task>
-    <task id="LOCAL-00127" summary="fix: update .gitattributes for export-ignore settings and line endings&#10;&#10;- Changed text normalization to LF.&#10;- Added export-ignore rules for various directories and files.">
-      <option name="closed" value="true" />
-      <created>1738260251140</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1738260251140</updated>
-    </task>
-    <task id="LOCAL-00128" summary="fix: update .gitignore to include necessary files and folders&#10;&#10;- Removed unnecessary entries for Composer and other systems.&#10;- Added back specific files like phpunit.xml.dist and composer.lock.&#10;- Ensured proper structure for Symfony and VisualStudioCode files.">
-      <option name="closed" value="true" />
-      <created>1738260271114</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1738260271114</updated>
-    </task>
-    <task id="LOCAL-00129" summary="style(editorconfig): updated indentation and formatting rules">
-      <option name="closed" value="true" />
-      <created>1738260276963</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1738260276963</updated>
-    </task>
-    <task id="LOCAL-00130" summary="docs: add initial TODO list to track upcoming tasks">
-      <option name="closed" value="true" />
-      <created>1738260985423</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1738260985423</updated>
+      <workItem from="1739207820611" duration="5396000" />
     </task>
     <task id="LOCAL-00131" summary="feat: add useful tips for CI workflows in TIPS.md&#10;&#10;- Added a section explaining how to skip CI workflows by using specific &#10;  strings in commit messages.">
       <option name="closed" value="true" />
@@ -878,7 +812,71 @@
       <option name="project" value="LOCAL" />
       <updated>1739212621003</updated>
     </task>
-    <option name="localTasksCounter" value="172" />
+    <task id="LOCAL-00172" summary="chore(workflow): update labeler action and add checkout step&#10;&#10;- Added `actions/checkout@v4` to the workflow for sparse-checkout.&#10;- Updated the workflow to include the necessary steps for labeler action.">
+      <option name="closed" value="true" />
+      <created>1739217047035</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1739217047035</updated>
+    </task>
+    <task id="LOCAL-00173" summary="feat(workflow): add GitHub Actions workflow for building documentation">
+      <option name="closed" value="true" />
+      <created>1739217076991</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1739217076991</updated>
+    </task>
+    <task id="LOCAL-00174" summary="chore: update GitHub Actions workflow for IDMarinas Template Bundle&#10;&#10;- Renamed the workflow to &quot;IDMarinas Template Bundle Test Suite&quot;.&#10;- Updated the `on` section to include more event types and ignore specific tags.&#10;- Modified the `push` section to ignore certain paths.&#10;- Adjusted the PHP and Symfony matrix versions for the build job.&#10;- Updated `actions/checkout` to version 4 and added fetch-depth condition.&#10;- Changed `ramsey/composer-install` action to version 3.&#10;- Added a SonarCloud Scan step for PHP 8.2 and Symfony 6.4.*.">
+      <option name="closed" value="true" />
+      <created>1739217102016</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1739217102016</updated>
+    </task>
+    <task id="LOCAL-00175" summary="chore: update GitHub Actions workflow for IDMarinas Template Bundle&#10;&#10;- Renamed the workflow to &quot;IDMarinas Template Bundle Test Suite&quot;.&#10;- Updated the `on` section to include more event types and ignore specific tags.&#10;- Modified the `push` section to ignore certain paths.&#10;- Adjusted the PHP and Symfony matrix versions for the build job.&#10;- Updated `actions/checkout` to version 4 and added fetch-depth condition.&#10;- Changed `ramsey/composer-install` action to version 3.&#10;- Added a SonarCloud Scan step for PHP 8.2 and Symfony 6.4.*.">
+      <option name="closed" value="true" />
+      <created>1739217138276</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1739217138276</updated>
+    </task>
+    <task id="LOCAL-00176" summary="feat: add description to composer.json and reorganize config section&#10;&#10;- Added a description for the package in composer.json.&#10;- Reorganized the config section for better clarity and structure.">
+      <option name="closed" value="true" />
+      <created>1739217147672</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1739217147672</updated>
+    </task>
+    <task id="LOCAL-00177" summary="feat(README): update badge links and add new badges&#10;&#10;- Updated badge links to point to the correct branch (2.x) for&#10;  test suite, quality gate status, coverage, and technical debt.&#10;- Added new badges for GitHub release information and commit activity.&#10;- Removed outdated badge links for GitHub release and last commit.">
+      <option name="closed" value="true" />
+      <created>1739217695983</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1739217695983</updated>
+    </task>
+    <task id="LOCAL-00178" summary="fix(workflow): update name for IDMarinas Maker Bundle Test Suite">
+      <option name="closed" value="true" />
+      <created>1739217713516</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1739217713516</updated>
+    </task>
+    <task id="LOCAL-00179" summary="feat(docs): add configuration, security, requirements, and installation documentation">
+      <option name="closed" value="true" />
+      <created>1739217828586</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1739217828586</updated>
+    </task>
+    <option name="localTasksCounter" value="180" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -904,13 +902,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feat(config): moved all configuration of bundle to IdmMakerBundle.php" />
-    <MESSAGE value="feat(docker): add PHP configuration files and Dockerfile" />
-    <MESSAGE value="feat(console): add console entry point for Symfony application" />
-    <MESSAGE value="feat(docker): add initial compose.yaml configuration for PHP service" />
-    <MESSAGE value="refactor: update rector configuration for improved code quality and sets&#10;&#10;- Replaced the previous configuration method with a new fluent interface.&#10;- Updated paths to include additional directories: app/src, factories, and fixtures.&#10;- Set PHP version to 8.2 and included various quality sets.&#10;- Removed unused imports automatically.&#10;- Added type coverage level and specific rules for better code quality." />
-    <MESSAGE value="updated(dependencies): for composer.json" />
-    <MESSAGE value="fix(docs): update composer require command to include --dev flag&#10;&#10;Updated the README.md to reflect the correct usage of the &#10;composer require command for the idmarinas/maker-bundle, &#10;changing it to include the --dev flag in the relevant sections." />
     <MESSAGE value="feat(user): add user management entities and controllers templates" />
     <MESSAGE value="feat: add .gitkeep files in factories and fixtures directories" />
     <MESSAGE value="feat(traits): add MakeHelpFileTrait for help file retrieval functionality" />
@@ -929,7 +920,14 @@
     <MESSAGE value="fix: remove unused TemplateController from Kernel.php" />
     <MESSAGE value="docs: add SECURITY.md file with security policy and reporting guidelines" />
     <MESSAGE value="ide(config): added/updated automatically" />
-    <option name="LAST_COMMIT_MESSAGE" value="ide(config): added/updated automatically" />
+    <MESSAGE value="chore(workflow): update labeler action and add checkout step&#10;&#10;- Added `actions/checkout@v4` to the workflow for sparse-checkout.&#10;- Updated the workflow to include the necessary steps for labeler action." />
+    <MESSAGE value="feat(workflow): add GitHub Actions workflow for building documentation" />
+    <MESSAGE value="chore: update GitHub Actions workflow for IDMarinas Template Bundle&#10;&#10;- Renamed the workflow to &quot;IDMarinas Template Bundle Test Suite&quot;.&#10;- Updated the `on` section to include more event types and ignore specific tags.&#10;- Modified the `push` section to ignore certain paths.&#10;- Adjusted the PHP and Symfony matrix versions for the build job.&#10;- Updated `actions/checkout` to version 4 and added fetch-depth condition.&#10;- Changed `ramsey/composer-install` action to version 3.&#10;- Added a SonarCloud Scan step for PHP 8.2 and Symfony 6.4.*." />
+    <MESSAGE value="feat: add description to composer.json and reorganize config section&#10;&#10;- Added a description for the package in composer.json.&#10;- Reorganized the config section for better clarity and structure." />
+    <MESSAGE value="feat(README): update badge links and add new badges&#10;&#10;- Updated badge links to point to the correct branch (2.x) for&#10;  test suite, quality gate status, coverage, and technical debt.&#10;- Added new badges for GitHub release information and commit activity.&#10;- Removed outdated badge links for GitHub release and last commit." />
+    <MESSAGE value="fix(workflow): update name for IDMarinas Maker Bundle Test Suite" />
+    <MESSAGE value="feat(docs): add configuration, security, requirements, and installation documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(docs): add configuration, security, requirements, and installation documentation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
