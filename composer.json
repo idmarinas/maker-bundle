@@ -1,5 +1,6 @@
 {
 	"name": "idmarinas/maker-bundle",
+	"description": "A simple way to create the files for my bundles and some other things",
 	"type": "symfony-bundle",
 	"license": "BSD-3-Clause",
 	"keywords": [
@@ -42,19 +43,6 @@
 		"symfony/twig-bundle": "^6.4 | ^7.0",
 		"zenstruck/foundry": "^2.3"
 	},
-	"config": {
-		"allow-plugins": {
-			"composer/package-versions-deprecated": true,
-			"idmarinas/composer-plugin": false,
-			"symfony/flex": true,
-			"symfony/runtime": true
-		},
-		"optimize-autoloader": false,
-		"preferred-install": {
-			"*": "dist"
-		},
-		"sort-packages": true
-	},
 	"autoload": {
 		"psr-4": {
 			"Idm\\Bundle\\Maker\\": "src/"
@@ -79,6 +67,19 @@
 			"php bin/console doctrine:schema:update --env=dev --force --ansi",
 			"php bin/console doctrine:fixtures:load --env=dev -n --ansi"
 		]
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/package-versions-deprecated": true,
+			"idmarinas/composer-plugin": false,
+			"symfony/flex": true,
+			"symfony/runtime": true
+		},
+		"optimize-autoloader": false,
+		"preferred-install": {
+			"*": "dist"
+		},
+		"sort-packages": true
 	},
 	"funding": [
 		{
