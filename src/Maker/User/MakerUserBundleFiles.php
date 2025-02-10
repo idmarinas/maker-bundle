@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 01/02/2025, 12:38
+ * Last modified by "IDMarinas" on 10/02/2025, 21:08
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -53,7 +53,7 @@ final class MakerUserBundleFiles extends AbstractMaker
 
 	public static function getCommandDescription (): string
 	{
-		return 'Create de User Bundle related files';
+		return 'Create the User Bundle related files';
 	}
 
 	/**
