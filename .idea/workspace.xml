@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="">
+    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="feat(User): refactor generate method to use GenerateClassTrait&#10;&#10;- Added `GenerateClassTrait` to `MakerUserBundleFiles` for improved &#10;  class generation.&#10;- Refactored the `generate` method to streamline class creation &#10;  by utilizing the new trait.&#10;- Removed redundant code for class generation and replaced it with &#10;  a call to `generateClasses` method.">
       <change afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Maker/User/MakerUserBundleFiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maker/User/MakerUserBundleFiles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/bundle/src/Controller/Admin/User/UserCrudController.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/bundle/src/Controller/Admin/User/UserCrudController.tpl.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,6 +286,12 @@
       <path value="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/vendor/twig/html-extra" />
+      <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/ux-twig-component" />
+      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
     </include_path>
   </component>
   <component name="ProblemsViewState">
@@ -322,7 +329,7 @@
     "nodejs_package_manager_path": "npm",
     "php.override.implement.member.chooser.php.doc": "NONE",
     "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "web-ide.project.structure",
+    "settings.editor.selected.configurable": "preferences.sourceCode",
     "vue.rearranger.settings.migration": "true",
     "writerside.last.selected.productIDMarinas Template Bundle": "itb"
   }
@@ -482,39 +489,7 @@
       <workItem from="1738581187242" duration="1173000" />
       <workItem from="1738582590148" duration="443000" />
       <workItem from="1738670585177" duration="1503000" />
-      <workItem from="1739207820611" duration="5396000" />
-    </task>
-    <task id="LOCAL-00131" summary="feat: add useful tips for CI workflows in TIPS.md&#10;&#10;- Added a section explaining how to skip CI workflows by using specific &#10;  strings in commit messages.">
-      <option name="closed" value="true" />
-      <created>1738260997930</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1738260997930</updated>
-    </task>
-    <task id="LOCAL-00132" summary="docs: add useful commands documentation file">
-      <option name="closed" value="true" />
-      <created>1738261004174</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1738261004174</updated>
-    </task>
-    <task id="LOCAL-00133" summary="ide(config): added/updated automatically">
-      <option name="closed" value="true" />
-      <created>1738261134431</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1738261134431</updated>
-    </task>
-    <task id="LOCAL-00134" summary="chore: update LICENSE to reflect current copyright holder and year">
-      <option name="closed" value="true" />
-      <created>1738261155281</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1738261155281</updated>
+      <workItem from="1739207820611" duration="13631000" />
     </task>
     <task id="LOCAL-00135" summary="updated(dependencies): for phpunit.xml.dist">
       <option name="closed" value="true" />
@@ -876,7 +851,39 @@
       <option name="project" value="LOCAL" />
       <updated>1739217828586</updated>
     </task>
-    <option name="localTasksCounter" value="180" />
+    <task id="LOCAL-00180" summary="fix: correct spelling in the command description for User Bundle files">
+      <option name="closed" value="true" />
+      <created>1739219244077</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1739219244077</updated>
+    </task>
+    <task id="LOCAL-00181" summary="feat(dependencies): add idmarinas/common-bundle as a dev dependency">
+      <option name="closed" value="true" />
+      <created>1739219259279</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1739219259279</updated>
+    </task>
+    <task id="LOCAL-00182" summary="ide(config): added/updated automatically">
+      <option name="closed" value="true" />
+      <created>1739219273177</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1739219273177</updated>
+    </task>
+    <task id="LOCAL-00183" summary="feat(User): refactor generate method to use GenerateClassTrait&#10;&#10;- Added `GenerateClassTrait` to `MakerUserBundleFiles` for improved &#10;  class generation.&#10;- Refactored the `generate` method to streamline class creation &#10;  by utilizing the new trait.&#10;- Removed redundant code for class generation and replaced it with &#10;  a call to `generateClasses` method.">
+      <option name="closed" value="true" />
+      <created>1739220269169</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1739220269169</updated>
+    </task>
+    <option name="localTasksCounter" value="184" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -902,9 +909,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feat(user): add user management entities and controllers templates" />
-    <MESSAGE value="feat: add .gitkeep files in factories and fixtures directories" />
-    <MESSAGE value="feat(traits): add MakeHelpFileTrait for help file retrieval functionality" />
     <MESSAGE value="feat(routes): add idm_user routes configuration template file&#10;&#10;- Introduced a new YAML configuration file for user routes in the IdmUserBundle.&#10;- This file imports various route resources for login, profile, registration, and password reset functionalities." />
     <MESSAGE value="delete: removed empty test directory" />
     <MESSAGE value="feat(rate-limiter): add configuration for user login rate limiting" />
@@ -919,7 +923,6 @@
     <MESSAGE value="feat(kernel): add initial Kernel class for application structure" />
     <MESSAGE value="fix: remove unused TemplateController from Kernel.php" />
     <MESSAGE value="docs: add SECURITY.md file with security policy and reporting guidelines" />
-    <MESSAGE value="ide(config): added/updated automatically" />
     <MESSAGE value="chore(workflow): update labeler action and add checkout step&#10;&#10;- Added `actions/checkout@v4` to the workflow for sparse-checkout.&#10;- Updated the workflow to include the necessary steps for labeler action." />
     <MESSAGE value="feat(workflow): add GitHub Actions workflow for building documentation" />
     <MESSAGE value="chore: update GitHub Actions workflow for IDMarinas Template Bundle&#10;&#10;- Renamed the workflow to &quot;IDMarinas Template Bundle Test Suite&quot;.&#10;- Updated the `on` section to include more event types and ignore specific tags.&#10;- Modified the `push` section to ignore certain paths.&#10;- Adjusted the PHP and Symfony matrix versions for the build job.&#10;- Updated `actions/checkout` to version 4 and added fetch-depth condition.&#10;- Changed `ramsey/composer-install` action to version 3.&#10;- Added a SonarCloud Scan step for PHP 8.2 and Symfony 6.4.*." />
@@ -927,7 +930,11 @@
     <MESSAGE value="feat(README): update badge links and add new badges&#10;&#10;- Updated badge links to point to the correct branch (2.x) for&#10;  test suite, quality gate status, coverage, and technical debt.&#10;- Added new badges for GitHub release information and commit activity.&#10;- Removed outdated badge links for GitHub release and last commit." />
     <MESSAGE value="fix(workflow): update name for IDMarinas Maker Bundle Test Suite" />
     <MESSAGE value="feat(docs): add configuration, security, requirements, and installation documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(docs): add configuration, security, requirements, and installation documentation" />
+    <MESSAGE value="fix: correct spelling in the command description for User Bundle files" />
+    <MESSAGE value="feat(dependencies): add idmarinas/common-bundle as a dev dependency" />
+    <MESSAGE value="ide(config): added/updated automatically" />
+    <MESSAGE value="feat(User): refactor generate method to use GenerateClassTrait&#10;&#10;- Added `GenerateClassTrait` to `MakerUserBundleFiles` for improved &#10;  class generation.&#10;- Refactored the `generate` method to streamline class creation &#10;  by utilizing the new trait.&#10;- Removed redundant code for class generation and replaced it with &#10;  a call to `generateClasses` method." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(User): refactor generate method to use GenerateClassTrait&#10;&#10;- Added `GenerateClassTrait` to `MakerUserBundleFiles` for improved &#10;  class generation.&#10;- Refactored the `generate` method to streamline class creation &#10;  by utilizing the new trait.&#10;- Removed redundant code for class generation and replaced it with &#10;  a call to `generateClasses` method." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
