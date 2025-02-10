@@ -3,6 +3,9 @@
 
 # IDMarinas Maker Bundle
 
+![GitHub release](https://img.shields.io/github/release/idmarinas/maker-bundle.svg?style=for-the-badge)
+![GitHub Release Date](https://img.shields.io/github/release-date/idmarinas/maker-bundle.svg?style=for-the-badge)
+
 </div>
 
 > A simple way to create the files for my bundles and some other things
@@ -11,29 +14,26 @@
 
 <div align="center">
 
-[![Test Suite](https://img.shields.io/github/actions/workflow/status/idmarinas/maker-bundle/php.yml?style=for-the-badge&logo=github&logoColor=white&label=Bundle%20Test%20Suite)](https://github.com/idmarinas/maker-bundle/actions/workflows/php.yml)
-[![Quality Gate Status](https://img.shields.io/sonar/quality_gate/idmarinas_maker-bundle?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white)](https://sonarcloud.io/summary/new_code?id=idmarinas_maker-bundle)
-[![Coverage](https://img.shields.io/sonar/coverage/idmarinas_maker-bundle?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white)](https://sonarcloud.io/dashboard?id=idmarinas_maker-bundle)
-[![Technical Debt](https://img.shields.io/sonar/tech_debt/idmarinas_maker-bundle?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white)](https://sonarcloud.io/dashboard?id=idmarinas_maker-bundle)
+[![Test Suite](https://img.shields.io/github/actions/workflow/status/idmarinas/maker-bundle/php.yml?branch=2.x&style=for-the-badge&logo=github&logoColor=white&label=Bundle%20Test%20Suite)][testsuit]
+[![Quality Gate Status](https://img.shields.io/sonar/quality_gate/idmarinas_maker-bundle/2.x?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white)][sonarcloud]
+[![Coverage](https://img.shields.io/sonar/coverage/idmarinas_maker-bundle/2.x?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white)][sonarcloud]
+[![Technical Debt](https://img.shields.io/sonar/tech_debt/idmarinas_maker-bundle/2.x?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white)][sonarcloud]
 
 <br />
 
-![GitHub release](https://img.shields.io/github/release/idmarinas/maker-bundle.svg?style=for-the-badge)
-![GitHub Release Date](https://img.shields.io/github/release-date/idmarinas/maker-bundle.svg?style=for-the-badge)
-![Github commits (since latest release)](https://img.shields.io/github/commits-since/idmarinas/maker-bundle/latest.svg?style=for-the-badge)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/w/idmarinas/maker-bundle.svg?style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/idmarinas/maker-bundle.svg?style=for-the-badge)
+![Github commits (since latest release)](https://img.shields.io/github/commits-since/idmarinas/maker-bundle/latest/2.x?style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/idmarinas/maker-bundle/2.x?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/idmarinas/maker-bundle/2.x?style=for-the-badge)
 
 #### Code analysis
 
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_maker-bundle&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=idmarinas_maker-bundle)
-
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_maker-bundle&metric=bugs)](https://sonarcloud.io/dashboard?id=idmarinas_maker-bundle)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_maker-bundle&metric=security_rating)](https://sonarcloud.io/dashboard?id=idmarinas_maker-bundle)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_maker-bundle&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=idmarinas_maker-bundle)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_maker-bundle&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=idmarinas_maker-bundle&#41;)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_maker-bundle&metric=code_smells)](https://sonarcloud.io/dashboard?id=idmarinas_maker-bundle)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_maker-bundle&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=idmarinas_maker-bundle)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_maker-bundle&branch=2.x&metric=reliability_rating)][sonarcloud]
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_maker-bundle&branch=2.x&metric=bugs)][sonarcloud]
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_maker-bundle&branch=2.x&metric=security_rating)][sonarcloud]
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_maker-bundle&branch=2.x&metric=vulnerabilities)][sonarcloud]
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_maker-bundle&branch=2.x&metric=sqale_rating)][sonarcloud]
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_maker-bundle&branch=2.x&metric=code_smells)][sonarcloud]
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_maker-bundle&branch=2.x&metric=duplicated_lines_density)][sonarcloud]
 
 </div>
 
@@ -98,3 +98,7 @@ return [
 [![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/features/actions)
 [![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com)
 [![Composer](https://img.shields.io/badge/composer-%238c5530?style=for-the-badge&logo=composer&logoColor=white)](https://getcomposer.org)
+
+[testsuit]: https://github.com/idmarinas/maker-bundle/actions/workflows/php.yml
+
+[sonarcloud]: https://sonarcloud.io/dashboard?id=idmarinas_maker-bundle
