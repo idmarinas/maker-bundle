@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="">
+    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="ide(config): added/updated automatically">
       <change afterPath="$PROJECT_DIR$/.github/workflows/build-docs.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.github/workflows/sonar-cloud.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/php.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/php.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php-test-framework.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
@@ -318,7 +317,7 @@
     "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm": "Docker Compose",
     "git-widget-placeholder": "2.x",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "F:/Bundles/maker-bundle",
+    "last_opened_file_path": "F:/Bundles/maker-bundle/Writerside/topics",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -332,11 +331,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Bundles\maker-bundle\Writerside\topics" />
       <recent name="F:\Bundles\maker-bundle" />
       <recent name="F:\Bundles\maker-bundle\config" />
       <recent name="F:\Bundles\maker-bundle\templates\user\bundle" />
       <recent name="F:\Bundles\template-bundle\app\config\packages" />
-      <recent name="F:\Bundles\template-bundle\.docker\php\conf.d" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Bundles\maker-bundle\app\config" />
@@ -485,23 +484,7 @@
       <workItem from="1738581187242" duration="1173000" />
       <workItem from="1738582590148" duration="443000" />
       <workItem from="1738670585177" duration="1503000" />
-      <workItem from="1739207820611" duration="1345000" />
-    </task>
-    <task id="LOCAL-00121" summary="updated(dependencies): for composer.json">
-      <option name="closed" value="true" />
-      <created>1737646949186</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1737646949186</updated>
-    </task>
-    <task id="LOCAL-00122" summary="updated(dependencies): for composer.json">
-      <option name="closed" value="true" />
-      <created>1737647731527</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1737647731528</updated>
+      <workItem from="1739207820611" duration="2465000" />
     </task>
     <task id="LOCAL-00123" summary="ide(config): added/updated automatically">
       <option name="closed" value="true" />
@@ -879,7 +862,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738522076882</updated>
     </task>
-    <option name="localTasksCounter" value="170" />
+    <task id="LOCAL-00170" summary="docs: add SECURITY.md file with security policy and reporting guidelines">
+      <option name="closed" value="true" />
+      <created>1739212602612</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1739212602612</updated>
+    </task>
+    <task id="LOCAL-00171" summary="ide(config): added/updated automatically">
+      <option name="closed" value="true" />
+      <created>1739212621003</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1739212621003</updated>
+    </task>
+    <option name="localTasksCounter" value="172" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -905,7 +904,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feat: add sonar-project.properties for project configuration and metadata" />
     <MESSAGE value="feat(config): moved all configuration of bundle to IdmMakerBundle.php" />
     <MESSAGE value="feat(docker): add PHP configuration files and Dockerfile" />
     <MESSAGE value="feat(console): add console entry point for Symfony application" />
@@ -921,7 +919,6 @@
     <MESSAGE value="feat(rate-limiter): add configuration for user login rate limiting" />
     <MESSAGE value="refactor(user): update namespaces in user-related templates&#10;&#10;- Updated namespaces in the following files to use dynamic &#10;  `&lt;?= $namespace; ?&gt;` instead of hardcoded `App\Entity\User`:&#10;  - UserCrudController.tpl.php&#10;  - Connections.tpl.php&#10;  - ConnectionsLog.tpl.php&#10;  - ResetPasswordRequest.tpl.php&#10;  - ResetPasswordRequestLog.tpl.php&#10;  - Log.tpl.php&#10;  - User.tpl.php&#10;  - Premium.tpl.php&#10;  - PremiumLog.tpl.php&#10;  - UserRepository.tpl.php&#10;  - ResetPasswordRequestRepository.tpl.php&#10;&#10;ide(config): added/updated automatically." />
     <MESSAGE value="feat(security): add SecurityTrait for user authentication configuration&#10;&#10;- Introduced a new trait `SecurityTrait` to manage security configuration&#10;  for user authentication within the Maker Bundle. This trait includes&#10;  methods to update the security settings for providers, firewalls, and&#10;  password hashers, enhancing the flexibility of user management." />
-    <MESSAGE value="ide(config): added/updated automatically" />
     <MESSAGE value="feat(user-bundle): add MakerUserBundleFiles for user bundle generation" />
     <MESSAGE value="update(funding): remove unused sponsorship platforms and clean up file" />
     <MESSAGE value="updated(dependencies): for .github/labeler.yml" />
@@ -930,7 +927,9 @@
     <MESSAGE value="feat(config): add initial configuration files for Symfony" />
     <MESSAGE value="feat(kernel): add initial Kernel class for application structure" />
     <MESSAGE value="fix: remove unused TemplateController from Kernel.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: remove unused TemplateController from Kernel.php" />
+    <MESSAGE value="docs: add SECURITY.md file with security policy and reporting guidelines" />
+    <MESSAGE value="ide(config): added/updated automatically" />
+    <option name="LAST_COMMIT_MESSAGE" value="ide(config): added/updated automatically" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>

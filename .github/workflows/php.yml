@@ -1,47 +1,39 @@
-name: Test Suite
+name: IDMarinas Template Bundle Test Suite
 
 on:
   pull_request:
+    types: [ opened, synchronize, reopened ]
+    tags-ignore: [ dependencies, documentation, meta, 'docker configuration', 'deployer configuration' ]
   push:
-    branches:
-      - master
+    paths-ignore:
+      - '.deployer/**'
+      - '.docker/**'
+      - 'migrations/**'
+      - '**/docs/**'
+      - '**/Writerside/**'
+      - '**/README.md'
+      - '**/COMMANDS.md'
+      - '**/TIPS.md'
+      - '**/TODO.md'
+      - '**/LICENSE'
+      - rector.php
+      - .editorconfig
+      - .gitignore
+      - compose.yaml
 
 jobs:
   build:
-    runs-on: ${{ matrix.operating-system }}
+    runs-on: ubuntu-latest
     name: PHP ${{ matrix.php }} and Symfony ${{ matrix.symfony }}
     strategy:
       matrix:
-        operating-system: [ ubuntu-latest ]
-        php: [ '7.4', '8.0', '8.1', '8.2' ]
-        symfony: ['4.4.*', '5.4.*', '6.1.*', '6.2.*', '6.3.*', '6.4.*', '7.0.*']
-
-        exclude:
-          - php: '7.4'
-            symfony: '6.1.*'
-          - php: '7.4'
-            symfony: '6.2.*'
-          - php: '7.4'
-            symfony: '6.3.*'
-          - php: '7.4'
-            symfony: '6.4.*'
-          - php: '7.4'
-            symfony: '7.0.*'
-          - php: '8.0'
-            symfony: '6.1.*'
-          - php: '8.0'
-            symfony: '6.2.*'
-          - php: '8.0'
-            symfony: '6.3.*'
-          - php: '8.0'
-            symfony: '6.4.*'
-          - php: '8.0'
-            symfony: '7.0.*'
-          - php: '8.1'
-            symfony: '7.0.*'
+        php: [ '8.2', '8.3', '8.4' ]
+        symfony: [ '6.4.*', '7.0.*', '7.1.*', '7.2.*' ]
 
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: ${{ (matrix.php == '8.2' && matrix.symfony == '6.4.*') && '0' || '1' }}
 
       - name: Setup PHP ${{ matrix.php }}
         uses: shivammathur/setup-php@v2
@@ -52,7 +44,15 @@ jobs:
       - name: Download dependencies
         env:
           SYMFONY_REQUIRE: ${{ matrix.symfony }}
-        uses: ramsey/composer-install@v2
+        uses: ramsey/composer-install@v3
 
       - name: Run test suite on PHP ${{ matrix.php }} and Symfony ${{ matrix.symfony }}
-        run: ./vendor/bin/phpunit
+        run: ./vendor/bin/phpunit --exclude ignore
+
+      # Uncomment to activate SonarCloud Scan
+      - name: SonarCloud Scan
+        if: matrix.php == '8.2' && matrix.symfony == '6.4.*'
+        uses: SonarSource/sonarqube-scan-action@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
