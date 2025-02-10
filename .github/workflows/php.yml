@@ -1,4 +1,4 @@
-name: IDMarinas Template Bundle Test Suite
+name: IDMarinas Maker Bundle Test Suite
 
 on:
   pull_request:
