@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 10/02/2025, 21:39
+ * Last modified by "IDMarinas" on 10/02/2025, 22:24
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -100,18 +100,23 @@ final class MakerUserBundleFiles extends AbstractMaker
 		];
 
 		/* @var array<string, ClassNameDetails> $generatedClasses */
-		$generatedClasses = $this->generateClasses($sources, $generator, [$this, 'tplBundle']);
+		$generatedClasses = $this->generateClasses($sources, $generator);
 
 		// Config files
 		$this->tplConfigRateLimiterYaml();
 		$this->tplConfigResetPasswordYaml($generatedClasses['ResetPasswordRequestRepository']->getFullName());
 		$this->configSecurityYaml($generatedClasses['User']);
 
-		$generator->generateFile('config/routes/idm_user.yaml', self::tplBundle('config/routes/idm_user.tpl.yaml'));
+		$generator->generateFile('config/routes/idm_user.yaml', self::getTpl('config/routes/idm_user.tpl.yaml'));
 
 		$generator->writeChanges();
 
 		$this->writeSuccessMessage($io);
+	}
+
+	protected static function getTpl (string $file): string
+	{
+		return 'templates/user/bundle/' . $file;
 	}
 
 	/** @internal */
@@ -120,7 +125,7 @@ final class MakerUserBundleFiles extends AbstractMaker
 		$rateLimiter = 'config/packages/rate_limiter.yaml';
 		$tplRateLimiter = 'config/packages/rate_limiter.tpl.yaml';
 
-		$tplManipulator = new YamlSourceManipulator($this->fileManager->getFileContents(self::tplBundle($tplRateLimiter)));
+		$tplManipulator = new YamlSourceManipulator($this->fileManager->getFileContents(self::getTpl($tplRateLimiter)));
 
 		if (!$this->fileManager->fileExists($rateLimiter)) {
 			$this->fileManager->dumpFile($rateLimiter, $tplManipulator->getContents());
@@ -212,11 +217,5 @@ final class MakerUserBundleFiles extends AbstractMaker
 		$manipulator->setData($data);
 
 		$this->fileManager->dumpFile($securityYaml, $manipulator->getContents());
-	}
-
-	/** @internal */
-	private function tplBundle (string $file): string
-	{
-		return 'templates/user/bundle/' . $file;
 	}
 }
