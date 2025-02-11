@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 01/02/2025, 12:36
+ * Last modified by "IDMarinas" on 11/02/2025, 16:11
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -17,7 +17,7 @@
  * @since   2.0.0
  */
 
-namespace Idm\Bundle\Maker\Maker\User\MakerUserBundleFiles;
+namespace Idm\Bundle\Maker\Maker\User\MakerUserBundle;
 
 use Idm\Bundle\User\Security\Checker\UserAdminChecker;
 use Idm\Bundle\User\Security\Checker\UserChecker;
@@ -26,7 +26,7 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 
 trait SecurityTrait
 {
-	/** @private */
+	/** @internal */
 	private function updateSecurityConfig (array $data, ClassNameDetails $classNameDetails): array
 	{
 		return array_merge_recursive($data, [
