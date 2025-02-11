@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 11/02/2025, 14:37
+ * Last modified by "IDMarinas" on 11/02/2025, 16:04
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -33,7 +33,7 @@ use Symfony\Bundle\MakerBundle\Maker\AbstractMaker;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 
-class MakerCommonContact extends AbstractMaker
+final class MakerCommonContact extends AbstractMaker
 {
 	use MakeHelpFileTrait;
 	use GenerateClassTrait;
