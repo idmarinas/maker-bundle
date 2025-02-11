@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 11/02/2025, 16:12
+ * Last modified by "IDMarinas" on 11/02/2025, 22:01
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -81,30 +81,18 @@ final class MakerUserBundle extends AbstractMaker
 	 */
 	public function generate (InputInterface $input, ConsoleStyle $io, Generator $generator): void
 	{
-		// Sources
-		$sources = [
-			// Entities
-			'Connections'                    => 'Entity\\User',
-			'ConnectionsLog'                 => 'Entity\\User',
-			'Log'                            => 'Entity\\User',
-			'Premium'                        => 'Entity\\User',
-			'PremiumLog'                     => 'Entity\\User',
-			'ResetPasswordRequest'           => 'Entity\\User',
-			'ResetPasswordRequestLog'        => 'Entity\\User',
-			'User'                           => 'Entity\\User',
-			// Repositories
-			'UserRepository'                 => 'Repository\\User',
-			'ResetPasswordRequestRepository' => 'Repository\\User',
-			// Admin Crud Controller
-			'UserCrudController'             => 'Controller\\Admin\\User',
-		];
+		self::$generator = $generator;
 
-		$generatedClasses = $this->generateClasses($sources, $generator);
+		// Sources
+		$sources = include __DIR__ . '/MakerUserBundle/sources.php';
+		$sources = $sources($generator);
+
+		$this->generateClasses($sources);
 
 		// Config files
 		$this->tplConfigRateLimiterYaml();
-		$this->tplConfigResetPasswordYaml($generatedClasses['ResetPasswordRequestRepository']->getFullName());
-		$this->configSecurityYaml($generatedClasses['User']);
+		$this->tplConfigResetPasswordYaml($sources['ResetPasswordRequestRepository']['class']->getFullName());
+		$this->configSecurityYaml($sources['User']['class']);
 
 		$generator->generateFile('config/routes/idm_user.yaml', self::getTpl('config/routes/idm_user.tpl.yaml'));
 
@@ -208,7 +196,7 @@ final class MakerUserBundle extends AbstractMaker
 			$this->fileManager->dumpFile($securityYaml, Yaml::dump(['security' => []]));
 		}
 
-		$manipulator = new YamlSourceManipulator($securityYaml);
+		$manipulator = new YamlSourceManipulator($this->fileManager->getFileContents($securityYaml));
 		$data = $manipulator->getData();
 
 		$data = $this->updateSecurityConfig($data, $classNameDetails);
