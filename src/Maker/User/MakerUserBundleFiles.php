@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 10/02/2025, 22:24
+ * Last modified by "IDMarinas" on 11/02/2025, 15:55
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -99,8 +99,7 @@ final class MakerUserBundleFiles extends AbstractMaker
 			'UserCrudController'             => 'Controller\\Admin\\User',
 		];
 
-		/* @var array<string, ClassNameDetails> $generatedClasses */
-		$generatedClasses = $this->generateClasses($sources, $generator);
+		$this->generateClasses($sources);
 
 		// Config files
 		$this->tplConfigRateLimiterYaml();
