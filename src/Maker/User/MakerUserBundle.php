@@ -2,12 +2,12 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 11/02/2025, 15:55
+ * Last modified by "IDMarinas" on 11/02/2025, 16:12
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
  *
- * @file    MakerUserBundleFiles.php
+ * @file    MakerUserBundle.php
  * @date    30/01/2025
  * @time    20:11
  *
@@ -20,7 +20,7 @@
 namespace Idm\Bundle\Maker\Maker\User;
 
 use Exception;
-use Idm\Bundle\Maker\Maker\User\MakerUserBundleFiles\SecurityTrait;
+use Idm\Bundle\Maker\Maker\User\MakerUserBundle\SecurityTrait;
 use Idm\Bundle\Maker\Traits\GenerateClassTrait;
 use Idm\Bundle\Maker\Traits\MakeHelpFileTrait;
 use Idm\Bundle\User\IdmUserBundle;
@@ -37,7 +37,7 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Yaml\Yaml;
 
-final class MakerUserBundleFiles extends AbstractMaker
+final class MakerUserBundle extends AbstractMaker
 {
 	use MakeHelpFileTrait;
 	use GenerateClassTrait;
@@ -50,7 +50,7 @@ final class MakerUserBundleFiles extends AbstractMaker
 	 */
 	public static function getCommandName (): string
 	{
-		return 'make:idm:user-bundle';
+		return 'make:idm:user:bundle';
 	}
 
 	public static function getCommandDescription (): string
@@ -99,7 +99,7 @@ final class MakerUserBundleFiles extends AbstractMaker
 			'UserCrudController'             => 'Controller\\Admin\\User',
 		];
 
-		$this->generateClasses($sources);
+		$generatedClasses = $this->generateClasses($sources, $generator);
 
 		// Config files
 		$this->tplConfigRateLimiterYaml();
