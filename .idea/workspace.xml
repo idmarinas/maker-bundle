@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="feat(User): refactor generate method to use GenerateClassTrait&#10;&#10;- Added `GenerateClassTrait` to `MakerUserBundleFiles` for improved &#10;  class generation.&#10;- Refactored the `generate` method to streamline class creation &#10;  by utilizing the new trait.&#10;- Removed redundant code for class generation and replaced it with &#10;  a call to `generateClasses` method.">
+    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="feat(User): refactor generate method to use sources from external file&#10;&#10;- Updated the `generate` method in `MakerUserBundle.php` to load&#10;  sources from an external file instead of hardcoding them.&#10;- Improved the handling of generated classes and configuration files.&#10;- Adjusted the instantiation of `YamlSourceManipulator` to use &#10;  the file contents directly.">
       <change afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Maker/User/MakerUserBundle/sources.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Maker/User/MakerUserBundleFiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maker/User/MakerUserBundleFiles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/user/bundle/src/Controller/Admin/User/UserCrudController.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/bundle/src/Controller/Admin/User/UserCrudController.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/bundle/src/Entity/User/Connections.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/bundle/src/Entity/User/Connections.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/bundle/src/Entity/User/ConnectionsLog.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/bundle/src/Entity/User/ConnectionsLog.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/bundle/src/Entity/User/Log.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/bundle/src/Entity/User/Log.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/bundle/src/Entity/User/Premium.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/bundle/src/Entity/User/Premium.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/bundle/src/Entity/User/PremiumLog.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/bundle/src/Entity/User/PremiumLog.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/bundle/src/Entity/User/ResetPasswordRequest.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/bundle/src/Entity/User/ResetPasswordRequest.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/bundle/src/Entity/User/ResetPasswordRequestLog.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/bundle/src/Entity/User/ResetPasswordRequestLog.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/bundle/src/Entity/User/User.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/bundle/src/Entity/User/User.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/bundle/src/Repository/User/ResetPasswordRequestRepository.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/bundle/src/Repository/User/ResetPasswordRequestRepository.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/bundle/src/Repository/User/UserRepository.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/bundle/src/Repository/User/UserRepository.tpl.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -310,30 +318,30 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.Dev - PHP.executor": "Run",
-    "PHPUnit.Test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "code.cleanup.on.save": "true",
-    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm": "Docker Compose",
-    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm": "Docker Compose",
-    "git-widget-placeholder": "2.x",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "F:/Bundles/maker-bundle/Writerside/topics",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "php.override.implement.member.chooser.php.doc": "NONE",
-    "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "preferences.sourceCode",
-    "vue.rearranger.settings.migration": "true",
-    "writerside.last.selected.productIDMarinas Template Bundle": "itb"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.Dev - PHP.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.Test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm&quot;: &quot;Docker Compose&quot;,
+    &quot;credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm&quot;: &quot;Docker Compose&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;2.x&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Bundles/user-bundle&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;writerside.last.selected.productIDMarinas Template Bundle&quot;: &quot;itb&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Bundles\maker-bundle\Writerside\topics" />
@@ -343,6 +351,8 @@
       <recent name="F:\Bundles\template-bundle\app\config\packages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Bundles\maker-bundle\templates\common\contact\src\Form\Contact" />
+      <recent name="F:\Bundles\maker-bundle\src\Maker\Common\MakerCommonContact" />
       <recent name="F:\Bundles\maker-bundle\app\config" />
       <recent name="F:\Bundles\maker-bundle\templates\user\bundle\src\Entity\User" />
       <recent name="F:\Bundles\template-bundle" />
@@ -489,119 +499,8 @@
       <workItem from="1738581187242" duration="1173000" />
       <workItem from="1738582590148" duration="443000" />
       <workItem from="1738670585177" duration="1503000" />
-      <workItem from="1739207820611" duration="13631000" />
-    </task>
-    <task id="LOCAL-00135" summary="updated(dependencies): for phpunit.xml.dist">
-      <option name="closed" value="true" />
-      <created>1738261172666</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1738261172666</updated>
-    </task>
-    <task id="LOCAL-00136" summary="ide(config): added/updated automatically">
-      <option name="closed" value="true" />
-      <created>1738261215499</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1738261215499</updated>
-    </task>
-    <task id="LOCAL-00137" summary="feat(docs): add README.md for IDMarinas Maker Bundle">
-      <option name="closed" value="true" />
-      <created>1738261748154</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1738261748154</updated>
-    </task>
-    <task id="LOCAL-00138" summary="feat: update short description in README.md to reflect project purpose">
-      <option name="closed" value="true" />
-      <created>1738261831963</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1738261831963</updated>
-    </task>
-    <task id="LOCAL-00139" summary="feat: add sonar-project.properties for project configuration and metadata">
-      <option name="closed" value="true" />
-      <created>1738261976990</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1738261976991</updated>
-    </task>
-    <task id="LOCAL-00140" summary="ide(config): added/updated automatically">
-      <option name="closed" value="true" />
-      <created>1738261998363</created>
-      <option name="number" value="00140" />
-      <option name="presentableId" value="LOCAL-00140" />
-      <option name="project" value="LOCAL" />
-      <updated>1738261998363</updated>
-    </task>
-    <task id="LOCAL-00141" summary="feat(config): moved all configuration of bundle to IdmMakerBundle.php">
-      <option name="closed" value="true" />
-      <created>1738262566244</created>
-      <option name="number" value="00141" />
-      <option name="presentableId" value="LOCAL-00141" />
-      <option name="project" value="LOCAL" />
-      <updated>1738262566244</updated>
-    </task>
-    <task id="LOCAL-00142" summary="feat(docker): add PHP configuration files and Dockerfile">
-      <option name="closed" value="true" />
-      <created>1738270380669</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1738270380669</updated>
-    </task>
-    <task id="LOCAL-00143" summary="feat(console): add console entry point for Symfony application">
-      <option name="closed" value="true" />
-      <created>1738270396575</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1738270396575</updated>
-    </task>
-    <task id="LOCAL-00144" summary="feat(docker): add initial compose.yaml configuration for PHP service">
-      <option name="closed" value="true" />
-      <created>1738270420305</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1738270420305</updated>
-    </task>
-    <task id="LOCAL-00145" summary="refactor: update rector configuration for improved code quality and sets&#10;&#10;- Replaced the previous configuration method with a new fluent interface.&#10;- Updated paths to include additional directories: app/src, factories, and fixtures.&#10;- Set PHP version to 8.2 and included various quality sets.&#10;- Removed unused imports automatically.&#10;- Added type coverage level and specific rules for better code quality.">
-      <option name="closed" value="true" />
-      <created>1738327969377</created>
-      <option name="number" value="00145" />
-      <option name="presentableId" value="LOCAL-00145" />
-      <option name="project" value="LOCAL" />
-      <updated>1738327969377</updated>
-    </task>
-    <task id="LOCAL-00146" summary="ide(config): added/updated automatically">
-      <option name="closed" value="true" />
-      <created>1738328074141</created>
-      <option name="number" value="00146" />
-      <option name="presentableId" value="LOCAL-00146" />
-      <option name="project" value="LOCAL" />
-      <updated>1738328074141</updated>
-    </task>
-    <task id="LOCAL-00147" summary="updated(dependencies): for composer.json">
-      <option name="closed" value="true" />
-      <created>1738328341664</created>
-      <option name="number" value="00147" />
-      <option name="presentableId" value="LOCAL-00147" />
-      <option name="project" value="LOCAL" />
-      <updated>1738328341664</updated>
-    </task>
-    <task id="LOCAL-00148" summary="fix(docs): update composer require command to include --dev flag&#10;&#10;Updated the README.md to reflect the correct usage of the &#10;composer require command for the idmarinas/maker-bundle, &#10;changing it to include the --dev flag in the relevant sections.">
-      <option name="closed" value="true" />
-      <created>1738330461644</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1738330461644</updated>
+      <workItem from="1739207820611" duration="14119000" />
+      <workItem from="1739276009270" duration="18574000" />
     </task>
     <task id="LOCAL-00149" summary="ide(config): added/updated automatically">
       <option name="closed" value="true" />
@@ -883,7 +782,119 @@
       <option name="project" value="LOCAL" />
       <updated>1739220269169</updated>
     </task>
-    <option name="localTasksCounter" value="184" />
+    <task id="LOCAL-00184" summary="refactor(user): simplify template file retrieval in MakerUserBundleFiles&#10;&#10;- Updated the method for generating class templates to remove unnecessary &#10;  parameters.&#10;- Simplified the retrieval of template file paths by introducing a new &#10;  method `getTpl`.&#10;- Removed the old `tplBundle` method to streamline the code. &#10;&#10;flex(recipe): updated symfony.lock file&#10;&#10;ide(config): added/updated automatically">
+      <option name="closed" value="true" />
+      <created>1739228739457</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1739228739457</updated>
+    </task>
+    <task id="LOCAL-00185" summary="style(controller): format code in UserCrudController template for consistency">
+      <option name="closed" value="true" />
+      <created>1739228755567</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1739228755567</updated>
+    </task>
+    <task id="LOCAL-00186" summary="ide(config): added/updated automatically">
+      <option name="closed" value="true" />
+      <created>1739228795685</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1739228795685</updated>
+    </task>
+    <task id="LOCAL-00187" summary="feat(dev): add easyadmin-bundle as a development dependency">
+      <option name="closed" value="true" />
+      <created>1739228808977</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1739228808977</updated>
+    </task>
+    <task id="LOCAL-00188" summary="feat(tests): add bootstrap file for test environment setup&#10;&#10;- Introduced a new `bootstrap.php` file to initialize the test &#10;  environment for the Maker Bundle.&#10;- The file sets up the Symfony Kernel and ensures that the cache &#10;  and log directories are cleared before running tests.">
+      <option name="closed" value="true" />
+      <created>1739285044195</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1739285044195</updated>
+    </task>
+    <task id="LOCAL-00189" summary="fix: update version annotations to 2.0.0 across configuration files">
+      <option name="closed" value="true" />
+      <created>1739285209487</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1739285209487</updated>
+    </task>
+    <task id="LOCAL-00190" summary="feat(tpl): added templates for contact system">
+      <option name="closed" value="true" />
+      <created>1739285793000</created>
+      <option name="number" value="00190" />
+      <option name="presentableId" value="LOCAL-00190" />
+      <option name="project" value="LOCAL" />
+      <updated>1739285793000</updated>
+    </task>
+    <task id="LOCAL-00191" summary="feat(command): added maker command for generate contact files">
+      <option name="closed" value="true" />
+      <created>1739285833951</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1739285833951</updated>
+    </task>
+    <task id="LOCAL-00192" summary="feat: add GenerateClassTrait for class generation functionality&#10;&#10;- Introduced the GenerateClassTrait which provides methods to generate&#10;  classes based on provided templates and source data.&#10;- Implemented functionality for handling use statements and class&#10;  variable merging.&#10;- Added methods to retrieve the appropriate namespace and template&#10;  for class generation.">
+      <option name="closed" value="true" />
+      <created>1739285920758</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1739285920758</updated>
+    </task>
+    <task id="LOCAL-00193" summary="fix(docs): update installation instructions for development mode&#10;&#10;- Changed `composer require %package_name%` to `composer require --dev %package_name%` &#10;  in the installation steps for applications that use Symfony Flex and those &#10;  that don't.&#10;- Updated the bundle registration to enable it only for 'dev' and 'test' &#10;  environments.">
+      <option name="closed" value="true" />
+      <created>1739286113479</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1739286113479</updated>
+    </task>
+    <task id="LOCAL-00194" summary="fix: change MakerCommonContact class to final for better design">
+      <option name="closed" value="true" />
+      <created>1739286291585</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1739286291585</updated>
+    </task>
+    <task id="LOCAL-00195" summary="refactor: rename namespace in SecurityTrait.php for consistency&#10;&#10;- Updated the namespace from &#10;  `Idm\Bundle\Maker\Maker\User\MakerUserBundleFiles` to &#10;  `Idm\Bundle\Maker\Maker\User\MakerUserBundle`.&#10;- Changed the visibility comment for the `updateSecurityConfig` method &#10;  from `@private` to `@internal`.">
+      <option name="closed" value="true" />
+      <created>1739286726609</created>
+      <option name="number" value="00195" />
+      <option name="presentableId" value="LOCAL-00195" />
+      <option name="project" value="LOCAL" />
+      <updated>1739286726609</updated>
+    </task>
+    <task id="LOCAL-00196" summary="refactor(user-bundle): rename MakerUserBundleFiles to MakerUserBundle&#10;&#10;- Renamed `MakerUserBundleFiles.php` to `MakerUserBundle.php`.&#10;- Updated namespace and class name references accordingly.&#10;- Modified the command name from `make:idm:user-bundle` to `make:idm:user:bundle`.">
+      <option name="closed" value="true" />
+      <created>1739286796051</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1739286796051</updated>
+    </task>
+    <task id="LOCAL-00197" summary="feat(User): refactor generate method to use sources from external file&#10;&#10;- Updated the `generate` method in `MakerUserBundle.php` to load&#10;  sources from an external file instead of hardcoding them.&#10;- Improved the handling of generated classes and configuration files.&#10;- Adjusted the instantiation of `YamlSourceManipulator` to use &#10;  the file contents directly.">
+      <option name="closed" value="true" />
+      <created>1739307764134</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1739307764134</updated>
+    </task>
+    <option name="localTasksCounter" value="198" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -909,19 +920,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feat(routes): add idm_user routes configuration template file&#10;&#10;- Introduced a new YAML configuration file for user routes in the IdmUserBundle.&#10;- This file imports various route resources for login, profile, registration, and password reset functionalities." />
-    <MESSAGE value="delete: removed empty test directory" />
-    <MESSAGE value="feat(rate-limiter): add configuration for user login rate limiting" />
-    <MESSAGE value="refactor(user): update namespaces in user-related templates&#10;&#10;- Updated namespaces in the following files to use dynamic &#10;  `&lt;?= $namespace; ?&gt;` instead of hardcoded `App\Entity\User`:&#10;  - UserCrudController.tpl.php&#10;  - Connections.tpl.php&#10;  - ConnectionsLog.tpl.php&#10;  - ResetPasswordRequest.tpl.php&#10;  - ResetPasswordRequestLog.tpl.php&#10;  - Log.tpl.php&#10;  - User.tpl.php&#10;  - Premium.tpl.php&#10;  - PremiumLog.tpl.php&#10;  - UserRepository.tpl.php&#10;  - ResetPasswordRequestRepository.tpl.php&#10;&#10;ide(config): added/updated automatically." />
-    <MESSAGE value="feat(security): add SecurityTrait for user authentication configuration&#10;&#10;- Introduced a new trait `SecurityTrait` to manage security configuration&#10;  for user authentication within the Maker Bundle. This trait includes&#10;  methods to update the security settings for providers, firewalls, and&#10;  password hashers, enhancing the flexibility of user management." />
-    <MESSAGE value="feat(user-bundle): add MakerUserBundleFiles for user bundle generation" />
-    <MESSAGE value="update(funding): remove unused sponsorship platforms and clean up file" />
-    <MESSAGE value="updated(dependencies): for .github/labeler.yml" />
-    <MESSAGE value="fix(workflow): update pull request labeler configuration&#10;&#10;- Changed the workflow name to &quot;Pull Request Labeler&quot;.&#10;- Updated the trigger to use `pull_request_target`.&#10;- Renamed job from `label` to `labeler`.&#10;- Added permissions for contents and pull requests.&#10;- Updated action version to `v5`." />
-    <MESSAGE value="feat(templates): add bug report and feature request issue templates" />
-    <MESSAGE value="feat(config): add initial configuration files for Symfony" />
-    <MESSAGE value="feat(kernel): add initial Kernel class for application structure" />
-    <MESSAGE value="fix: remove unused TemplateController from Kernel.php" />
     <MESSAGE value="docs: add SECURITY.md file with security policy and reporting guidelines" />
     <MESSAGE value="chore(workflow): update labeler action and add checkout step&#10;&#10;- Added `actions/checkout@v4` to the workflow for sparse-checkout.&#10;- Updated the workflow to include the necessary steps for labeler action." />
     <MESSAGE value="feat(workflow): add GitHub Actions workflow for building documentation" />
@@ -932,9 +930,22 @@
     <MESSAGE value="feat(docs): add configuration, security, requirements, and installation documentation" />
     <MESSAGE value="fix: correct spelling in the command description for User Bundle files" />
     <MESSAGE value="feat(dependencies): add idmarinas/common-bundle as a dev dependency" />
-    <MESSAGE value="ide(config): added/updated automatically" />
     <MESSAGE value="feat(User): refactor generate method to use GenerateClassTrait&#10;&#10;- Added `GenerateClassTrait` to `MakerUserBundleFiles` for improved &#10;  class generation.&#10;- Refactored the `generate` method to streamline class creation &#10;  by utilizing the new trait.&#10;- Removed redundant code for class generation and replaced it with &#10;  a call to `generateClasses` method." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(User): refactor generate method to use GenerateClassTrait&#10;&#10;- Added `GenerateClassTrait` to `MakerUserBundleFiles` for improved &#10;  class generation.&#10;- Refactored the `generate` method to streamline class creation &#10;  by utilizing the new trait.&#10;- Removed redundant code for class generation and replaced it with &#10;  a call to `generateClasses` method." />
+    <MESSAGE value="refactor(user): simplify template file retrieval in MakerUserBundleFiles&#10;&#10;- Updated the method for generating class templates to remove unnecessary &#10;  parameters.&#10;- Simplified the retrieval of template file paths by introducing a new &#10;  method `getTpl`.&#10;- Removed the old `tplBundle` method to streamline the code. &#10;&#10;flex(recipe): updated symfony.lock file&#10;&#10;ide(config): added/updated automatically" />
+    <MESSAGE value="style(controller): format code in UserCrudController template for consistency" />
+    <MESSAGE value="ide(config): added/updated automatically" />
+    <MESSAGE value="feat(dev): add easyadmin-bundle as a development dependency" />
+    <MESSAGE value="feat(tests): add bootstrap file for test environment setup&#10;&#10;- Introduced a new `bootstrap.php` file to initialize the test &#10;  environment for the Maker Bundle.&#10;- The file sets up the Symfony Kernel and ensures that the cache &#10;  and log directories are cleared before running tests." />
+    <MESSAGE value="fix: update version annotations to 2.0.0 across configuration files" />
+    <MESSAGE value="feat(tpl): added templates for contact system" />
+    <MESSAGE value="feat(command): added maker command for generate contact files" />
+    <MESSAGE value="feat: add GenerateClassTrait for class generation functionality&#10;&#10;- Introduced the GenerateClassTrait which provides methods to generate&#10;  classes based on provided templates and source data.&#10;- Implemented functionality for handling use statements and class&#10;  variable merging.&#10;- Added methods to retrieve the appropriate namespace and template&#10;  for class generation." />
+    <MESSAGE value="fix(docs): update installation instructions for development mode&#10;&#10;- Changed `composer require %package_name%` to `composer require --dev %package_name%` &#10;  in the installation steps for applications that use Symfony Flex and those &#10;  that don't.&#10;- Updated the bundle registration to enable it only for 'dev' and 'test' &#10;  environments." />
+    <MESSAGE value="fix: change MakerCommonContact class to final for better design" />
+    <MESSAGE value="refactor: rename namespace in SecurityTrait.php for consistency&#10;&#10;- Updated the namespace from &#10;  `Idm\Bundle\Maker\Maker\User\MakerUserBundleFiles` to &#10;  `Idm\Bundle\Maker\Maker\User\MakerUserBundle`.&#10;- Changed the visibility comment for the `updateSecurityConfig` method &#10;  from `@private` to `@internal`." />
+    <MESSAGE value="refactor(user-bundle): rename MakerUserBundleFiles to MakerUserBundle&#10;&#10;- Renamed `MakerUserBundleFiles.php` to `MakerUserBundle.php`.&#10;- Updated namespace and class name references accordingly.&#10;- Modified the command name from `make:idm:user-bundle` to `make:idm:user:bundle`." />
+    <MESSAGE value="feat(User): refactor generate method to use sources from external file&#10;&#10;- Updated the `generate` method in `MakerUserBundle.php` to load&#10;  sources from an external file instead of hardcoding them.&#10;- Improved the handling of generated classes and configuration files.&#10;- Adjusted the instantiation of `YamlSourceManipulator` to use &#10;  the file contents directly." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(User): refactor generate method to use sources from external file&#10;&#10;- Updated the `generate` method in `MakerUserBundle.php` to load&#10;  sources from an external file instead of hardcoding them.&#10;- Improved the handling of generated classes and configuration files.&#10;- Adjusted the instantiation of `YamlSourceManipulator` to use &#10;  the file contents directly." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
