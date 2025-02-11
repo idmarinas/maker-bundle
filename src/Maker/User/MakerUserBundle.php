@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 11/02/2025, 22:01
+ * Last modified by "IDMarinas" on 11/02/2025, 22:25
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -24,8 +24,10 @@ use Idm\Bundle\Maker\Maker\User\MakerUserBundle\SecurityTrait;
 use Idm\Bundle\Maker\Traits\GenerateClassTrait;
 use Idm\Bundle\Maker\Traits\MakeHelpFileTrait;
 use Idm\Bundle\User\IdmUserBundle;
+use Idm\Bundle\User\Model\Entity\AbstractPremium;
 use Symfony\Bundle\MakerBundle\ConsoleStyle;
 use Symfony\Bundle\MakerBundle\DependencyBuilder;
+use Symfony\Bundle\MakerBundle\Exception\RuntimeCommandException;
 use Symfony\Bundle\MakerBundle\FileManager;
 use Symfony\Bundle\MakerBundle\Generator;
 use Symfony\Bundle\MakerBundle\InputConfiguration;
@@ -73,6 +75,12 @@ final class MakerUserBundle extends AbstractMaker
 	{
 		$dependencies->addClassDependency(IdmUserBundle::class, 'idmarinas/user-bundle');
 		$dependencies->addClassDependency(SecurityBundle::class, 'security');
+
+		if (!class_exists(AbstractPremium::class)) {
+			throw new RuntimeCommandException(
+				'Please run "composer upgrade idmarinas/user-bundle". Version 2.0 or greater of this bundle is required.'
+			);
+		}
 	}
 
 	/**
