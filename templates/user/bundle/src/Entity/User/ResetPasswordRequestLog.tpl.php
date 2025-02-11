@@ -2,6 +2,7 @@
 
 namespace <?= $namespace; ?>;
 
+<?= $use_statements; ?>
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Loggable\Entity\MappedSuperclass\AbstractLogEntry;
 use Gedmo\Loggable\Entity\Repository\LogEntryRepository;

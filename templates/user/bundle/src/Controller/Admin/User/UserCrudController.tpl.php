@@ -2,7 +2,7 @@
 
 namespace <?= $namespace; ?>;
 
-use App\Entity\User\User;
+<?= $use_statements; ?>
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Filters;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Option\SearchMode;
@@ -21,7 +21,7 @@ final class UserCrudController extends AbstractCrudController
 {
 	public static function getEntityFqcn (): string
 	{
-		return User::class;
+		return <?= $user_entity ?>::class;
 	}
 
 	public function configureCrud (Crud $crud): Crud

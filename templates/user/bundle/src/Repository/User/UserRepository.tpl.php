@@ -2,14 +2,14 @@
 
 namespace <?= $namespace; ?>;
 
-use App\Entity\User\User;
+<?= $use_statements; ?>
 use Doctrine\Persistence\ManagerRegistry;
 use Idm\Bundle\User\Model\Repository\AbstractUserRepository;
 
 final class UserRepository extends AbstractUserRepository
 {
-public function __construct (ManagerRegistry $registry)
-{
-parent::__construct($registry, User::class);
-}
+	public function __construct (ManagerRegistry $registry)
+	{
+		parent::__construct($registry, <?= $user_entity ?>::class);
+	}
 }
