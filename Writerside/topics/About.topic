@@ -1,21 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!---
-  - Copyright 2025 (C) IDMarinas - All Rights Reserved
-  -
-  - Last modified by "IDMarinas" on 18/02/2025, 15:36
-  -
-  - @project IDMarinas Maker Bundle
-  - @see https://github.com/idmarinas/maker-bundle
-  -
-  - @file About.topic
-  - @date 18/02/2025
-  - @time 15:38
-  -
-  - @author Iván Diaz Marinas (IDMarinas)
-  - @license BSD 3-Clause License
-  -
-  - @since 2.0.0
-  -->
 
 <!DOCTYPE topic
 	SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
