@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 18/02/2025, 16:47
+ * Last modified by "IDMarinas" on 18/02/2025, 17:59
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -17,18 +17,14 @@
  * @since   2.0.0
  */
 
-use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
 use Idm\Bundle\Maker\IdmMakerBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\MakerBundle\MakerBundle;
-use Symfony\Bundle\SecurityBundle\SecurityBundle;
 use Zenstruck\Foundry\ZenstruckFoundryBundle;
 
 return [
 	FrameworkBundle::class        => ['all' => true],
-	DoctrineBundle::class         => ['all' => true],
 	IdmMakerBundle::class         => ['all' => true],
-	SecurityBundle::class         => ['all' => true],
 
 	// Dev-Test Bundles
 	MakerBundle::class            => ['all' => true],
