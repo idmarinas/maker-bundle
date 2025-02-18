@@ -48,6 +48,6 @@
 	</logging>
 
 	<extensions>
-		<extension class="DAMA\DoctrineTestBundle\PHPUnit\PHPUnitExtension" />
+		<!-- <extension class="DAMA\DoctrineTestBundle\PHPUnit\PHPUnitExtension" /> -->
 	</extensions>
 </phpunit>
