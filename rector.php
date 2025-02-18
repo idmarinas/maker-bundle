@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 31/01/2025, 13:52
+ * Last modified by "IDMarinas" on 18/02/2025, 15:21
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -21,7 +21,6 @@ declare(strict_types=1);
 
 use Rector\Config\RectorConfig;
 use Rector\Symfony\Set\SymfonySetList;
-use Rector\TypeDeclaration\Rector\ClassMethod\AddVoidReturnTypeWhereNoReturnRector;
 
 return RectorConfig::configure()
 	->withPaths([
@@ -45,7 +44,5 @@ return RectorConfig::configure()
 	->withTypeCoverageLevel(0)
 	->withSets([
 		SymfonySetList::SYMFONY_64,
-		SymfonySetList::SYMFONY_CONSTRUCTOR_INJECTION,
 	])
-	->withRules([AddVoidReturnTypeWhereNoReturnRector::class])
 ;
