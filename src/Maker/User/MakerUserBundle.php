@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 18/02/2025, 15:10
+ * Last modified by "IDMarinas" on 18/02/2025, 15:16
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -21,8 +21,8 @@ namespace Idm\Bundle\Maker\Maker\User;
 
 use Exception;
 use Idm\Bundle\Maker\Maker\User\MakerUserBundle\SecurityTrait;
-use Idm\Bundle\Maker\Traits\GenerateClassTrait;
-use Idm\Bundle\Maker\Traits\MakeHelpFileTrait;
+use Idm\Bundle\Maker\Traits\Maker\GenerateClassTrait;
+use Idm\Bundle\Maker\Traits\Maker\MakeHelpFileTrait;
 use Idm\Bundle\User\IdmUserBundle;
 use Idm\Bundle\User\Model\Entity\AbstractPremium;
 use Symfony\Bundle\MakerBundle\ConsoleStyle;
