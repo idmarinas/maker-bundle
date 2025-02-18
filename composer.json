@@ -29,8 +29,7 @@
 		"symfony/string": "^6.4 | ^7.0"
 	},
 	"require-dev": {
-		"dama/doctrine-test-bundle": "^8.2",
-		"doctrine/doctrine-fixtures-bundle": "^3.0 | ^4.0",
+		"doctrine/doctrine-bundle": "^2.13",
 		"easycorp/easyadmin-bundle": "^4.24",
 		"idmarinas/common-bundle": "^3.4",
 		"idmarinas/composer-plugin": "^1.0.0",
@@ -53,9 +52,7 @@
 	"autoload-dev": {
 		"psr-4": {
 			"App\\": "app/src/",
-			"Idm\\Bundle\\Maker\\Tests\\": "tests/",
-			"DataFixtures\\": "fixtures/",
-			"Factory\\": "factories/"
+			"Idm\\Bundle\\Maker\\Tests\\": "tests/"
 		}
 	},
 	"scripts": {
