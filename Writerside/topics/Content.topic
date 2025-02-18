@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+	SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic
+	id="Content"
+	title="Content"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+>
+
+	<note>%project% contain the following make commands</note>
+
+	<chapter id="common-contact-system" title="Make Contact System">
+		<secondary-label ref="2.0.0" />
+		Create necessary files for Contact System included in IDMarinas Common Bundle:
+		<code-block lang="console">php bin/console make:idm:common:contact</code-block>
+	</chapter>
+
+	<chapter id="user-bundle" title="Make User Bundle">
+		<secondary-label ref="2.0.0" />
+		Create necessary files for IDMarinas User Bundle:
+		<code-block lang="Console">php bin/console make:idm:user:bundle</code-block>
+	</chapter>
+
+	<seealso style="cards">
+		<category ref="related">
+			<a href="Changelog.md" />
+			<a href="About.topic" />
+		</category>
+	</seealso>
+</topic>
