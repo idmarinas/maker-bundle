@@ -1,0 +1,1 @@
+The <info>%command.name%</info> command generates files for Contact System included in IDMarinas Common Bundle.
