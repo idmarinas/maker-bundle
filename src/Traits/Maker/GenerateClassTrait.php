@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 11/02/2025, 24:02
+ * Last modified by "IDMarinas" on 18/02/2025, 15:16
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -17,7 +17,7 @@
  * @since   2.0.0
  */
 
-namespace Idm\Bundle\Maker\Traits;
+namespace Idm\Bundle\Maker\Traits\Maker;
 
 use Exception;
 use Symfony\Bundle\MakerBundle\Generator;

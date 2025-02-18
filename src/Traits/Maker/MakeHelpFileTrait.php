@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 30/01/2025, 21:27
+ * Last modified by "IDMarinas" on 18/02/2025, 15:16
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -17,12 +17,12 @@
  * @since   2.0.0
  */
 
-namespace Idm\Bundle\Maker\Traits;
+namespace Idm\Bundle\Maker\Traits\Maker;
 
 trait MakeHelpFileTrait
 {
-    final protected function getMakeHelpFileContents (string $fileName): string
-    {
-        return file_get_contents(sprintf('%s/config/help/%s', dirname(__DIR__, 2), $fileName));
-    }
+	final protected function getMakeHelpFileContents (string $fileName): string
+	{
+		return file_get_contents(sprintf('%s/config/help/%s', dirname(__DIR__, 3), $fileName));
+	}
 }
