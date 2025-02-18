@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 11/02/2025, 15:44
+ * Last modified by "IDMarinas" on 18/02/2025, 17:05
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -148,8 +148,8 @@ final class Kernel extends BaseKernel
 		$loader->load($this->getTestConfigDir() . '/services.php');
 
 		// Load Fixtures and Factories of Bundle
-		$loader->load($this->getTestConfigDir() . '/factories.php');
-		$loader->load($this->getTestConfigDir() . '/fixtures.php');
+//		$loader->load($this->getTestConfigDir() . '/factories.php');
+//		$loader->load($this->getTestConfigDir() . '/fixtures.php');
 
 		foreach ($this->extraConfig as $extension => $config) {
 			if (is_array($config)) {
