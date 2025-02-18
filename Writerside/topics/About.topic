@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!---
+  - Copyright 2025 (C) IDMarinas - All Rights Reserved
+  -
+  - Last modified by "IDMarinas" on 18/02/2025, 15:36
+  -
+  - @project IDMarinas Maker Bundle
+  - @see https://github.com/idmarinas/maker-bundle
+  -
+  - @file About.topic
+  - @date 18/02/2025
+  - @time 15:38
+  -
+  - @author Iván Diaz Marinas (IDMarinas)
+  - @license BSD 3-Clause License
+  -
+  - @since 2.0.0
+  -->
+
+<!DOCTYPE topic
+	SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic
+	id="About"
+	title="About"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+>
+	<card-summary>Third-party libraries that have helped create %project%.</card-summary>
+
+	<note>
+		These other third-party libraries/bundles have been used to create %project%.
+	</note>
+
+	<deflist>
+		<def id="symfony-components" title="Symfony Components">
+			This project relies on these components for most of its features.
+		</def>
+	</deflist>
+
+	<seealso>
+		<category ref="external">
+			<a href="https://symfony.com/components">Symfony Components</a>
+		</category>
+	</seealso>
+</topic>
