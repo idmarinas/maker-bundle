@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 11/02/2025, 16:04
+ * Last modified by "IDMarinas" on 18/02/2025, 15:16
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -22,8 +22,8 @@ namespace Idm\Bundle\Maker\Maker\Common;
 use Exception;
 use Idm\Bundle\Common\IdmCommonBundle;
 use Idm\Bundle\Common\Model\Controller\AbstractContactController;
-use Idm\Bundle\Maker\Traits\GenerateClassTrait;
-use Idm\Bundle\Maker\Traits\MakeHelpFileTrait;
+use Idm\Bundle\Maker\Traits\Maker\GenerateClassTrait;
+use Idm\Bundle\Maker\Traits\Maker\MakeHelpFileTrait;
 use Symfony\Bundle\MakerBundle\ConsoleStyle;
 use Symfony\Bundle\MakerBundle\DependencyBuilder;
 use Symfony\Bundle\MakerBundle\Exception\RuntimeCommandException;
