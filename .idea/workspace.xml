@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="ide(config): added/updated automatically" />
+    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="fix: remove outdated comments from About.topic file&#10;&#10;- Removed old copyright and metadata comments from the About.topic file.&#10;- Cleaned up the XML structure for better readability.">
+      <change beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -141,6 +144,11 @@
   </component>
   <component name="MaliciousPackageCheckinHandlerState">
     <option name="packageCheck" value="true" />
+  </component>
+  <component name="NamedScopeManager">
+    <order>
+      <scope name="Scope for Copyright" />
+    </order>
   </component>
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
@@ -312,7 +320,7 @@
     "nodejs_package_manager_path": "npm",
     "php.override.implement.member.chooser.php.doc": "NONE",
     "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "preferences.sourceCode",
+    "settings.editor.selected.configurable": "copyright",
     "vue.rearranger.settings.migration": "true",
     "writerside.last.selected.productIDMarinas Template Bundle": "itb"
   }
@@ -480,55 +488,7 @@
       <workItem from="1739445518253" duration="3148000" />
       <workItem from="1739542514663" duration="1597000" />
       <workItem from="1739811764731" duration="2782000" />
-      <workItem from="1739883437647" duration="3518000" />
-    </task>
-    <task id="LOCAL-00164" summary="feat(templates): add bug report and feature request issue templates">
-      <option name="closed" value="true" />
-      <created>1738410309295</created>
-      <option name="number" value="00164" />
-      <option name="presentableId" value="LOCAL-00164" />
-      <option name="project" value="LOCAL" />
-      <updated>1738410309295</updated>
-    </task>
-    <task id="LOCAL-00165" summary="feat(config): add initial configuration files for Symfony">
-      <option name="closed" value="true" />
-      <created>1738410416523</created>
-      <option name="number" value="00165" />
-      <option name="presentableId" value="LOCAL-00165" />
-      <option name="project" value="LOCAL" />
-      <updated>1738410416523</updated>
-    </task>
-    <task id="LOCAL-00166" summary="feat(config): add initial configuration files for Symfony">
-      <option name="closed" value="true" />
-      <created>1738410442977</created>
-      <option name="number" value="00166" />
-      <option name="presentableId" value="LOCAL-00166" />
-      <option name="project" value="LOCAL" />
-      <updated>1738410442977</updated>
-    </task>
-    <task id="LOCAL-00167" summary="feat(config): add initial configuration files for Symfony">
-      <option name="closed" value="true" />
-      <created>1738410464162</created>
-      <option name="number" value="00167" />
-      <option name="presentableId" value="LOCAL-00167" />
-      <option name="project" value="LOCAL" />
-      <updated>1738410464162</updated>
-    </task>
-    <task id="LOCAL-00168" summary="feat(kernel): add initial Kernel class for application structure">
-      <option name="closed" value="true" />
-      <created>1738410498938</created>
-      <option name="number" value="00168" />
-      <option name="presentableId" value="LOCAL-00168" />
-      <option name="project" value="LOCAL" />
-      <updated>1738410498938</updated>
-    </task>
-    <task id="LOCAL-00169" summary="fix: remove unused TemplateController from Kernel.php">
-      <option name="closed" value="true" />
-      <created>1738522076882</created>
-      <option name="number" value="00169" />
-      <option name="presentableId" value="LOCAL-00169" />
-      <option name="project" value="LOCAL" />
-      <updated>1738522076882</updated>
+      <workItem from="1739883437647" duration="5755000" />
     </task>
     <task id="LOCAL-00170" summary="docs: add SECURITY.md file with security policy and reporting guidelines">
       <option name="closed" value="true" />
@@ -874,7 +834,55 @@
       <option name="project" value="LOCAL" />
       <updated>1739888690008</updated>
     </task>
-    <option name="localTasksCounter" value="213" />
+    <task id="LOCAL-00213" summary="fix: improve wording in SECURITY.md for clarity">
+      <option name="closed" value="true" />
+      <created>1739889342415</created>
+      <option name="number" value="00213" />
+      <option name="presentableId" value="LOCAL-00213" />
+      <option name="project" value="LOCAL" />
+      <updated>1739889342415</updated>
+    </task>
+    <task id="LOCAL-00214" summary="feat: add About topic to provide information on third-party libraries&#10;&#10;- Introduced a new XML topic file that outlines third-party libraries &#10;  used in the project, specifically highlighting Symfony Components. &#10;  This addition aims to enhance documentation and user understanding &#10;  of the project's dependencies.">
+      <option name="closed" value="true" />
+      <created>1739889488843</created>
+      <option name="number" value="00214" />
+      <option name="presentableId" value="LOCAL-00214" />
+      <option name="project" value="LOCAL" />
+      <updated>1739889488843</updated>
+    </task>
+    <task id="LOCAL-00215" summary="docs: add initial content to Index.md with donation links and support info">
+      <option name="closed" value="true" />
+      <created>1739889538104</created>
+      <option name="number" value="00215" />
+      <option name="presentableId" value="LOCAL-00215" />
+      <option name="project" value="LOCAL" />
+      <updated>1739889538104</updated>
+    </task>
+    <task id="LOCAL-00216" summary="ide(config): updated automatically">
+      <option name="closed" value="true" />
+      <created>1739889578213</created>
+      <option name="number" value="00216" />
+      <option name="presentableId" value="LOCAL-00216" />
+      <option name="project" value="LOCAL" />
+      <updated>1739889578213</updated>
+    </task>
+    <task id="LOCAL-00217" summary="feat: add initial configuration files for Writerside">
+      <option name="closed" value="true" />
+      <created>1739889683170</created>
+      <option name="number" value="00217" />
+      <option name="presentableId" value="LOCAL-00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1739889683170</updated>
+    </task>
+    <task id="LOCAL-00218" summary="fix: remove outdated comments from About.topic file&#10;&#10;- Removed old copyright and metadata comments from the About.topic file.&#10;- Cleaned up the XML structure for better readability.">
+      <option name="closed" value="true" />
+      <created>1739890842418</created>
+      <option name="number" value="00218" />
+      <option name="presentableId" value="LOCAL-00218" />
+      <option name="project" value="LOCAL" />
+      <updated>1739890842418</updated>
+    </task>
+    <option name="localTasksCounter" value="219" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -900,12 +908,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feat(dev): add easyadmin-bundle as a development dependency" />
-    <MESSAGE value="feat(tests): add bootstrap file for test environment setup&#10;&#10;- Introduced a new `bootstrap.php` file to initialize the test &#10;  environment for the Maker Bundle.&#10;- The file sets up the Symfony Kernel and ensures that the cache &#10;  and log directories are cleared before running tests." />
-    <MESSAGE value="fix: update version annotations to 2.0.0 across configuration files" />
-    <MESSAGE value="feat(tpl): added templates for contact system" />
-    <MESSAGE value="feat(command): added maker command for generate contact files" />
-    <MESSAGE value="feat: add GenerateClassTrait for class generation functionality&#10;&#10;- Introduced the GenerateClassTrait which provides methods to generate&#10;  classes based on provided templates and source data.&#10;- Implemented functionality for handling use statements and class&#10;  variable merging.&#10;- Added methods to retrieve the appropriate namespace and template&#10;  for class generation." />
     <MESSAGE value="fix(docs): update installation instructions for development mode&#10;&#10;- Changed `composer require %package_name%` to `composer require --dev %package_name%` &#10;  in the installation steps for applications that use Symfony Flex and those &#10;  that don't.&#10;- Updated the bundle registration to enable it only for 'dev' and 'test' &#10;  environments." />
     <MESSAGE value="fix: change MakerCommonContact class to final for better design" />
     <MESSAGE value="refactor: rename namespace in SecurityTrait.php for consistency&#10;&#10;- Updated the namespace from &#10;  `Idm\Bundle\Maker\Maker\User\MakerUserBundleFiles` to &#10;  `Idm\Bundle\Maker\Maker\User\MakerUserBundle`.&#10;- Changed the visibility comment for the `updateSecurityConfig` method &#10;  from `@private` to `@internal`." />
@@ -925,7 +927,13 @@
     <MESSAGE value="refactor: remove unused rule from rector configuration&#10;&#10;- Removed the unused rule for AddVoidReturnTypeWhereNoReturnRector.&#10;- Cleaned up the rector.php file for better maintainability." />
     <MESSAGE value="feat(help): add help files for Common and User Bundles&#10;&#10;- Added MakeCommonBundleContact.txt to provide information about &#10;  the Contact System command.&#10;- Added MakeUserBundleFile.txt to explain the User Bundle command." />
     <MESSAGE value="ide(config): added/updated automatically" />
-    <option name="LAST_COMMIT_MESSAGE" value="ide(config): added/updated automatically" />
+    <MESSAGE value="fix: improve wording in SECURITY.md for clarity" />
+    <MESSAGE value="feat: add About topic to provide information on third-party libraries&#10;&#10;- Introduced a new XML topic file that outlines third-party libraries &#10;  used in the project, specifically highlighting Symfony Components. &#10;  This addition aims to enhance documentation and user understanding &#10;  of the project's dependencies." />
+    <MESSAGE value="docs: add initial content to Index.md with donation links and support info" />
+    <MESSAGE value="ide(config): updated automatically" />
+    <MESSAGE value="feat: add initial configuration files for Writerside" />
+    <MESSAGE value="fix: remove outdated comments from About.topic file&#10;&#10;- Removed old copyright and metadata comments from the About.topic file.&#10;- Cleaned up the XML structure for better readability." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: remove outdated comments from About.topic file&#10;&#10;- Removed old copyright and metadata comments from the About.topic file.&#10;- Cleaned up the XML structure for better readability." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
