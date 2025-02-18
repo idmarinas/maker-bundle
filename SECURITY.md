@@ -13,8 +13,8 @@ below.
 ## Reporting a Vulnerability
 
 1) This project relies on [Symfony components][components] for most of its features. If you suspect that the security
-   issue
-   is caused by Symfony component/s, please report the issue to them as explained in [symfony.com/security][security]
+   issue is caused by Symfony component/s, please report the issue to them as explained
+   in [symfony.com/security][security]
 
 2) If you find security issues you can report them in this repository using the tool provided by GitHub in
    [Security > Advisories][advisories].
