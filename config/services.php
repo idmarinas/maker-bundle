@@ -2,7 +2,7 @@
 /**
  * Copyright 2022-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 11/02/2025, 16:11
+ * Last modified by "IDMarinas" on 18/02/2025, 17:45
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -25,7 +25,7 @@ use Idm\Bundle\Maker\Maker\User\MakerUserBundle;
 return function (ContainerConfigurator $container) {
 	// @formatter:off
 	$container->services()
-		->set('idm_maker.make.user_bundle_files', MakerUserBundle::class)
+		->set('idm_maker.make.user_bundle.files', MakerUserBundle::class)
 			->args([
 				'$fileManager' => service('maker.file_manager')
 			])
