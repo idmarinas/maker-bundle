@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 18/02/2025, 17:05
+ * Last modified by "IDMarinas" on 18/02/2025, 17:58
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -35,23 +35,11 @@ final class Kernel extends BaseKernel
 
 	public function configureRoutes (RoutingConfigurator $routes): void
 	{
-//		$routes->import($this->getConfigDir() . '/routes.php');
-//		$routes->import('security.route_loader.logout', 'service')->methods(['GET']);
-
 		$extraRoutes = array_unique($this->extraRoutes);
 
 		foreach ($extraRoutes as $route) {
 			$routes->import($route);
 		}
-
-//		$routes
-//			->add('app_home', '/')
-//			->methods(['GET'])
-//			->controller(TemplateController::class)
-//			//->defaults([
-//			//	'template' => 'path/to/template.html.twig',
-//			//])
-//		;
 	}
 
 	public function addExtraBundle (string $bundleName): self
@@ -141,15 +129,10 @@ final class Kernel extends BaseKernel
 
 		// Load config for Test App
 		$loader->load($this->getTestPackagesConfigDir() . '/framework.php');
-		$loader->load($this->getTestPackagesConfigDir() . '/doctrine.php');
 		$loader->load($this->getTestPackagesConfigDir() . '/maker.php');
 
 		// Load service of Bundle
 		$loader->load($this->getTestConfigDir() . '/services.php');
-
-		// Load Fixtures and Factories of Bundle
-//		$loader->load($this->getTestConfigDir() . '/factories.php');
-//		$loader->load($this->getTestConfigDir() . '/fixtures.php');
 
 		foreach ($this->extraConfig as $extension => $config) {
 			if (is_array($config)) {
