@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 11/02/2025, 22:25
+ * Last modified by "IDMarinas" on 18/02/2025, 15:10
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -101,8 +101,6 @@ final class MakerUserBundle extends AbstractMaker
 		$this->tplConfigRateLimiterYaml();
 		$this->tplConfigResetPasswordYaml($sources['ResetPasswordRequestRepository']['class']->getFullName());
 		$this->configSecurityYaml($sources['User']['class']);
-
-		$generator->generateFile('config/routes/idm_user.yaml', self::getTpl('config/routes/idm_user.tpl.yaml'));
 
 		$generator->writeChanges();
 
