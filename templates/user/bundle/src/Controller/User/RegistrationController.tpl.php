@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Attribute\Route;
 #[Route(path: '/registration', name: 'registration_')]
 class RegistrationController extends AbstractRegistrationController
 {
-	protected function getRegistrationForm (object $data, array $options = []): FormInterface
+	protected function getRegistrationForm (?object $data = null, array $options = []): FormInterface
 	{
 		return $this->createForm(<?= $registration_form ?>::class, $data, $options);
 	}

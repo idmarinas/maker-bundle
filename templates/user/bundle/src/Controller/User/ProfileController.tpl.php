@@ -15,7 +15,7 @@ use Symfony\Component\Security\Http\Attribute\IsGranted;
 #[Route(path: '/profile', name: 'profile_')]
 class ProfileController extends AbstractProfileController
 {
-	protected function getChangePasswordForm (object $data = null, array $options = []): FormInterface
+	protected function getChangePasswordForm (?object $data = null, array $options = []): FormInterface
 	{
 		return $this->createForm(ChangePasswordFormType::class, $data, $options);
 	}

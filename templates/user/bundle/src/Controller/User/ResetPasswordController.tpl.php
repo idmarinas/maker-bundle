@@ -14,12 +14,12 @@ use Symfony\Component\Routing\Attribute\Route;
 #[Route('/reset-password')]
 class ResetPasswordController extends AbstractResetPasswordController
 {
-	protected function getResetPasswordRequestForm (object $data = null, array $options = []): FormInterface
+	protected function getResetPasswordRequestForm (?object $data = null, array $options = []): FormInterface
 	{
 		return $this->createForm(ResetPasswordRequestFormType::class, $data, $options);
 	}
 
-	protected function getResetPasswordForm (object $data = null, array $options = []): FormInterface
+	protected function getResetPasswordForm (?object $data = null, array $options = []): FormInterface
 	{
 		return $this->createForm(ResetPasswordFormType::class, $data, $options);
 	}
