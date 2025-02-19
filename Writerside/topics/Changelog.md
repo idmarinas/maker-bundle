@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.4 - (2025-02-19)
+
+## Fixed {id="fixed_2.0.4"}
+
+* Fixed **User Make Command** now updates the `request_password_repository` and correctly updates the file
+* `security.yaml`.
+
 ## 2.0.3 - (2025-02-19)
 
 ## Fixed {id="fixed_2.0.3"}
