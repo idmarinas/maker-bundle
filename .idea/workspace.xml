@@ -295,35 +295,37 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.Dev - PHP.executor": "Run",
-    "PHPUnit.MakerUserBundleTest.executor": "Run",
-    "PHPUnit.Test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "code.cleanup.on.save": "true",
-    "com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary": "PHPUnit",
-    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm": "Docker Compose",
-    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm": "Docker Compose",
-    "git-widget-placeholder": "2.x",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "F:/Bundles/user-bundle",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "php.override.implement.member.chooser.php.doc": "NONE",
-    "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "copyright",
-    "vue.rearranger.settings.migration": "true",
-    "writerside.last.selected.productIDMarinas Template Bundle": "itb"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.Dev - PHP.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.MakerUserBundleTest.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.Test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary&quot;: &quot;PHPUnit&quot;,
+    &quot;credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm&quot;: &quot;Docker Compose&quot;,
+    &quot;credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm&quot;: &quot;Docker Compose&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;2.x&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Bundles/user-bundle&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;copyright&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;writerside.last.selected.productIDMarinas Template Bundle&quot;: &quot;itb&quot;
   },
-  "keyToStringList": {
-    "stardust.markdown.MarkdownSplitEditorSuppressor:keyList": []
+  &quot;keyToStringList&quot;: {
+    &quot;stardust.markdown.MarkdownSplitEditorSuppressor:keyList&quot;: [
+      &quot;H://maker-bundle/Writerside/topics/Changelog.md&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Bundles\maker-bundle\Writerside\topics" />
@@ -341,11 +343,6 @@
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.Test">
-    <configuration name="MakerUserBundleTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <CommandLine parameters="-d xdebug.mode=coverage " />
-      <TestRunner class="Idm\Bundle\Maker\Tests\Maker\User\MakerUserBundleTest" configuration_file="/var/www/html/phpunit.xml" file="$PROJECT_DIR$/tests/Maker/User/MakerUserBundleTest.php" scope="Class" options="--exclude ignore" />
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine parameters="-d xdebug.mode=coverage" />
       <TestRunner scope="XML" />
@@ -375,13 +372,7 @@
       <item itemvalue="Composer Script.Test: Reload DB" />
       <item itemvalue="Docker.Dev - PHP" />
       <item itemvalue="PHPUnit.Test" />
-      <item itemvalue="PHPUnit.MakerUserBundleTest" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="PHPUnit.MakerUserBundleTest" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -499,38 +490,7 @@
       <workItem from="1739542514663" duration="1597000" />
       <workItem from="1739811764731" duration="2782000" />
       <workItem from="1739883437647" duration="14604000" />
-    </task>
-    <task id="LOCAL-00187" summary="feat(dev): add easyadmin-bundle as a development dependency">
-      <option name="closed" value="true" />
-      <created>1739228808977</created>
-      <option name="number" value="00187" />
-      <option name="presentableId" value="LOCAL-00187" />
-      <option name="project" value="LOCAL" />
-      <updated>1739228808977</updated>
-    </task>
-    <task id="LOCAL-00188" summary="feat(tests): add bootstrap file for test environment setup&#10;&#10;- Introduced a new `bootstrap.php` file to initialize the test &#10;  environment for the Maker Bundle.&#10;- The file sets up the Symfony Kernel and ensures that the cache &#10;  and log directories are cleared before running tests.">
-      <option name="closed" value="true" />
-      <created>1739285044195</created>
-      <option name="number" value="00188" />
-      <option name="presentableId" value="LOCAL-00188" />
-      <option name="project" value="LOCAL" />
-      <updated>1739285044195</updated>
-    </task>
-    <task id="LOCAL-00189" summary="fix: update version annotations to 2.0.0 across configuration files">
-      <option name="closed" value="true" />
-      <created>1739285209487</created>
-      <option name="number" value="00189" />
-      <option name="presentableId" value="LOCAL-00189" />
-      <option name="project" value="LOCAL" />
-      <updated>1739285209487</updated>
-    </task>
-    <task id="LOCAL-00190" summary="feat(tpl): added templates for contact system">
-      <option name="closed" value="true" />
-      <created>1739285793000</created>
-      <option name="number" value="00190" />
-      <option name="presentableId" value="LOCAL-00190" />
-      <option name="project" value="LOCAL" />
-      <updated>1739285793000</updated>
+      <workItem from="1739970482269" duration="262000" />
     </task>
     <task id="LOCAL-00191" summary="feat(command): added maker command for generate contact files">
       <option name="closed" value="true" />
@@ -892,7 +852,39 @@
       <option name="project" value="LOCAL" />
       <updated>1739902299556</updated>
     </task>
-    <option name="localTasksCounter" value="236" />
+    <task id="LOCAL-00236" summary="refactor: update path handling in MakerUserBundle and MakerCommonContact&#10;&#10;- Added Path::canonicalize to getTpl method in MakerUserBundle for &#10;  better path resolution.&#10;- Updated getTpl method in MakerCommonContact to use &#10;  Path::canonicalize for consistent path handling.">
+      <option name="closed" value="true" />
+      <created>1739970600013</created>
+      <option name="number" value="00236" />
+      <option name="presentableId" value="LOCAL-00236" />
+      <option name="project" value="LOCAL" />
+      <updated>1739970600013</updated>
+    </task>
+    <task id="LOCAL-00237" summary="ide(config): added/updated automatically">
+      <option name="closed" value="true" />
+      <created>1739970629821</created>
+      <option name="number" value="00237" />
+      <option name="presentableId" value="LOCAL-00237" />
+      <option name="project" value="LOCAL" />
+      <updated>1739970629821</updated>
+    </task>
+    <task id="LOCAL-00238" summary="chore: update changelog for version 2.0.1&#10;&#10;- Added entry for version 2.0.1 released on 2025-02-19&#10;- Documented fix for **Commands** to now find templates.">
+      <option name="closed" value="true" />
+      <created>1739970728886</created>
+      <option name="number" value="00238" />
+      <option name="presentableId" value="LOCAL-00238" />
+      <option name="project" value="LOCAL" />
+      <updated>1739970728886</updated>
+    </task>
+    <task id="LOCAL-00239" summary="fix: update instance version in writerside configuration file&#10;&#10;Updated the instance version from 2.0.0 to 2.0.1 in the &#10;Writerside/writerside.cfg file to ensure compatibility &#10;with the latest features.">
+      <option name="closed" value="true" />
+      <created>1739970735829</created>
+      <option name="number" value="00239" />
+      <option name="presentableId" value="LOCAL-00239" />
+      <option name="project" value="LOCAL" />
+      <updated>1739970735829</updated>
+    </task>
+    <option name="localTasksCounter" value="240" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -921,7 +913,11 @@
     <MESSAGE value="delete(symfony): bump symfony 7.0 version" />
     <MESSAGE value="fix(workflow): ignore all tags in push events&#10;&#10;- Updated the GitHub Actions workflow configuration to ignore all &#10;  tags during push events. This change helps streamline the workflow &#10;  by preventing unnecessary triggers from tag pushes." />
     <MESSAGE value="feat(tests): add BundleInitializationTest for kernel initialization&#10;&#10;- Implemented a new test case to verify the initialization of the &#10;  Maker Bundle.&#10;- The test checks the presence of specific services in the container &#10;  after booting the kernel." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(tests): add BundleInitializationTest for kernel initialization&#10;&#10;- Implemented a new test case to verify the initialization of the &#10;  Maker Bundle.&#10;- The test checks the presence of specific services in the container &#10;  after booting the kernel." />
+    <MESSAGE value="refactor: update path handling in MakerUserBundle and MakerCommonContact&#10;&#10;- Added Path::canonicalize to getTpl method in MakerUserBundle for &#10;  better path resolution.&#10;- Updated getTpl method in MakerCommonContact to use &#10;  Path::canonicalize for consistent path handling." />
+    <MESSAGE value="ide(config): added/updated automatically" />
+    <MESSAGE value="chore: update changelog for version 2.0.1&#10;&#10;- Added entry for version 2.0.1 released on 2025-02-19&#10;- Documented fix for **Commands** to now find templates." />
+    <MESSAGE value="fix: update instance version in writerside configuration file&#10;&#10;Updated the instance version from 2.0.0 to 2.0.1 in the &#10;Writerside/writerside.cfg file to ensure compatibility &#10;with the latest features." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: update instance version in writerside configuration file&#10;&#10;Updated the instance version from 2.0.0 to 2.0.1 in the &#10;Writerside/writerside.cfg file to ensure compatibility &#10;with the latest features." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
