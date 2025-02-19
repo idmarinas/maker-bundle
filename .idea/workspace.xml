@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="fix: remove outdated comments from About.topic file&#10;&#10;- Removed old copyright and metadata comments from the About.topic file.&#10;- Cleaned up the XML structure for better readability.">
-      <change beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -227,12 +224,10 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
       <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
       <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
       <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
       <path value="$PROJECT_DIR$/vendor/doctrine/sql-formatter" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
       <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
@@ -241,7 +236,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
       <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
       <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
-      <path value="$PROJECT_DIR$/vendor/dama/doctrine-test-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/type-info" />
       <path value="$PROJECT_DIR$/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
@@ -304,11 +298,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Docker.Dev - PHP.executor": "Run",
+    "PHPUnit.MakerUserBundleTest.executor": "Run",
     "PHPUnit.Test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "code.cleanup.on.save": "true",
+    "com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary": "PHPUnit",
     "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm": "Docker Compose",
     "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm": "Docker Compose",
     "git-widget-placeholder": "2.x",
@@ -323,6 +319,9 @@
     "settings.editor.selected.configurable": "copyright",
     "vue.rearranger.settings.migration": "true",
     "writerside.last.selected.productIDMarinas Template Bundle": "itb"
+  },
+  "keyToStringList": {
+    "stardust.markdown.MarkdownSplitEditorSuppressor:keyList": []
   }
 }]]></component>
   <component name="RecentsManager">
@@ -341,7 +340,12 @@
       <recent name="F:\Bundles\maker-bundle\templates\user\bundle\src\Entity\User" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.Dev - PHP">
+  <component name="RunManager" selected="PHPUnit.Test">
+    <configuration name="MakerUserBundleTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine parameters="-d xdebug.mode=coverage " />
+      <TestRunner class="Idm\Bundle\Maker\Tests\Maker\User\MakerUserBundleTest" configuration_file="/var/www/html/phpunit.xml" file="$PROJECT_DIR$/tests/Maker/User/MakerUserBundleTest.php" scope="Class" options="--exclude ignore" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine parameters="-d xdebug.mode=coverage" />
       <TestRunner scope="XML" />
@@ -371,7 +375,13 @@
       <item itemvalue="Composer Script.Test: Reload DB" />
       <item itemvalue="Docker.Dev - PHP" />
       <item itemvalue="PHPUnit.Test" />
+      <item itemvalue="PHPUnit.MakerUserBundleTest" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.MakerUserBundleTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -488,143 +498,7 @@
       <workItem from="1739445518253" duration="3148000" />
       <workItem from="1739542514663" duration="1597000" />
       <workItem from="1739811764731" duration="2782000" />
-      <workItem from="1739883437647" duration="5755000" />
-    </task>
-    <task id="LOCAL-00170" summary="docs: add SECURITY.md file with security policy and reporting guidelines">
-      <option name="closed" value="true" />
-      <created>1739212602612</created>
-      <option name="number" value="00170" />
-      <option name="presentableId" value="LOCAL-00170" />
-      <option name="project" value="LOCAL" />
-      <updated>1739212602612</updated>
-    </task>
-    <task id="LOCAL-00171" summary="ide(config): added/updated automatically">
-      <option name="closed" value="true" />
-      <created>1739212621003</created>
-      <option name="number" value="00171" />
-      <option name="presentableId" value="LOCAL-00171" />
-      <option name="project" value="LOCAL" />
-      <updated>1739212621003</updated>
-    </task>
-    <task id="LOCAL-00172" summary="chore(workflow): update labeler action and add checkout step&#10;&#10;- Added `actions/checkout@v4` to the workflow for sparse-checkout.&#10;- Updated the workflow to include the necessary steps for labeler action.">
-      <option name="closed" value="true" />
-      <created>1739217047035</created>
-      <option name="number" value="00172" />
-      <option name="presentableId" value="LOCAL-00172" />
-      <option name="project" value="LOCAL" />
-      <updated>1739217047035</updated>
-    </task>
-    <task id="LOCAL-00173" summary="feat(workflow): add GitHub Actions workflow for building documentation">
-      <option name="closed" value="true" />
-      <created>1739217076991</created>
-      <option name="number" value="00173" />
-      <option name="presentableId" value="LOCAL-00173" />
-      <option name="project" value="LOCAL" />
-      <updated>1739217076991</updated>
-    </task>
-    <task id="LOCAL-00174" summary="chore: update GitHub Actions workflow for IDMarinas Template Bundle&#10;&#10;- Renamed the workflow to &quot;IDMarinas Template Bundle Test Suite&quot;.&#10;- Updated the `on` section to include more event types and ignore specific tags.&#10;- Modified the `push` section to ignore certain paths.&#10;- Adjusted the PHP and Symfony matrix versions for the build job.&#10;- Updated `actions/checkout` to version 4 and added fetch-depth condition.&#10;- Changed `ramsey/composer-install` action to version 3.&#10;- Added a SonarCloud Scan step for PHP 8.2 and Symfony 6.4.*.">
-      <option name="closed" value="true" />
-      <created>1739217102016</created>
-      <option name="number" value="00174" />
-      <option name="presentableId" value="LOCAL-00174" />
-      <option name="project" value="LOCAL" />
-      <updated>1739217102016</updated>
-    </task>
-    <task id="LOCAL-00175" summary="chore: update GitHub Actions workflow for IDMarinas Template Bundle&#10;&#10;- Renamed the workflow to &quot;IDMarinas Template Bundle Test Suite&quot;.&#10;- Updated the `on` section to include more event types and ignore specific tags.&#10;- Modified the `push` section to ignore certain paths.&#10;- Adjusted the PHP and Symfony matrix versions for the build job.&#10;- Updated `actions/checkout` to version 4 and added fetch-depth condition.&#10;- Changed `ramsey/composer-install` action to version 3.&#10;- Added a SonarCloud Scan step for PHP 8.2 and Symfony 6.4.*.">
-      <option name="closed" value="true" />
-      <created>1739217138276</created>
-      <option name="number" value="00175" />
-      <option name="presentableId" value="LOCAL-00175" />
-      <option name="project" value="LOCAL" />
-      <updated>1739217138276</updated>
-    </task>
-    <task id="LOCAL-00176" summary="feat: add description to composer.json and reorganize config section&#10;&#10;- Added a description for the package in composer.json.&#10;- Reorganized the config section for better clarity and structure.">
-      <option name="closed" value="true" />
-      <created>1739217147672</created>
-      <option name="number" value="00176" />
-      <option name="presentableId" value="LOCAL-00176" />
-      <option name="project" value="LOCAL" />
-      <updated>1739217147672</updated>
-    </task>
-    <task id="LOCAL-00177" summary="feat(README): update badge links and add new badges&#10;&#10;- Updated badge links to point to the correct branch (2.x) for&#10;  test suite, quality gate status, coverage, and technical debt.&#10;- Added new badges for GitHub release information and commit activity.&#10;- Removed outdated badge links for GitHub release and last commit.">
-      <option name="closed" value="true" />
-      <created>1739217695983</created>
-      <option name="number" value="00177" />
-      <option name="presentableId" value="LOCAL-00177" />
-      <option name="project" value="LOCAL" />
-      <updated>1739217695983</updated>
-    </task>
-    <task id="LOCAL-00178" summary="fix(workflow): update name for IDMarinas Maker Bundle Test Suite">
-      <option name="closed" value="true" />
-      <created>1739217713516</created>
-      <option name="number" value="00178" />
-      <option name="presentableId" value="LOCAL-00178" />
-      <option name="project" value="LOCAL" />
-      <updated>1739217713516</updated>
-    </task>
-    <task id="LOCAL-00179" summary="feat(docs): add configuration, security, requirements, and installation documentation">
-      <option name="closed" value="true" />
-      <created>1739217828586</created>
-      <option name="number" value="00179" />
-      <option name="presentableId" value="LOCAL-00179" />
-      <option name="project" value="LOCAL" />
-      <updated>1739217828586</updated>
-    </task>
-    <task id="LOCAL-00180" summary="fix: correct spelling in the command description for User Bundle files">
-      <option name="closed" value="true" />
-      <created>1739219244077</created>
-      <option name="number" value="00180" />
-      <option name="presentableId" value="LOCAL-00180" />
-      <option name="project" value="LOCAL" />
-      <updated>1739219244077</updated>
-    </task>
-    <task id="LOCAL-00181" summary="feat(dependencies): add idmarinas/common-bundle as a dev dependency">
-      <option name="closed" value="true" />
-      <created>1739219259279</created>
-      <option name="number" value="00181" />
-      <option name="presentableId" value="LOCAL-00181" />
-      <option name="project" value="LOCAL" />
-      <updated>1739219259279</updated>
-    </task>
-    <task id="LOCAL-00182" summary="ide(config): added/updated automatically">
-      <option name="closed" value="true" />
-      <created>1739219273177</created>
-      <option name="number" value="00182" />
-      <option name="presentableId" value="LOCAL-00182" />
-      <option name="project" value="LOCAL" />
-      <updated>1739219273177</updated>
-    </task>
-    <task id="LOCAL-00183" summary="feat(User): refactor generate method to use GenerateClassTrait&#10;&#10;- Added `GenerateClassTrait` to `MakerUserBundleFiles` for improved &#10;  class generation.&#10;- Refactored the `generate` method to streamline class creation &#10;  by utilizing the new trait.&#10;- Removed redundant code for class generation and replaced it with &#10;  a call to `generateClasses` method.">
-      <option name="closed" value="true" />
-      <created>1739220269169</created>
-      <option name="number" value="00183" />
-      <option name="presentableId" value="LOCAL-00183" />
-      <option name="project" value="LOCAL" />
-      <updated>1739220269169</updated>
-    </task>
-    <task id="LOCAL-00184" summary="refactor(user): simplify template file retrieval in MakerUserBundleFiles&#10;&#10;- Updated the method for generating class templates to remove unnecessary &#10;  parameters.&#10;- Simplified the retrieval of template file paths by introducing a new &#10;  method `getTpl`.&#10;- Removed the old `tplBundle` method to streamline the code. &#10;&#10;flex(recipe): updated symfony.lock file&#10;&#10;ide(config): added/updated automatically">
-      <option name="closed" value="true" />
-      <created>1739228739457</created>
-      <option name="number" value="00184" />
-      <option name="presentableId" value="LOCAL-00184" />
-      <option name="project" value="LOCAL" />
-      <updated>1739228739457</updated>
-    </task>
-    <task id="LOCAL-00185" summary="style(controller): format code in UserCrudController template for consistency">
-      <option name="closed" value="true" />
-      <created>1739228755567</created>
-      <option name="number" value="00185" />
-      <option name="presentableId" value="LOCAL-00185" />
-      <option name="project" value="LOCAL" />
-      <updated>1739228755567</updated>
-    </task>
-    <task id="LOCAL-00186" summary="ide(config): added/updated automatically">
-      <option name="closed" value="true" />
-      <created>1739228795685</created>
-      <option name="number" value="00186" />
-      <option name="presentableId" value="LOCAL-00186" />
-      <option name="project" value="LOCAL" />
-      <updated>1739228795685</updated>
+      <workItem from="1739883437647" duration="14604000" />
     </task>
     <task id="LOCAL-00187" summary="feat(dev): add easyadmin-bundle as a development dependency">
       <option name="closed" value="true" />
@@ -882,7 +756,143 @@
       <option name="project" value="LOCAL" />
       <updated>1739890842418</updated>
     </task>
-    <option name="localTasksCounter" value="219" />
+    <task id="LOCAL-00219" summary="ide(config): updated automatically">
+      <option name="closed" value="true" />
+      <created>1739891899992</created>
+      <option name="number" value="00219" />
+      <option name="presentableId" value="LOCAL-00219" />
+      <option name="project" value="LOCAL" />
+      <updated>1739891899992</updated>
+    </task>
+    <task id="LOCAL-00220" summary="ide(config): updated automatically">
+      <option name="closed" value="true" />
+      <created>1739891908024</created>
+      <option name="number" value="00220" />
+      <option name="presentableId" value="LOCAL-00220" />
+      <option name="project" value="LOCAL" />
+      <updated>1739891908024</updated>
+    </task>
+    <task id="LOCAL-00221" summary="feat(changelog): add initial changelog for version 2.0.0&#10;&#10;- Added new make commands: `make:idm:common:contact` and &#10;  `make:idm:user:bundle`.&#10;- Removed old command for creating a bundle; use &#10;  [IDMarinas Template Bundle](https://www.github.com/idmarinas/template-bundle) instead.&#10;  &#10;This commit introduces the changelog file with the release highlights and &#10;details on added features and breaking changes.">
+      <option name="closed" value="true" />
+      <created>1739892267130</created>
+      <option name="number" value="00221" />
+      <option name="presentableId" value="LOCAL-00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1739892267130</updated>
+    </task>
+    <task id="LOCAL-00222" summary="feat: add initial Writerside instance profile configuration&#10;&#10;- Added a new XML configuration file for the IDMarinas Maker Bundle.&#10;- This includes a table of contents with links to various documentation &#10;  topics such as Installation Guide, Requirements, Configuration, &#10;  Changelog, and About.">
+      <option name="closed" value="true" />
+      <created>1739892280162</created>
+      <option name="number" value="00222" />
+      <option name="presentableId" value="LOCAL-00222" />
+      <option name="project" value="LOCAL" />
+      <updated>1739892280162</updated>
+    </task>
+    <task id="LOCAL-00223" summary="feat: add Content topic XML file with make commands and references">
+      <option name="closed" value="true" />
+      <created>1739893431465</created>
+      <option name="number" value="00223" />
+      <option name="presentableId" value="LOCAL-00223" />
+      <option name="project" value="LOCAL" />
+      <updated>1739893431465</updated>
+    </task>
+    <task id="LOCAL-00224" summary="chore: remove empty .gitkeep files from factories and fixtures directories">
+      <option name="closed" value="true" />
+      <created>1739897148734</created>
+      <option name="number" value="00224" />
+      <option name="presentableId" value="LOCAL-00224" />
+      <option name="project" value="LOCAL" />
+      <updated>1739897148734</updated>
+    </task>
+    <task id="LOCAL-00225" summary="fix(services): correct service identifier for user bundle files&#10;&#10;- Updated the service identifier from 'idm_maker.make.user_bundle_files' &#10;  to 'idm_maker.make.user_bundle.files' in config/services.php.">
+      <option name="closed" value="true" />
+      <created>1739897163045</created>
+      <option name="number" value="00225" />
+      <option name="presentableId" value="LOCAL-00225" />
+      <option name="project" value="LOCAL" />
+      <updated>1739897163045</updated>
+    </task>
+    <task id="LOCAL-00226" summary="refactor(Kernel): comment out loading of factories and fixtures&#10;&#10;- Commented out the loading of factories and fixtures in the test&#10;  configuration to improve clarity and maintainability.">
+      <option name="closed" value="true" />
+      <created>1739897175083</created>
+      <option name="number" value="00226" />
+      <option name="presentableId" value="LOCAL-00226" />
+      <option name="project" value="LOCAL" />
+      <updated>1739897175083</updated>
+    </task>
+    <task id="LOCAL-00227" summary="fix: comment out PHPUnit extension in configuration file&#10;&#10;- Updated phpunit.xml.dist to comment out the &#10;  DAMA\DoctrineTestBundle\PHPUnit\PHPUnitExtension &#10;  extension for better compatibility.">
+      <option name="closed" value="true" />
+      <created>1739897224853</created>
+      <option name="number" value="00227" />
+      <option name="presentableId" value="LOCAL-00227" />
+      <option name="project" value="LOCAL" />
+      <updated>1739897224854</updated>
+    </task>
+    <task id="LOCAL-00228" summary="chore(deps): updated dev dependencies in composer.json">
+      <option name="closed" value="true" />
+      <created>1739897248810</created>
+      <option name="number" value="00228" />
+      <option name="presentableId" value="LOCAL-00228" />
+      <option name="project" value="LOCAL" />
+      <updated>1739897248810</updated>
+    </task>
+    <task id="LOCAL-00229" summary="fix(deps): update idmarinas/user-bundle version to ^2.0 in composer.json">
+      <option name="closed" value="true" />
+      <created>1739897282495</created>
+      <option name="number" value="00229" />
+      <option name="presentableId" value="LOCAL-00229" />
+      <option name="project" value="LOCAL" />
+      <updated>1739897282495</updated>
+    </task>
+    <task id="LOCAL-00230" summary="feat: add bundles configuration file for Symfony application&#10;&#10;- Introduced a new `bundles.php` file to manage the Symfony bundles &#10;  used in the application.&#10;- Included necessary bundles such as Doctrine, Framework, and Security &#10;  among others for the project setup.">
+      <option name="closed" value="true" />
+      <created>1739897705867</created>
+      <option name="number" value="00230" />
+      <option name="presentableId" value="LOCAL-00230" />
+      <option name="project" value="LOCAL" />
+      <updated>1739897705867</updated>
+    </task>
+    <task id="LOCAL-00231" summary="refactor(Kernel): clean up commented code in configureRoutes method">
+      <option name="closed" value="true" />
+      <created>1739898093134</created>
+      <option name="number" value="00231" />
+      <option name="presentableId" value="LOCAL-00231" />
+      <option name="project" value="LOCAL" />
+      <updated>1739898093134</updated>
+    </task>
+    <task id="LOCAL-00232" summary="refactor(bundles): remove unused Doctrine and Security bundles&#10;&#10;- Removed DoctrineBundle and SecurityBundle from the bundles.php file.&#10;- Cleaned up the configuration for better maintainability.">
+      <option name="closed" value="true" />
+      <created>1739898099597</created>
+      <option name="number" value="00232" />
+      <option name="presentableId" value="LOCAL-00232" />
+      <option name="project" value="LOCAL" />
+      <updated>1739898099597</updated>
+    </task>
+    <task id="LOCAL-00233" summary="delete(symfony): bump symfony 7.0 version">
+      <option name="closed" value="true" />
+      <created>1739900312289</created>
+      <option name="number" value="00233" />
+      <option name="presentableId" value="LOCAL-00233" />
+      <option name="project" value="LOCAL" />
+      <updated>1739900312289</updated>
+    </task>
+    <task id="LOCAL-00234" summary="fix(workflow): ignore all tags in push events&#10;&#10;- Updated the GitHub Actions workflow configuration to ignore all &#10;  tags during push events. This change helps streamline the workflow &#10;  by preventing unnecessary triggers from tag pushes.">
+      <option name="closed" value="true" />
+      <created>1739902240485</created>
+      <option name="number" value="00234" />
+      <option name="presentableId" value="LOCAL-00234" />
+      <option name="project" value="LOCAL" />
+      <updated>1739902240485</updated>
+    </task>
+    <task id="LOCAL-00235" summary="feat(tests): add BundleInitializationTest for kernel initialization&#10;&#10;- Implemented a new test case to verify the initialization of the &#10;  Maker Bundle.&#10;- The test checks the presence of specific services in the container &#10;  after booting the kernel.">
+      <option name="closed" value="true" />
+      <created>1739902299556</created>
+      <option name="number" value="00235" />
+      <option name="presentableId" value="LOCAL-00235" />
+      <option name="project" value="LOCAL" />
+      <updated>1739902299556</updated>
+    </task>
+    <option name="localTasksCounter" value="236" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -908,32 +918,10 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="fix(docs): update installation instructions for development mode&#10;&#10;- Changed `composer require %package_name%` to `composer require --dev %package_name%` &#10;  in the installation steps for applications that use Symfony Flex and those &#10;  that don't.&#10;- Updated the bundle registration to enable it only for 'dev' and 'test' &#10;  environments." />
-    <MESSAGE value="fix: change MakerCommonContact class to final for better design" />
-    <MESSAGE value="refactor: rename namespace in SecurityTrait.php for consistency&#10;&#10;- Updated the namespace from &#10;  `Idm\Bundle\Maker\Maker\User\MakerUserBundleFiles` to &#10;  `Idm\Bundle\Maker\Maker\User\MakerUserBundle`.&#10;- Changed the visibility comment for the `updateSecurityConfig` method &#10;  from `@private` to `@internal`." />
-    <MESSAGE value="refactor(user-bundle): rename MakerUserBundleFiles to MakerUserBundle&#10;&#10;- Renamed `MakerUserBundleFiles.php` to `MakerUserBundle.php`.&#10;- Updated namespace and class name references accordingly.&#10;- Modified the command name from `make:idm:user-bundle` to `make:idm:user:bundle`." />
-    <MESSAGE value="feat(User): refactor generate method to use sources from external file&#10;&#10;- Updated the `generate` method in `MakerUserBundle.php` to load&#10;  sources from an external file instead of hardcoding them.&#10;- Improved the handling of generated classes and configuration files.&#10;- Adjusted the instantiation of `YamlSourceManipulator` to use &#10;  the file contents directly." />
-    <MESSAGE value="updated(tpl): update templates for better generation" />
-    <MESSAGE value="refactor: remove obsolete MakeBundle and related skeleton files" />
-    <MESSAGE value="feat(user): add runtime check for AbstractPremium class existence&#10;&#10;- Added a runtime check to ensure the AbstractPremium class is available.&#10;- Throws a RuntimeCommandException with instructions to upgrade the&#10;  idmarinas/user-bundle if the class does not exist.&#10;- Updated dependencies in the MakerUserBundle.php file." />
-    <MESSAGE value="refactor(controller): update UserCrudController to extend AbstractUserCrudController&#10;&#10;- Replaced the parent class from AbstractCrudController to &#10;  AbstractUserCrudController.&#10;- Removed unnecessary configureCrud, configureFilters, and &#10;  configureFields methods, simplifying the controller." />
-    <MESSAGE value="chore: remove unused user routes template&#10;&#10;- Deleted the `idm_user.tpl.yaml` template file as it is no longer needed.&#10;- Updated `MakerUserBundle.php` to remove the generation of the routes &#10;  file associated with the deleted template." />
-    <MESSAGE value="feat(user): add user-related controllers and registration form type&#10;&#10;- Added RegistrationFormType for user registration.&#10;- Implemented ResetPasswordController for password reset functionality.&#10;- Created LoginController for user login handling.&#10;- Developed ProfileController for user profile management.&#10;- Added RegistrationController for user registration process.&#10;- All controllers utilize appropriate form types and Symfony attributes." />
-    <MESSAGE value="refactor(traits): rename and move MakeHelpFileTrait and GenerateClassTrait&#10;&#10;- Renamed and moved MakeHelpFileTrait.php to src/Traits/Maker/&#10;- Renamed and moved GenerateClassTrait.php to src/Traits/Maker/&#10;- Updated namespaces accordingly.&#10;- Adjusted file path in getMakeHelpFileContents method." />
-    <MESSAGE value="fix(User): update trait namespaces in MakerUserBundle.php&#10;&#10;- Changed the import paths for GenerateClassTrait and &#10;  MakeHelpFileTrait to reflect the new directory structure. &#10;&#10;ide(config): added/updated automatically." />
-    <MESSAGE value="fix(maker): update trait namespaces in MakerCommonContact.php&#10;&#10;Updated the namespaces for GenerateClassTrait and MakeHelpFileTrait &#10;to reflect their new location under the Maker directory. This change &#10;ensures proper functionality and adherence to the latest project &#10;structure." />
-    <MESSAGE value="feat(user): add MakerUserBundle source file with entity and controller definitions&#10;&#10;- Created `sources.php` file in the MakerUserBundle directory.&#10;- Defined entities: Connections, ConnectionsLog, Log, Premium, PremiumLog, &#10;  ResetPasswordRequest, ResetPasswordRequestLog, User.&#10;- Included repository classes: UserRepository, ResetPasswordRequestRepository.&#10;- Added form type: RegistrationFormType.&#10;- Implemented admin CRUD controller: UserCrudController.&#10;- Added user controllers: LoginController, ProfileController, &#10;  RegistrationController, ResetPasswordController." />
-    <MESSAGE value="feat(services): add service configuration for user bundle and common contact&#10;&#10;- Introduced a new `services.php` file for service configuration.&#10;- Registered `idm_maker.make.user_bundle_files` and &#10;  `idm_maker.make.common_bundle.contact` services.&#10;- The user bundle service is configured with a dependency on the &#10;  file manager service" />
-    <MESSAGE value="refactor: remove unused rule from rector configuration&#10;&#10;- Removed the unused rule for AddVoidReturnTypeWhereNoReturnRector.&#10;- Cleaned up the rector.php file for better maintainability." />
-    <MESSAGE value="feat(help): add help files for Common and User Bundles&#10;&#10;- Added MakeCommonBundleContact.txt to provide information about &#10;  the Contact System command.&#10;- Added MakeUserBundleFile.txt to explain the User Bundle command." />
-    <MESSAGE value="ide(config): added/updated automatically" />
-    <MESSAGE value="fix: improve wording in SECURITY.md for clarity" />
-    <MESSAGE value="feat: add About topic to provide information on third-party libraries&#10;&#10;- Introduced a new XML topic file that outlines third-party libraries &#10;  used in the project, specifically highlighting Symfony Components. &#10;  This addition aims to enhance documentation and user understanding &#10;  of the project's dependencies." />
-    <MESSAGE value="docs: add initial content to Index.md with donation links and support info" />
-    <MESSAGE value="ide(config): updated automatically" />
-    <MESSAGE value="feat: add initial configuration files for Writerside" />
-    <MESSAGE value="fix: remove outdated comments from About.topic file&#10;&#10;- Removed old copyright and metadata comments from the About.topic file.&#10;- Cleaned up the XML structure for better readability." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: remove outdated comments from About.topic file&#10;&#10;- Removed old copyright and metadata comments from the About.topic file.&#10;- Cleaned up the XML structure for better readability." />
+    <MESSAGE value="delete(symfony): bump symfony 7.0 version" />
+    <MESSAGE value="fix(workflow): ignore all tags in push events&#10;&#10;- Updated the GitHub Actions workflow configuration to ignore all &#10;  tags during push events. This change helps streamline the workflow &#10;  by preventing unnecessary triggers from tag pushes." />
+    <MESSAGE value="feat(tests): add BundleInitializationTest for kernel initialization&#10;&#10;- Implemented a new test case to verify the initialization of the &#10;  Maker Bundle.&#10;- The test checks the presence of specific services in the container &#10;  after booting the kernel." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(tests): add BundleInitializationTest for kernel initialization&#10;&#10;- Implemented a new test case to verify the initialization of the &#10;  Maker Bundle.&#10;- The test checks the presence of specific services in the container &#10;  after booting the kernel." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>

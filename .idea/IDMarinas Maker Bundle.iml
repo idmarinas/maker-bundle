@@ -5,8 +5,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="Idm\Bundle\Maker\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Idm\Bundle\Maker\Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/app/src" isTestSource="true" packagePrefix="App\" />
-      <sourceFolder url="file://$MODULE_DIR$/factories" isTestSource="true" packagePrefix="Factory\" />
-      <sourceFolder url="file://$MODULE_DIR$/fixtures" isTestSource="true" packagePrefix="DataFixtures\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/inflector" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />
