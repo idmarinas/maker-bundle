@@ -491,38 +491,7 @@
       <workItem from="1739811764731" duration="2782000" />
       <workItem from="1739883437647" duration="14604000" />
       <workItem from="1739970482269" duration="262000" />
-    </task>
-    <task id="LOCAL-00191" summary="feat(command): added maker command for generate contact files">
-      <option name="closed" value="true" />
-      <created>1739285833951</created>
-      <option name="number" value="00191" />
-      <option name="presentableId" value="LOCAL-00191" />
-      <option name="project" value="LOCAL" />
-      <updated>1739285833951</updated>
-    </task>
-    <task id="LOCAL-00192" summary="feat: add GenerateClassTrait for class generation functionality&#10;&#10;- Introduced the GenerateClassTrait which provides methods to generate&#10;  classes based on provided templates and source data.&#10;- Implemented functionality for handling use statements and class&#10;  variable merging.&#10;- Added methods to retrieve the appropriate namespace and template&#10;  for class generation.">
-      <option name="closed" value="true" />
-      <created>1739285920758</created>
-      <option name="number" value="00192" />
-      <option name="presentableId" value="LOCAL-00192" />
-      <option name="project" value="LOCAL" />
-      <updated>1739285920758</updated>
-    </task>
-    <task id="LOCAL-00193" summary="fix(docs): update installation instructions for development mode&#10;&#10;- Changed `composer require %package_name%` to `composer require --dev %package_name%` &#10;  in the installation steps for applications that use Symfony Flex and those &#10;  that don't.&#10;- Updated the bundle registration to enable it only for 'dev' and 'test' &#10;  environments.">
-      <option name="closed" value="true" />
-      <created>1739286113479</created>
-      <option name="number" value="00193" />
-      <option name="presentableId" value="LOCAL-00193" />
-      <option name="project" value="LOCAL" />
-      <updated>1739286113479</updated>
-    </task>
-    <task id="LOCAL-00194" summary="fix: change MakerCommonContact class to final for better design">
-      <option name="closed" value="true" />
-      <created>1739286291585</created>
-      <option name="number" value="00194" />
-      <option name="presentableId" value="LOCAL-00194" />
-      <option name="project" value="LOCAL" />
-      <updated>1739286291585</updated>
+      <workItem from="1739979193501" duration="284000" />
     </task>
     <task id="LOCAL-00195" summary="refactor: rename namespace in SecurityTrait.php for consistency&#10;&#10;- Updated the namespace from &#10;  `Idm\Bundle\Maker\Maker\User\MakerUserBundleFiles` to &#10;  `Idm\Bundle\Maker\Maker\User\MakerUserBundle`.&#10;- Changed the visibility comment for the `updateSecurityConfig` method &#10;  from `@private` to `@internal`.">
       <option name="closed" value="true" />
@@ -884,7 +853,39 @@
       <option name="project" value="LOCAL" />
       <updated>1739970735829</updated>
     </task>
-    <option name="localTasksCounter" value="240" />
+    <task id="LOCAL-00240" summary="refactor(controller): update method signatures to allow nullable objects&#10;&#10;- Changed method signatures in `ResetPasswordController`, &#10;  `ProfileController`, and `RegistrationController` to allow &#10;  nullable objects for the `$data` parameter. &#10;&#10;- Updated the following methods:&#10;  - `getResetPasswordRequestForm`&#10;  - `getResetPasswordForm`&#10;  - `getChangePasswordForm`&#10;  - `getRegistrationForm`">
+      <option name="closed" value="true" />
+      <created>1739979285434</created>
+      <option name="number" value="00240" />
+      <option name="presentableId" value="LOCAL-00240" />
+      <option name="project" value="LOCAL" />
+      <updated>1739979285435</updated>
+    </task>
+    <task id="LOCAL-00241" summary="fix: update version and fix templates compatibility in changelog&#10;&#10;- Updated instance version in writerside.cfg from 2.0.1 to 2.0.3.&#10;- Fixed indentation in buildprofiles.xml.&#10;- Updated changelog to reflect version 2.0.3 and added fixes.">
+      <option name="closed" value="true" />
+      <created>1739979409312</created>
+      <option name="number" value="00241" />
+      <option name="presentableId" value="LOCAL-00241" />
+      <option name="project" value="LOCAL" />
+      <updated>1739979409312</updated>
+    </task>
+    <task id="LOCAL-00242" summary="ide(config): added/updated automatically">
+      <option name="closed" value="true" />
+      <created>1739979426312</created>
+      <option name="number" value="00242" />
+      <option name="presentableId" value="LOCAL-00242" />
+      <option name="project" value="LOCAL" />
+      <updated>1739979426312</updated>
+    </task>
+    <task id="LOCAL-00243" summary="ide(config): added/updated automatically">
+      <option name="closed" value="true" />
+      <created>1739979455006</created>
+      <option name="number" value="00243" />
+      <option name="presentableId" value="LOCAL-00243" />
+      <option name="project" value="LOCAL" />
+      <updated>1739979455006</updated>
+    </task>
+    <option name="localTasksCounter" value="244" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -914,10 +915,12 @@
     <MESSAGE value="fix(workflow): ignore all tags in push events&#10;&#10;- Updated the GitHub Actions workflow configuration to ignore all &#10;  tags during push events. This change helps streamline the workflow &#10;  by preventing unnecessary triggers from tag pushes." />
     <MESSAGE value="feat(tests): add BundleInitializationTest for kernel initialization&#10;&#10;- Implemented a new test case to verify the initialization of the &#10;  Maker Bundle.&#10;- The test checks the presence of specific services in the container &#10;  after booting the kernel." />
     <MESSAGE value="refactor: update path handling in MakerUserBundle and MakerCommonContact&#10;&#10;- Added Path::canonicalize to getTpl method in MakerUserBundle for &#10;  better path resolution.&#10;- Updated getTpl method in MakerCommonContact to use &#10;  Path::canonicalize for consistent path handling." />
-    <MESSAGE value="ide(config): added/updated automatically" />
     <MESSAGE value="chore: update changelog for version 2.0.1&#10;&#10;- Added entry for version 2.0.1 released on 2025-02-19&#10;- Documented fix for **Commands** to now find templates." />
     <MESSAGE value="fix: update instance version in writerside configuration file&#10;&#10;Updated the instance version from 2.0.0 to 2.0.1 in the &#10;Writerside/writerside.cfg file to ensure compatibility &#10;with the latest features." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: update instance version in writerside configuration file&#10;&#10;Updated the instance version from 2.0.0 to 2.0.1 in the &#10;Writerside/writerside.cfg file to ensure compatibility &#10;with the latest features." />
+    <MESSAGE value="refactor(controller): update method signatures to allow nullable objects&#10;&#10;- Changed method signatures in `ResetPasswordController`, &#10;  `ProfileController`, and `RegistrationController` to allow &#10;  nullable objects for the `$data` parameter. &#10;&#10;- Updated the following methods:&#10;  - `getResetPasswordRequestForm`&#10;  - `getResetPasswordForm`&#10;  - `getChangePasswordForm`&#10;  - `getRegistrationForm`" />
+    <MESSAGE value="fix: update version and fix templates compatibility in changelog&#10;&#10;- Updated instance version in writerside.cfg from 2.0.1 to 2.0.3.&#10;- Fixed indentation in buildprofiles.xml.&#10;- Updated changelog to reflect version 2.0.3 and added fixes." />
+    <MESSAGE value="ide(config): added/updated automatically" />
+    <option name="LAST_COMMIT_MESSAGE" value="ide(config): added/updated automatically" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
