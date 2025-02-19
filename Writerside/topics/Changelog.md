@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.1 - (2025-02-19)
+
+## Fixed
+
+* Fixed **Commands** now find templates.
+
 ## 2.0.0 - (2025-02-18)
 
 ## Release highlights
