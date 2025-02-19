@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 18/02/2025, 15:16
+ * Last modified by "IDMarinas" on 19/02/2025, 14:08
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -37,6 +37,7 @@ use Symfony\Bundle\MakerBundle\Util\YamlSourceManipulator;
 use Symfony\Bundle\SecurityBundle\SecurityBundle;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Filesystem\Path;
 use Symfony\Component\Yaml\Yaml;
 
 final class MakerUserBundle extends AbstractMaker
@@ -109,7 +110,7 @@ final class MakerUserBundle extends AbstractMaker
 
 	protected static function getTpl (string $file): string
 	{
-		return 'templates/user/bundle/' . $file;
+		return Path::canonicalize(dirname(__DIR__, 3) . '/templates/user/bundle/' . $file);
 	}
 
 	/** @internal */
