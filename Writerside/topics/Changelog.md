@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.0.5 - (2025-02-19)
+
+### Fixed {id="fixed_2.0.5"}
+
+* Fixed **User Make Command**
+	* `security.yaml` updated route name for login
+	* `MakerUserBundle` add method for update `doctrine.yaml`
+	* This avoids the error
+	  `The class 'Idm\Bundle\User\Model\Entity\AbstractUser' was not found in the chain configured namespaces App\Entity`
+
 ## 2.0.4 - (2025-02-19)
 
 ### Fixed {id="fixed_2.0.4"}
