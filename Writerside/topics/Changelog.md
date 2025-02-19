@@ -1,8 +1,14 @@
 # Changelog
 
-## 2.0.1 - (2025-02-19)
+## 2.0.3 - (2025-02-19)
 
-## Fixed
+## Fixed {id="fixed_2.0.3"}
+
+* Fixed **Templates** to be compatible with your abstract classes.
+
+## 2.0.2 - (2025-02-19)
+
+## Fixed {id="fixed_2.0.2"}
 
 * Fixed **Commands** now find templates.
 
