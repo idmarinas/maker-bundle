@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 11/02/2025, 16:11
+ * Last modified by "IDMarinas" on 19/02/2025, 17:13
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -22,16 +22,18 @@ namespace Idm\Bundle\Maker\Maker\User\MakerUserBundle;
 use Idm\Bundle\User\Security\Checker\UserAdminChecker;
 use Idm\Bundle\User\Security\Checker\UserChecker;
 use Symfony\Bundle\MakerBundle\Util\ClassNameDetails;
-use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 
 trait SecurityTrait
 {
 	/** @internal */
 	private function updateSecurityConfig (array $data, ClassNameDetails $classNameDetails): array
 	{
-		return array_merge_recursive($data, [
+		$data['security']['firewalls']['admin']['provider'] = 'idm_user_provider';
+		$data['security']['firewalls']['main']['provider'] = 'idm_user_provider';
+
+		$data = array_merge_recursive($data, [
 			'security' => [
-				'providers'        => [
+				'providers' => [
 					'idm_user_provider' => [
 						'entity' => [
 							'class'    => $classNameDetails->getFullName(),
@@ -39,9 +41,8 @@ trait SecurityTrait
 						],
 					],
 				],
-				'firewalls'        => [
+				'firewalls' => [
 					'admin' => [
-						'provider'         => 'idm_user_provider',
 						'user_checker'     => UserAdminChecker::class,
 						'form_login'       => [
 							'login_path'          => 'idm_user_login',
@@ -55,7 +56,6 @@ trait SecurityTrait
 						],
 					],
 					'main'  => [
-						'provider'         => 'idm_user_provider',
 						'user_checker'     => UserChecker::class,
 						'form_login'       => [
 							'login_path'          => 'idm_user_login',
@@ -69,10 +69,18 @@ trait SecurityTrait
 						],
 					],
 				],
-				'password_hashers' => [
-					PasswordAuthenticatedUserInterface::class => 'auto',
-				],
 			],
 		]);
+
+		// To make the 'admin' firewall come before the 'main' firewall
+		$admin = &$data['security']['firewalls']['admin'];
+		$main = &$data['security']['firewalls']['main'];
+
+		unset($data['security']['firewalls']['admin'], $data['security']['firewalls']['main']);
+
+		$data['security']['firewalls']['admin'] = $admin;
+		$data['security']['firewalls']['main'] = $main;
+
+		return $data;
 	}
 }
