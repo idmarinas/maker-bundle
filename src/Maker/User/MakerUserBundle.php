@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 19/02/2025, 14:08
+ * Last modified by "IDMarinas" on 19/02/2025, 16:44
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -184,7 +184,7 @@ final class MakerUserBundle extends AbstractMaker
 		$data = $manipulator->getData();
 		$config = &$data['symfonycasts_reset_password'];
 
-		if (isset($config['request_password_repository']) && '' == $config['request_password_repository']) {
+		if (!empty($config['request_password_repository'])) {
 			$config['request_password_repository'] = null;
 		}
 
