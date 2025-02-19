@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 19/02/2025, 16:44
+ * Last modified by "IDMarinas" on 19/02/2025, 21:47
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -24,7 +24,9 @@ use Idm\Bundle\Maker\Maker\User\MakerUserBundle\SecurityTrait;
 use Idm\Bundle\Maker\Traits\Maker\GenerateClassTrait;
 use Idm\Bundle\Maker\Traits\Maker\MakeHelpFileTrait;
 use Idm\Bundle\User\IdmUserBundle;
+use Idm\Bundle\User\Model\Entity\AbstractConnections;
 use Idm\Bundle\User\Model\Entity\AbstractPremium;
+use Idm\Bundle\User\Model\Entity\AbstractUser;
 use Symfony\Bundle\MakerBundle\ConsoleStyle;
 use Symfony\Bundle\MakerBundle\DependencyBuilder;
 use Symfony\Bundle\MakerBundle\Exception\RuntimeCommandException;
@@ -101,6 +103,7 @@ final class MakerUserBundle extends AbstractMaker
 		// Config files
 		$this->tplConfigRateLimiterYaml();
 		$this->tplConfigResetPasswordYaml($sources['ResetPasswordRequestRepository']['class']->getFullName());
+		$this->tplConfigDoctrineYaml($sources);
 		$this->configSecurityYaml($sources['User']['class']);
 
 		$generator->writeChanges();
@@ -111,6 +114,27 @@ final class MakerUserBundle extends AbstractMaker
 	protected static function getTpl (string $file): string
 	{
 		return Path::canonicalize(dirname(__DIR__, 3) . '/templates/user/bundle/' . $file);
+	}
+
+	/** @internal */
+	private function tplConfigDoctrineYaml (array $sources): void
+	{
+		$doctrineYaml = 'config/packages/doctrine.yaml';
+
+		$manipulator = new YamlSourceManipulator($this->fileManager->getFileContents($doctrineYaml));
+		$data = $manipulator->getData();
+
+		$data['doctrine']['orm'] = [
+			'resolve_target_entities' => [
+				AbstractUser::class        => $sources['User']['class']->getFullName(),
+				AbstractPremium::class     => $sources['Premium']['class']->getFullName(),
+				AbstractConnections::class => $sources['Connections']['class']->getFullName(),
+			],
+		];
+
+		$manipulator->setData($data);
+
+		self::$generator->dumpFile($doctrineYaml, $manipulator->getContents());
 	}
 
 	/** @internal */
@@ -163,6 +187,7 @@ final class MakerUserBundle extends AbstractMaker
 		$this->fileManager->dumpFile($rateLimiter, $manipulator->getContents());
 	}
 
+	/** @internal */
 	private function tplConfigResetPasswordYaml (string $repositoryClassFullName): void
 	{
 		$resetPassword = 'config/packages/reset_password.yaml';
@@ -195,6 +220,7 @@ final class MakerUserBundle extends AbstractMaker
 		$this->fileManager->dumpFile($resetPassword, $manipulator->getContents());
 	}
 
+	/** @internal */
 	private function configSecurityYaml (ClassNameDetails $classNameDetails): void
 	{
 		$securityYaml = 'config/packages/security.yaml';
