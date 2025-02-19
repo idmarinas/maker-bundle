@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 19/02/2025, 17:13
+ * Last modified by "IDMarinas" on 19/02/2025, 18:39
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -45,8 +45,8 @@ trait SecurityTrait
 					'admin' => [
 						'user_checker'     => UserAdminChecker::class,
 						'form_login'       => [
-							'login_path'          => 'idm_user_login',
-							'check_path'          => 'idm_user_login',
+							'login_path'          => 'idm_user_login_web',
+							'check_path'          => 'idm_user_login_web',
 							'enable_csrf'         => true,
 							'form_only'           => true,
 							'default_target_path' => 'idm_user_profile_index',
@@ -58,8 +58,8 @@ trait SecurityTrait
 					'main'  => [
 						'user_checker'     => UserChecker::class,
 						'form_login'       => [
-							'login_path'          => 'idm_user_login',
-							'check_path'          => 'idm_user_login',
+							'login_path'          => 'idm_user_login_web',
+							'check_path'          => 'idm_user_login_web',
 							'enable_csrf'         => true,
 							'form_only'           => true,
 							'default_target_path' => 'idm_user_profile_index',
