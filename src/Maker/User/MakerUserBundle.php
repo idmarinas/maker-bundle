@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 19/02/2025, 21:47
+ * Last modified by "IDMarinas" on 20/02/2025, 14:32
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -21,6 +21,7 @@ namespace Idm\Bundle\Maker\Maker\User;
 
 use Exception;
 use Idm\Bundle\Maker\Maker\User\MakerUserBundle\SecurityTrait;
+use Idm\Bundle\Maker\Traits\Maker\ArrayUtilsTrait;
 use Idm\Bundle\Maker\Traits\Maker\GenerateClassTrait;
 use Idm\Bundle\Maker\Traits\Maker\MakeHelpFileTrait;
 use Idm\Bundle\User\IdmUserBundle;
@@ -44,6 +45,7 @@ use Symfony\Component\Yaml\Yaml;
 
 final class MakerUserBundle extends AbstractMaker
 {
+	use ArrayUtilsTrait;
 	use MakeHelpFileTrait;
 	use GenerateClassTrait;
 	use SecurityTrait;
@@ -103,8 +105,8 @@ final class MakerUserBundle extends AbstractMaker
 		// Config files
 		$this->tplConfigRateLimiterYaml();
 		$this->tplConfigResetPasswordYaml($sources['ResetPasswordRequestRepository']['class']->getFullName());
-		$this->tplConfigDoctrineYaml($sources);
 		$this->configSecurityYaml($sources['User']['class']);
+		$this->configDoctrineYaml($sources);
 
 		$generator->writeChanges();
 
@@ -117,20 +119,24 @@ final class MakerUserBundle extends AbstractMaker
 	}
 
 	/** @internal */
-	private function tplConfigDoctrineYaml (array $sources): void
+	private function configDoctrineYaml (array $sources): void
 	{
 		$doctrineYaml = 'config/packages/doctrine.yaml';
 
 		$manipulator = new YamlSourceManipulator($this->fileManager->getFileContents($doctrineYaml));
 		$data = $manipulator->getData();
 
-		$data['doctrine']['orm'] = [
-			'resolve_target_entities' => [
-				AbstractUser::class        => $sources['User']['class']->getFullName(),
-				AbstractPremium::class     => $sources['Premium']['class']->getFullName(),
-				AbstractConnections::class => $sources['Connections']['class']->getFullName(),
+		$data = self::arrayMergeRecursive($data, [
+			'doctrine' => [
+				'orm' => [
+					'resolve_target_entities' => [
+						AbstractUser::class        => $sources['User']['class']->getFullName(),
+						AbstractPremium::class     => $sources['Premium']['class']->getFullName(),
+						AbstractConnections::class => $sources['Connections']['class']->getFullName(),
+					],
+				],
 			],
-		];
+		]);
 
 		$manipulator->setData($data);
 
@@ -146,7 +152,7 @@ final class MakerUserBundle extends AbstractMaker
 		$tplManipulator = new YamlSourceManipulator($this->fileManager->getFileContents(self::getTpl($tplRateLimiter)));
 
 		if (!$this->fileManager->fileExists($rateLimiter)) {
-			$this->fileManager->dumpFile($rateLimiter, $tplManipulator->getContents());
+			self::$generator->dumpFile($rateLimiter, $tplManipulator->getContents());
 
 			return;
 		}
@@ -184,7 +190,7 @@ final class MakerUserBundle extends AbstractMaker
 
 		$manipulator->setData($data);
 
-		$this->fileManager->dumpFile($rateLimiter, $manipulator->getContents());
+		self::$generator->dumpFile($rateLimiter, $manipulator->getContents());
 	}
 
 	/** @internal */
@@ -199,7 +205,7 @@ final class MakerUserBundle extends AbstractMaker
 		];
 
 		if (!$this->fileManager->fileExists($resetPassword)) {
-			$this->fileManager->dumpFile($resetPassword, Yaml::dump($tplData));
+			self::$generator->dumpFile($resetPassword, Yaml::dump($tplData));
 
 			return;
 		}
@@ -217,7 +223,7 @@ final class MakerUserBundle extends AbstractMaker
 
 		$manipulator->setData($data);
 
-		$this->fileManager->dumpFile($resetPassword, $manipulator->getContents());
+		self::$generator->dumpFile($resetPassword, $manipulator->getContents());
 	}
 
 	/** @internal */
@@ -226,7 +232,7 @@ final class MakerUserBundle extends AbstractMaker
 		$securityYaml = 'config/packages/security.yaml';
 
 		if (!$this->fileManager->fileExists($securityYaml)) {
-			$this->fileManager->dumpFile($securityYaml, Yaml::dump(['security' => []]));
+			self::$generator->dumpFile($securityYaml, Yaml::dump(['security' => []]));
 		}
 
 		$manipulator = new YamlSourceManipulator($this->fileManager->getFileContents($securityYaml));
@@ -236,6 +242,6 @@ final class MakerUserBundle extends AbstractMaker
 
 		$manipulator->setData($data);
 
-		$this->fileManager->dumpFile($securityYaml, $manipulator->getContents());
+		self::$generator->dumpFile($securityYaml, $manipulator->getContents());
 	}
 }
