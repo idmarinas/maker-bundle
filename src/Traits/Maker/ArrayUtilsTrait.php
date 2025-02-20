@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 20/02/2025, 14:30
+ * Last modified by "IDMarinas" on 20/02/2025, 14:39
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -21,6 +21,10 @@ namespace Idm\Bundle\Maker\Traits\Maker;
 
 trait ArrayUtilsTrait
 {
+	/**
+	 * Same as the php function <code>array_merge_recursive</code>, but this method does not convert values to arrays
+	 * when they are not, updating their value.
+	 */
 	public static function arrayMergeRecursive (array $array1, array $array2): array
 	{
 		foreach ($array2 as $key => $value) {
