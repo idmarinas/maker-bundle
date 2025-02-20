@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 18/02/2025, 15:06
+ * Last modified by "IDMarinas" on 20/02/2025, 15:59
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -34,8 +34,8 @@ return function (Generator $generator): array {
 		'ConnectionsLog'                 => [
 			'class' => $generator->createClassNameDetails('ConnectionsLog', 'Entity\\User'),
 		],
-		'Log'                            => [
-			'class' => $generator->createClassNameDetails('Log', 'Entity\\User'),
+		'UserLog'                        => [
+			'class' => $generator->createClassNameDetails('UserLog', 'Entity\\User'),
 		],
 		'Premium'                        => [
 			'class'          => $generator->createClassNameDetails('Premium', 'Entity\\User'),
@@ -69,13 +69,13 @@ return function (Generator $generator): array {
 			'class'          => $generator->createClassNameDetails('User', 'Entity\\User'),
 			'use_statements' => [
 				'UserRepository',
-				'Log',
+				'UserLog',
 				'Premium',
 			],
 			'variables'      => [
 				'repository_class' => 'UserRepository',
 				'premium_class'    => 'Premium',
-				'log_entry_class'  => 'Log',
+				'log_entry_class'  => 'UserLog',
 			],
 		],
 		// Repositories
