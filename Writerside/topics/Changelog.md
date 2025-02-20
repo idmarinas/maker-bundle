@@ -1,6 +1,20 @@
 # Changelog
 
-## 2.0.6 - (2025-02-19)
+## 2.0.7 - (2025-02-20)
+
+### Changed
+
+* Changed **User Templates**
+	* Table name for User Log entity
+	* Rename file `Log.tpl.php` to `UserLog.tpl.php` and Entity name too
+
+### Fixed {id="fixed_2.0.7"}
+
+* **User Templates**
+	* Fixed template `ResetPasswordRequest.tpl.php` make `$user` attribute public
+* Fixed `MakerCommonContact.php` now search templates in correct dir
+
+## 2.0.6 - (2025-02-20)
 
 ### Fixed {id="fixed_2.0.6"}
 
