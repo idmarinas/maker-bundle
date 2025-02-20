@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.0.6 - (2025-02-19)
+
+### Fixed {id="fixed_2.0.6"}
+
+* Fixed **User Make Command**
+	* Replace `array_merge_recursive` for a custom method `ArrayUtilsTrait::arrayMergeRecursive()`
+	* With this, when merging array not convert non array value to array
+
 ## 2.0.5 - (2025-02-19)
 
 ### Fixed {id="fixed_2.0.5"}
