@@ -20,7 +20,7 @@ class ResetPasswordRequest implements ResetPasswordRequestInterface
 
 	#[ORM\ManyToOne]
 	#[ORM\JoinColumn(nullable: false)]
-	private ?<?= $user_entity ?> $user;
+	public ?<?= $user_entity ?> $user;
 
 	public function __construct (
 		<?= $user_entity ?>$user,
