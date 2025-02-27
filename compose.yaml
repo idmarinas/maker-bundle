@@ -2,11 +2,7 @@ name: maker_bundle
 
 services:
   php:
-    build:
-      context: .docker/php
-      target: dev
-      args:
-        VERSION: '8.2'
+    image: idmarinas/php:8.2-xdebug
     environment:
       SYMFONY_REQUIRE: '6.4.*'
     healthcheck:
