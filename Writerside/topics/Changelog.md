@@ -1,5 +1,19 @@
 # Changelog
 
+## 2.0.8 - (2025-02-21)
+
+### Changed {id="changed_2.0.8"}
+
+* Changed **Common Contact Templates**
+	* Rename file `Log.tpl.php` to `ContactLog.tpl.php` and Entity name too
+* Changed **ProfileController.tpl.php Template** deleted `IsGranted`
+* Changed **User.tpl.php Template** Added `UniqueEntity` validators and `SoftDeleteable`
+
+### Fixed {id="fixed_2.0.8"}
+
+* Fixed error in **Contact.tpl.php Entity Template**, now include a construct to initialized `createdAt` and `updatedAt`
+* Fixed error in **User.tpl.php Entity Template**, now include a construct to initialized `createdAt` and `updatedAt`
+
 ## 2.0.7 - (2025-02-20)
 
 ### Changed
@@ -47,7 +61,7 @@
 
 ## 2.0.2 - (2025-02-19)
 
-### Fixed {id="fixed_2.0.2"}
+### Fixed
 
 * Fixed **Commands** now find templates.
 
