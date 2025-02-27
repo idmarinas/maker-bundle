@@ -3,6 +3,7 @@
 namespace <?= $namespace; ?>;
 
 <?= $use_statements; ?>
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
@@ -23,6 +24,8 @@ class User extends AbstractUser
 
 	public function __construct ()
 	{
+		$this->createdAt = new DateTime();
+		$this->updatedAt = new DateTime();
 		$this->premium = (new <?= $premium_class ?>())
 			->setUser($this)
 		;
