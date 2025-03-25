@@ -1,5 +1,19 @@
 # Changelog
 
+## 2.1.0 - (2025-03-DD)
+
+### Added {id="added_2.1.0"}
+
+* _Added_ `make:idm:settings:bundle` command
+
+### Changed {id="changed_2.1.0"}
+
+* _Changed_ `sources.php` to a `Sources[Name]Bundle` to get all classes, With this avoid use `import`.
+
+### Fixed {id="fixed_2.1.0"}
+
+* _Fixed_ possible errors when using the `make:idm:user:bundle` command that some files are not found.
+
 ## 2.0.8 - (2025-02-21)
 
 ### Changed {id="changed_2.0.8"}
