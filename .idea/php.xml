@@ -21,6 +21,9 @@
     </phpcs_settings>
   </component>
   <component name="PhpIncludePathManager">
+    <exclude_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php83/Resources/stubs" />
+    </exclude_path>
     <include_path>
       <path value="$PROJECT_DIR$/vendor/rector/rector" />
       <path value="$PROJECT_DIR$/vendor/psr/container" />
