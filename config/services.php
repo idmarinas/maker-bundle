@@ -2,7 +2,7 @@
 /**
  * Copyright 2022-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 18/02/2025, 17:45
+ * Last modified by "IDMarinas" on 25/03/2025, 14:23
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -20,6 +20,7 @@
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
 use Idm\Bundle\Maker\Maker\Common\MakerCommonContact;
+use Idm\Bundle\Maker\Maker\Settings\MakerSettingsBundle;
 use Idm\Bundle\Maker\Maker\User\MakerUserBundle;
 
 return function (ContainerConfigurator $container) {
@@ -32,6 +33,9 @@ return function (ContainerConfigurator $container) {
 			->tag('maker.command')
 
 		->set('idm_maker.make.common_bundle.contact', MakerCommonContact::class)
+			->tag('maker.command')
+
+		->set('idm_maker.make.settings_bundle.files', MakerSettingsBundle::class)
 			->tag('maker.command')
 	;
 	// @formatter::on
