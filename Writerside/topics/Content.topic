@@ -22,6 +22,12 @@
 		<code-block lang="Console">php bin/console make:idm:user:bundle</code-block>
 	</chapter>
 
+	<chapter id="settings-bundle" title="Make Settings Bundle">
+		<secondary-label ref="2.1.0" />
+		Create necessary files for IDMarinas Settings Bundle:
+		<code-block lang="Console">php bin/console make:idm:settings:bundle</code-block>
+	</chapter>
+
 	<seealso style="cards">
 		<category ref="related">
 			<a href="Changelog.md" />
