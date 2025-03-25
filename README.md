@@ -14,7 +14,7 @@
 
 <div align="center">
 
-[![Test Suite](https://img.shields.io/github/actions/workflow/status/idmarinas/maker-bundle/php.yml?branch=2.x&style=for-the-badge&logo=github&logoColor=white&label=Bundle%20Test%20Suite)][testsuit]
+[![Test Suite](https://img.shields.io/github/actions/workflow/status/idmarinas/maker-bundle/php.yml?branch=2.x&style=for-the-badge&logo=github&logoColor=white&label=Bundle%20Test%20Suite)][testsuite]
 [![Quality Gate Status](https://img.shields.io/sonar/quality_gate/idmarinas_maker-bundle/2.x?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white)][sonarcloud]
 [![Coverage](https://img.shields.io/sonar/coverage/idmarinas_maker-bundle/2.x?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white)][sonarcloud]
 [![Technical Debt](https://img.shields.io/sonar/tech_debt/idmarinas_maker-bundle/2.x?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white)][sonarcloud]
@@ -99,6 +99,6 @@ return [
 [![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com)
 [![Composer](https://img.shields.io/badge/composer-%238c5530?style=for-the-badge&logo=composer&logoColor=white)](https://getcomposer.org)
 
-[testsuit]: https://github.com/idmarinas/maker-bundle/actions/workflows/php.yml
-
+[//]: # (@formatter:off)
+[testsuite]: https://github.com/idmarinas/maker-bundle/actions/workflows/php.yml
 [sonarcloud]: https://sonarcloud.io/dashboard?id=idmarinas_maker-bundle
