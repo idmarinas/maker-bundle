@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="refactor: make sources method final in AbstractSources class">
-      <change beforePath="$PROJECT_DIR$/.idea/copyright/Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copyright/Default.xml" afterDir="false" />
+    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="ide(config): added/updated automatically">
+      <change afterPath="$PROJECT_DIR$/src/Maker/GenerateClasses.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Maker/Settings/MakerSettingsBundle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Maker/Settings/MakerSettingsBundle/SourcesSettingsBundle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TODO.md" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Writerside/topics/Changelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/Changelog.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Maker/Common/MakerCommonContact.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maker/Common/MakerCommonContact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Maker/Common/MakerCommonContact/SourcesCommonBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maker/Common/MakerCommonContact/SourcesCommonBundle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Maker/User/MakerUserBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maker/User/MakerUserBundle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Maker/User/MakerUserBundle/SourcesUserBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maker/User/MakerUserBundle/SourcesUserBundle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,6 +287,9 @@
       <path value="$PROJECT_DIR$/vendor/symfony/ux-twig-component" />
       <path value="$PROJECT_DIR$/vendor/symfony/intl" />
       <path value="$PROJECT_DIR$/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php84" />
+      <path value="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle" />
+      <path value="$PROJECT_DIR$/vendor/idmarinas/settings-bundle" />
     </include_path>
   </component>
   <component name="ProblemsViewState">
@@ -318,7 +322,7 @@
     "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm": "Docker Compose",
     "git-widget-placeholder": "2.x",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "F:/Bundles/user-bundle",
+    "last_opened_file_path": "F:/Bundles/maker-bundle/templates/settings/bundle",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -332,11 +336,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Bundles\maker-bundle\templates\settings\bundle" />
       <recent name="F:\Bundles\maker-bundle\Writerside\topics" />
       <recent name="F:\Bundles\maker-bundle" />
       <recent name="F:\Bundles\maker-bundle\config" />
       <recent name="F:\Bundles\maker-bundle\templates\user\bundle" />
-      <recent name="F:\Bundles\template-bundle\app\config\packages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Bundles\maker-bundle\templates\user\bundle\src\Form\User" />
@@ -503,47 +507,7 @@
       <workItem from="1740426447526" duration="51000" />
       <workItem from="1740649169384" duration="54000" />
       <workItem from="1740660092311" duration="1989000" />
-      <workItem from="1742896787832" duration="8017000" />
-    </task>
-    <task id="LOCAL-00236" summary="refactor: update path handling in MakerUserBundle and MakerCommonContact&#10;&#10;- Added Path::canonicalize to getTpl method in MakerUserBundle for &#10;  better path resolution.&#10;- Updated getTpl method in MakerCommonContact to use &#10;  Path::canonicalize for consistent path handling.">
-      <option name="closed" value="true" />
-      <created>1739970600013</created>
-      <option name="number" value="00236" />
-      <option name="presentableId" value="LOCAL-00236" />
-      <option name="project" value="LOCAL" />
-      <updated>1739970600013</updated>
-    </task>
-    <task id="LOCAL-00237" summary="ide(config): added/updated automatically">
-      <option name="closed" value="true" />
-      <created>1739970629821</created>
-      <option name="number" value="00237" />
-      <option name="presentableId" value="LOCAL-00237" />
-      <option name="project" value="LOCAL" />
-      <updated>1739970629821</updated>
-    </task>
-    <task id="LOCAL-00238" summary="chore: update changelog for version 2.0.1&#10;&#10;- Added entry for version 2.0.1 released on 2025-02-19&#10;- Documented fix for **Commands** to now find templates.">
-      <option name="closed" value="true" />
-      <created>1739970728886</created>
-      <option name="number" value="00238" />
-      <option name="presentableId" value="LOCAL-00238" />
-      <option name="project" value="LOCAL" />
-      <updated>1739970728886</updated>
-    </task>
-    <task id="LOCAL-00239" summary="fix: update instance version in writerside configuration file&#10;&#10;Updated the instance version from 2.0.0 to 2.0.1 in the &#10;Writerside/writerside.cfg file to ensure compatibility &#10;with the latest features.">
-      <option name="closed" value="true" />
-      <created>1739970735829</created>
-      <option name="number" value="00239" />
-      <option name="presentableId" value="LOCAL-00239" />
-      <option name="project" value="LOCAL" />
-      <updated>1739970735829</updated>
-    </task>
-    <task id="LOCAL-00240" summary="refactor(controller): update method signatures to allow nullable objects&#10;&#10;- Changed method signatures in `ResetPasswordController`, &#10;  `ProfileController`, and `RegistrationController` to allow &#10;  nullable objects for the `$data` parameter. &#10;&#10;- Updated the following methods:&#10;  - `getResetPasswordRequestForm`&#10;  - `getResetPasswordForm`&#10;  - `getChangePasswordForm`&#10;  - `getRegistrationForm`">
-      <option name="closed" value="true" />
-      <created>1739979285434</created>
-      <option name="number" value="00240" />
-      <option name="presentableId" value="LOCAL-00240" />
-      <option name="project" value="LOCAL" />
-      <updated>1739979285435</updated>
+      <workItem from="1742896787832" duration="9652000" />
     </task>
     <task id="LOCAL-00241" summary="fix: update version and fix templates compatibility in changelog&#10;&#10;- Updated instance version in writerside.cfg from 2.0.1 to 2.0.3.&#10;- Fixed indentation in buildprofiles.xml.&#10;- Updated changelog to reflect version 2.0.3 and added fixes.">
       <option name="closed" value="true" />
@@ -897,7 +861,47 @@
       <option name="project" value="LOCAL" />
       <updated>1742904818478</updated>
     </task>
-    <option name="localTasksCounter" value="285" />
+    <task id="LOCAL-00285" summary="refactor(SourcesUserBundle): change method visibility to protected">
+      <option name="closed" value="true" />
+      <created>1742905021786</created>
+      <option name="number" value="00285" />
+      <option name="presentableId" value="LOCAL-00285" />
+      <option name="project" value="LOCAL" />
+      <updated>1742905021786</updated>
+    </task>
+    <task id="LOCAL-00286" summary="refactor: change visibility of getSources method to protected">
+      <option name="closed" value="true" />
+      <created>1742905032940</created>
+      <option name="number" value="00286" />
+      <option name="presentableId" value="LOCAL-00286" />
+      <option name="project" value="LOCAL" />
+      <updated>1742905032940</updated>
+    </task>
+    <task id="LOCAL-00287" summary="fix(UserBundle): update method names and improve file handling logic">
+      <option name="closed" value="true" />
+      <created>1742905060784</created>
+      <option name="number" value="00287" />
+      <option name="presentableId" value="LOCAL-00287" />
+      <option name="project" value="LOCAL" />
+      <updated>1742905060784</updated>
+    </task>
+    <task id="LOCAL-00288" summary="refactor: update method calls in MakerCommonContact.php for clarity">
+      <option name="closed" value="true" />
+      <created>1742905085045</created>
+      <option name="number" value="00288" />
+      <option name="presentableId" value="LOCAL-00288" />
+      <option name="project" value="LOCAL" />
+      <updated>1742905085045</updated>
+    </task>
+    <task id="LOCAL-00289" summary="ide(config): added/updated automatically">
+      <option name="closed" value="true" />
+      <created>1742905132194</created>
+      <option name="number" value="00289" />
+      <option name="presentableId" value="LOCAL-00289" />
+      <option name="project" value="LOCAL" />
+      <updated>1742905132194</updated>
+    </task>
+    <option name="localTasksCounter" value="290" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -923,10 +927,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="refactor(entity): rename Log class to UserLog for clarity" />
-    <MESSAGE value="fix(MakerCommonContact): update template path for contact files&#10;&#10;Updated the path in the getTpl method to point to the correct &#10;directory for contact templates. This change ensures that the &#10;template files are correctly located when generating contact &#10;related components." />
-    <MESSAGE value="fix(entity): change user property visibility to public in ResetPasswordRequest template" />
-    <MESSAGE value="chore: update Changelog for version 2.0.7&#10;&#10;- Changed User Templates:&#10;  - Updated table name for User Log entity&#10;  - Renamed file Log.tpl.php to UserLog.tpl.php and updated entity name&#10;&#10;- Fixed issues in User Templates:&#10;  - Made $user attribute public in ResetPasswordRequest.tpl.php&#10;  - Corrected template search directory in MakerCommonContact.php" />
     <MESSAGE value="fix: update instance version in writerside configuration&#10;&#10;Updated the instance version from 2.0.6 to 2.0.7 in the &#10;Writerside configuration file. This change ensures compatibility &#10;with the latest features and improvements." />
     <MESSAGE value="fix(compose): update PHP service image to idmarinas/php:8.2-xdebug&#10;&#10;- Changed the PHP service configuration to use the new image&#10;  instead of the previous build context." />
     <MESSAGE value="feat(user): add soft delete and unique constraints to User entity&#10;&#10;- Added SoftDeleteableEntity trait for soft deletion functionality.&#10;- Implemented UniqueEntity constraints for email and username fields &#10;  to ensure uniqueness." />
@@ -934,7 +934,6 @@
     <MESSAGE value="refactor(contact): rename Log class to ContactLog for clarity" />
     <MESSAGE value="feat(Contact): add constructor to initialize createdAt and updatedAt&#10;&#10;- Added a constructor to the Contact class to set createdAt and &#10;  updatedAt properties using the DateTime class." />
     <MESSAGE value="feat(User): initialize createdAt and updatedAt in User entity&#10;&#10;- Added DateTime initialization for createdAt and updatedAt &#10;  properties in the User entity constructor. This ensures that &#10;  these fields are set to the current date and time upon &#10;  instantiation." />
-    <MESSAGE value="ide(config): added/updated automatically" />
     <MESSAGE value="ci: add release trigger for documentation build workflow" />
     <MESSAGE value="chore: update Writerside configuration and changelog for version 2.0.8&#10;&#10;- Updated instance version in writerside.cfg from 2.0.7 to 2.0.8.&#10;- Added changelog entries for version 2.0.8, detailing changes and fixes:&#10;  - Renamed `Log.tpl.php` to `ContactLog.tpl.php`.&#10;  - Modified `ProfileController.tpl.php` to remove `IsGranted`.&#10;  - Added `UniqueEntity` validators and `SoftDeleteable` in `User.tpl.php`.&#10;  - Fixed initialization errors in `Contact.tpl.php` and `User.tpl.php`." />
     <MESSAGE value="fix: corrected badge label reference in README.md from 'testsuit' to 'testsuite'" />
@@ -948,7 +947,12 @@
     <MESSAGE value="feat(MakerCommonContact): refactor source handling in generate method" />
     <MESSAGE value="refactor(AbstractSources): enhance initialization and sources management" />
     <MESSAGE value="refactor: make sources method final in AbstractSources class" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: make sources method final in AbstractSources class" />
+    <MESSAGE value="refactor(SourcesUserBundle): change method visibility to protected" />
+    <MESSAGE value="refactor: change visibility of getSources method to protected" />
+    <MESSAGE value="fix(UserBundle): update method names and improve file handling logic" />
+    <MESSAGE value="refactor: update method calls in MakerCommonContact.php for clarity" />
+    <MESSAGE value="ide(config): added/updated automatically" />
+    <option name="LAST_COMMIT_MESSAGE" value="ide(config): added/updated automatically" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
