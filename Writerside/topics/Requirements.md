@@ -5,7 +5,7 @@
 
 | **%project%** |  **PHP Version**  |      **Symfony Version**       | **Status**                 |
 |---------------|:-----------------:|:------------------------------:|----------------------------|
-| `2.x`         |      `^8.2`       |        `6.4` and `^7.0`        | New features and bug fixes |
+| `2.x`         |      `^8.2`       |        `6.4` and `^7.1`        | New features and bug fixes |
 | `1.x`         | `^7.4` and `^8.0` | `4.4`, `5.4`, `6.4` and `^7.0` | No longer maintained       |
 
 <seealso>
