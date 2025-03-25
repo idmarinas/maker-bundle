@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 20/02/2025, 14:32
+ * Last modified by "IDMarinas" on 25/03/2025, 11:29
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -21,6 +21,7 @@ namespace Idm\Bundle\Maker\Maker\User;
 
 use Exception;
 use Idm\Bundle\Maker\Maker\User\MakerUserBundle\SecurityTrait;
+use Idm\Bundle\Maker\Maker\User\MakerUserBundle\SourcesUserBundle;
 use Idm\Bundle\Maker\Traits\Maker\ArrayUtilsTrait;
 use Idm\Bundle\Maker\Traits\Maker\GenerateClassTrait;
 use Idm\Bundle\Maker\Traits\Maker\MakeHelpFileTrait;
@@ -95,10 +96,10 @@ final class MakerUserBundle extends AbstractMaker
 	public function generate (InputInterface $input, ConsoleStyle $io, Generator $generator): void
 	{
 		self::$generator = $generator;
+		SourcesUserBundle::setGenerator($generator);
 
 		// Sources
-		$sources = include __DIR__ . '/MakerUserBundle/sources.php';
-		$sources = $sources($generator);
+		$sources = SourcesUserBundle::getSources();
 
 		$this->generateClasses($sources);
 
