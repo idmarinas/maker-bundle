@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 25/03/2025, 12:41
+ * Last modified by "IDMarinas" on 25/03/2025, 13:13
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -39,7 +39,7 @@ abstract class AbstractSources
 		self::$initialized = false;
 	}
 
-	public static function sources (): array
+	final public static function sources (): array
 	{
 		if (!static::$initialized) {
 			throw new UninitializedPropertyException(
