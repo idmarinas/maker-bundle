@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 25/03/2025, 12:33
+ * Last modified by "IDMarinas" on 25/03/2025, 20:58
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -41,9 +41,11 @@ final class SourcesUserBundle extends AbstractSources
 
 	private static function getEntities (): array
 	{
+		$namePrefix = 'Entity\\User';
+
 		return [
 			'Connections'             => [
-				'class'          => self::$generator->createClassNameDetails('Connections', 'Entity\\User'),
+				'class'          => self::$generator->createClassNameDetails('Connections', $namePrefix),
 				'use_statements' => [
 					'ConnectionsLog',
 				],
@@ -52,13 +54,13 @@ final class SourcesUserBundle extends AbstractSources
 				],
 			],
 			'ConnectionsLog'          => [
-				'class' => self::$generator->createClassNameDetails('ConnectionsLog', 'Entity\\User'),
+				'class' => self::$generator->createClassNameDetails('ConnectionsLog', $namePrefix),
 			],
 			'UserLog'                 => [
-				'class' => self::$generator->createClassNameDetails('UserLog', 'Entity\\User'),
+				'class' => self::$generator->createClassNameDetails('UserLog', $namePrefix),
 			],
 			'Premium'                 => [
-				'class'          => self::$generator->createClassNameDetails('Premium', 'Entity\\User'),
+				'class'          => self::$generator->createClassNameDetails('Premium', $namePrefix),
 				'use_statements' => [
 					'PremiumLog',
 				],
@@ -67,10 +69,10 @@ final class SourcesUserBundle extends AbstractSources
 				],
 			],
 			'PremiumLog'              => [
-				'class' => self::$generator->createClassNameDetails('PremiumLog', 'Entity\\User'),
+				'class' => self::$generator->createClassNameDetails('PremiumLog', $namePrefix),
 			],
 			'ResetPasswordRequest'    => [
-				'class'          => self::$generator->createClassNameDetails('ResetPasswordRequest', 'Entity\\User'),
+				'class'          => self::$generator->createClassNameDetails('ResetPasswordRequest', $namePrefix),
 				'use_statements' => [
 					'ResetPasswordRequestRepository',
 					'ResetPasswordRequestLog',
@@ -83,10 +85,10 @@ final class SourcesUserBundle extends AbstractSources
 				],
 			],
 			'ResetPasswordRequestLog' => [
-				'class' => self::$generator->createClassNameDetails('ResetPasswordRequestLog', 'Entity\\User'),
+				'class' => self::$generator->createClassNameDetails('ResetPasswordRequestLog', $namePrefix),
 			],
 			'User'                    => [
-				'class'          => self::$generator->createClassNameDetails('User', 'Entity\\User'),
+				'class'          => self::$generator->createClassNameDetails('User', $namePrefix),
 				'use_statements' => [
 					'UserRepository',
 					'UserLog',
@@ -103,6 +105,8 @@ final class SourcesUserBundle extends AbstractSources
 
 	private static function getController (): array
 	{
+		$namePrefix = 'Controller\\User';
+
 		return [
 			// Admin Crud Controller
 			'UserCrudController'      => [
@@ -116,13 +120,13 @@ final class SourcesUserBundle extends AbstractSources
 			],
 			// Controllers
 			'LoginController'         => [
-				'class' => self::$generator->createClassNameDetails('LoginController', 'Controller\\User'),
+				'class' => self::$generator->createClassNameDetails('LoginController', $namePrefix),
 			],
 			'ProfileController'       => [
-				'class' => self::$generator->createClassNameDetails('ProfileController', 'Controller\\User'),
+				'class' => self::$generator->createClassNameDetails('ProfileController', $namePrefix),
 			],
 			'RegistrationController'  => [
-				'class'          => self::$generator->createClassNameDetails('RegistrationController', 'Controller\\User'),
+				'class'          => self::$generator->createClassNameDetails('RegistrationController', $namePrefix),
 				'use_statements' => [
 					'RegistrationFormType',
 				],
@@ -131,7 +135,7 @@ final class SourcesUserBundle extends AbstractSources
 				],
 			],
 			'ResetPasswordController' => [
-				'class' => self::$generator->createClassNameDetails('ResetPasswordController', 'Controller\\User'),
+				'class' => self::$generator->createClassNameDetails('ResetPasswordController', $namePrefix),
 			],
 		];
 	}
