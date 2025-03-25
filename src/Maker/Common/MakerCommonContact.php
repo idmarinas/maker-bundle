@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 20/02/2025, 18:00
+ * Last modified by "IDMarinas" on 25/03/2025, 11:36
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -22,6 +22,7 @@ namespace Idm\Bundle\Maker\Maker\Common;
 use Exception;
 use Idm\Bundle\Common\IdmCommonBundle;
 use Idm\Bundle\Common\Model\Controller\AbstractContactController;
+use Idm\Bundle\Maker\Maker\Common\MakerCommonContact\SourcesCommonBundle;
 use Idm\Bundle\Maker\Traits\Maker\GenerateClassTrait;
 use Idm\Bundle\Maker\Traits\Maker\MakeHelpFileTrait;
 use Symfony\Bundle\MakerBundle\ConsoleStyle;
@@ -81,10 +82,11 @@ final class MakerCommonContact extends AbstractMaker
 	public function generate (InputInterface $input, ConsoleStyle $io, Generator $generator): void
 	{
 		self::$generator = $generator;
+		SourcesCommonBundle::setGenerator($generator);
 
-		$sources = include __DIR__ . '/MakerCommonContact/sources.php';
+		$sources = SourcesCommonBundle::getSources();
 
-		$this->generateClasses($sources($generator));
+		$this->generateClasses($sources);
 
 		$generator->writeChanges();
 
