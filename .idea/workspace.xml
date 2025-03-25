@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="feat(entity): add SettingUser entity with ORM mappings and methods">
-      <change afterPath="$PROJECT_DIR$/src/Maker/ClassManipulator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Maker/Settings/MakerSettingsBundle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Maker/Settings/MakerSettingsBundle/SourcesSettingsBundle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TODO.md" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.md" afterDir="false" />
+    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="ide(config): added/updated automatically">
+      <change beforePath="$PROJECT_DIR$/Writerside/topics/About.topic" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/About.topic" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Writerside/topics/Changelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/Changelog.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -508,47 +502,7 @@
       <workItem from="1740426447526" duration="51000" />
       <workItem from="1740649169384" duration="54000" />
       <workItem from="1740660092311" duration="1989000" />
-      <workItem from="1742896787832" duration="28002000" />
-    </task>
-    <task id="LOCAL-00254" summary="feat: add ArrayUtilsTrait for recursive array merging functionality">
-      <option name="closed" value="true" />
-      <created>1740058458517</created>
-      <option name="number" value="00254" />
-      <option name="presentableId" value="LOCAL-00254" />
-      <option name="project" value="LOCAL" />
-      <updated>1740058458517</updated>
-    </task>
-    <task id="LOCAL-00255" summary="feat(security): refactor security config updates in SecurityTrait&#10;&#10;- Simplified the updateSecurityConfig method by removing &#10;  unnecessary code and directly merging security configurations.&#10;- Updated the method to use arrayMergeRecursive for merging data.&#10;- Integrated ArrayUtilsTrait for better array handling.&#10;- Renamed tplConfigDoctrineYaml to configDoctrineYaml for clarity.&#10;- Adjusted the logic for writing configuration files to use &#10;  self::$generator for consistency.">
-      <option name="closed" value="true" />
-      <created>1740058504233</created>
-      <option name="number" value="00255" />
-      <option name="presentableId" value="LOCAL-00255" />
-      <option name="project" value="LOCAL" />
-      <updated>1740058504233</updated>
-    </task>
-    <task id="LOCAL-00256" summary="fix: update Writerside configuration for version 2.0.6&#10;&#10;- Updated instance version in writerside.cfg from 2.0.5 to 2.0.6&#10;- Added changelog entry for version 2.0.6 detailing fixes to User Make Command">
-      <option name="closed" value="true" />
-      <created>1740058646206</created>
-      <option name="number" value="00256" />
-      <option name="presentableId" value="LOCAL-00256" />
-      <option name="project" value="LOCAL" />
-      <updated>1740058646206</updated>
-    </task>
-    <task id="LOCAL-00257" summary="feat(ArrayUtilsTrait): add arrayMergeRecursive method with updated behavior&#10;&#10;- Implemented a new method `arrayMergeRecursive` that behaves &#10;  similarly to PHP's `array_merge_recursive`, but does not convert &#10;  non-array values to arrays, updating their values instead. &#10;&#10;This enhancement improves the utility of the trait for merging arrays.">
-      <option name="closed" value="true" />
-      <created>1740058798971</created>
-      <option name="number" value="00257" />
-      <option name="presentableId" value="LOCAL-00257" />
-      <option name="project" value="LOCAL" />
-      <updated>1740058798971</updated>
-    </task>
-    <task id="LOCAL-00258" summary="fix(entity): update table and index names in User Log entity template&#10;&#10;- Changed table name from 'idm_user_log' to 'idm_user_user_log'.&#10;- Updated index names accordingly to reflect the new table name.">
-      <option name="closed" value="true" />
-      <created>1740063509428</created>
-      <option name="number" value="00258" />
-      <option name="presentableId" value="LOCAL-00258" />
-      <option name="project" value="LOCAL" />
-      <updated>1740063509428</updated>
+      <workItem from="1742896787832" duration="28480000" />
     </task>
     <task id="LOCAL-00259" summary="fix(UserLog): rename Log to UserLog in sources.php&#10;&#10;- Updated the 'Log' entry to 'UserLog' in the sources.php file.&#10;- Adjusted the use statements and variable references accordingly.">
       <option name="closed" value="true" />
@@ -902,7 +856,47 @@
       <option name="project" value="LOCAL" />
       <updated>1742925441829</updated>
     </task>
-    <option name="localTasksCounter" value="303" />
+    <task id="LOCAL-00303" summary="feat(dependencies): add nette/php-generator package requirement">
+      <option name="closed" value="true" />
+      <created>1742927640077</created>
+      <option name="number" value="00303" />
+      <option name="presentableId" value="LOCAL-00303" />
+      <option name="project" value="LOCAL" />
+      <updated>1742927640077</updated>
+    </task>
+    <task id="LOCAL-00304" summary="feat(ClassManipulator): add ClassManipulator for entity management functionality">
+      <option name="closed" value="true" />
+      <created>1742927948611</created>
+      <option name="number" value="00304" />
+      <option name="presentableId" value="LOCAL-00304" />
+      <option name="project" value="LOCAL" />
+      <updated>1742927948611</updated>
+    </task>
+    <task id="LOCAL-00305" summary="feat: add MakerSettingsBundle class for managing settings bundle files">
+      <option name="closed" value="true" />
+      <created>1742927978328</created>
+      <option name="number" value="00305" />
+      <option name="presentableId" value="LOCAL-00305" />
+      <option name="project" value="LOCAL" />
+      <updated>1742927978328</updated>
+    </task>
+    <task id="LOCAL-00306" summary="feat: add SourcesSettingsBundle to manage settings and entities">
+      <option name="closed" value="true" />
+      <created>1742927984734</created>
+      <option name="number" value="00306" />
+      <option name="presentableId" value="LOCAL-00306" />
+      <option name="project" value="LOCAL" />
+      <updated>1742927984734</updated>
+    </task>
+    <task id="LOCAL-00307" summary="ide(config): added/updated automatically">
+      <option name="closed" value="true" />
+      <created>1742928000488</created>
+      <option name="number" value="00307" />
+      <option name="presentableId" value="LOCAL-00307" />
+      <option name="project" value="LOCAL" />
+      <updated>1742928000488</updated>
+    </task>
+    <option name="localTasksCounter" value="308" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -928,10 +922,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feat: add instructions for creating IDMarinas Settings Bundle" />
-    <MESSAGE value="feat(maker): add AbstractSources class for source generation functionality" />
-    <MESSAGE value="refactor(User): replace sources.php with SourcesUserBundle class" />
-    <MESSAGE value="feat(MakerUserBundle): refactor source retrieval in generate method" />
     <MESSAGE value="refactor(contact): remove old sources.php and add SourcesCommonBundle.php" />
     <MESSAGE value="feat(MakerCommonContact): refactor source handling in generate method" />
     <MESSAGE value="refactor(AbstractSources): enhance initialization and sources management" />
@@ -942,7 +932,6 @@
     <MESSAGE value="refactor: update method calls in MakerCommonContact.php for clarity" />
     <MESSAGE value="fix(compose): update PHP image to version 8.3-xdebug" />
     <MESSAGE value="fix(deps): add idmarinas/settings-bundle and stof/doctrine-extensions-bundle" />
-    <MESSAGE value="ide(config): added/updated automatically" />
     <MESSAGE value="feat(services): add MakerSettingsBundle to service configuration" />
     <MESSAGE value="feat(help): add MakeSettingsBundleFile.txt for IDMarinas Settings Bundle generation" />
     <MESSAGE value="feat: add GenerateClasses class for class generation functionality" />
@@ -953,7 +942,12 @@
     <MESSAGE value="fix(GenerateClasses): throw specific exception for uninitialized property access" />
     <MESSAGE value="fix(GenerateClasses): skip ignored sources in class generation process" />
     <MESSAGE value="feat(entity): add SettingUser entity with ORM mappings and methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(entity): add SettingUser entity with ORM mappings and methods" />
+    <MESSAGE value="feat(dependencies): add nette/php-generator package requirement" />
+    <MESSAGE value="feat(ClassManipulator): add ClassManipulator for entity management functionality" />
+    <MESSAGE value="feat: add MakerSettingsBundle class for managing settings bundle files" />
+    <MESSAGE value="feat: add SourcesSettingsBundle to manage settings and entities" />
+    <MESSAGE value="ide(config): added/updated automatically" />
+    <option name="LAST_COMMIT_MESSAGE" value="ide(config): added/updated automatically" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
