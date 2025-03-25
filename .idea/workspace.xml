@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="ide(config): added/updated automatically">
-      <change afterPath="$PROJECT_DIR$/src/Maker/GenerateClasses.php" afterDir="false" />
+    <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="feat(entity): add SettingUser entity with ORM mappings and methods">
+      <change afterPath="$PROJECT_DIR$/src/Maker/ClassManipulator.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Maker/Settings/MakerSettingsBundle.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Maker/Settings/MakerSettingsBundle/SourcesSettingsBundle.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TODO.md" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Writerside/topics/Changelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/Changelog.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -290,6 +289,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php84" />
       <path value="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle" />
       <path value="$PROJECT_DIR$/vendor/idmarinas/settings-bundle" />
+      <path value="$PROJECT_DIR$/vendor/nette/php-generator" />
+      <path value="$PROJECT_DIR$/vendor/nette/utils" />
     </include_path>
   </component>
   <component name="ProblemsViewState">
@@ -322,7 +323,7 @@
     "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm": "Docker Compose",
     "git-widget-placeholder": "2.x",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "F:/Bundles/maker-bundle/templates/settings/bundle",
+    "last_opened_file_path": "F:/Bundles/maker-bundle/src/Entity",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -336,11 +337,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Bundles\maker-bundle\src\Entity" />
+      <recent name="F:\Bundles\maker-bundle\config\help" />
+      <recent name="F:\Bundles\maker-bundle\templates\settings\bundle\src\Entity\Setting" />
       <recent name="F:\Bundles\maker-bundle\templates\settings\bundle" />
       <recent name="F:\Bundles\maker-bundle\Writerside\topics" />
-      <recent name="F:\Bundles\maker-bundle" />
-      <recent name="F:\Bundles\maker-bundle\config" />
-      <recent name="F:\Bundles\maker-bundle\templates\user\bundle" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Bundles\maker-bundle\templates\user\bundle\src\Form\User" />
@@ -507,111 +508,7 @@
       <workItem from="1740426447526" duration="51000" />
       <workItem from="1740649169384" duration="54000" />
       <workItem from="1740660092311" duration="1989000" />
-      <workItem from="1742896787832" duration="9652000" />
-    </task>
-    <task id="LOCAL-00241" summary="fix: update version and fix templates compatibility in changelog&#10;&#10;- Updated instance version in writerside.cfg from 2.0.1 to 2.0.3.&#10;- Fixed indentation in buildprofiles.xml.&#10;- Updated changelog to reflect version 2.0.3 and added fixes.">
-      <option name="closed" value="true" />
-      <created>1739979409312</created>
-      <option name="number" value="00241" />
-      <option name="presentableId" value="LOCAL-00241" />
-      <option name="project" value="LOCAL" />
-      <updated>1739979409312</updated>
-    </task>
-    <task id="LOCAL-00242" summary="ide(config): added/updated automatically">
-      <option name="closed" value="true" />
-      <created>1739979426312</created>
-      <option name="number" value="00242" />
-      <option name="presentableId" value="LOCAL-00242" />
-      <option name="project" value="LOCAL" />
-      <updated>1739979426312</updated>
-    </task>
-    <task id="LOCAL-00243" summary="ide(config): added/updated automatically">
-      <option name="closed" value="true" />
-      <created>1739979455006</created>
-      <option name="number" value="00243" />
-      <option name="presentableId" value="LOCAL-00243" />
-      <option name="project" value="LOCAL" />
-      <updated>1739979455006</updated>
-    </task>
-    <task id="LOCAL-00244" summary="fix(UserUserBundle): update request_password_repository check for null&#10;&#10;- Changed condition to check if request_password_repository is not empty &#10;  before setting it to null. This improves the logic for handling &#10;  the password reset configuration.">
-      <option name="closed" value="true" />
-      <created>1739981661902</created>
-      <option name="number" value="00244" />
-      <option name="presentableId" value="LOCAL-00244" />
-      <option name="project" value="LOCAL" />
-      <updated>1739981661902</updated>
-    </task>
-    <task id="LOCAL-00245" summary="fix(SecurityTrait): update security configuration for firewalls&#10;&#10;- Set 'idm_user_provider' as the provider for both 'admin' and 'main' &#10;  firewalls.&#10;- Ensure 'admin' firewall comes before 'main' firewall in the config.&#10;- Removed redundant provider assignments in the firewall definitions.">
-      <option name="closed" value="true" />
-      <created>1739981672145</created>
-      <option name="number" value="00245" />
-      <option name="presentableId" value="LOCAL-00245" />
-      <option name="project" value="LOCAL" />
-      <updated>1739981672145</updated>
-    </task>
-    <task id="LOCAL-00246" summary="ide(config): added/updated automatically">
-      <option name="closed" value="true" />
-      <created>1739981684313</created>
-      <option name="number" value="00246" />
-      <option name="presentableId" value="LOCAL-00246" />
-      <option name="project" value="LOCAL" />
-      <updated>1739981684313</updated>
-    </task>
-    <task id="LOCAL-00247" summary="fix: update instance version to 2.0.4 in writerside.cfg">
-      <option name="closed" value="true" />
-      <created>1739981836281</created>
-      <option name="number" value="00247" />
-      <option name="presentableId" value="LOCAL-00247" />
-      <option name="project" value="LOCAL" />
-      <updated>1739981836281</updated>
-    </task>
-    <task id="LOCAL-00248" summary="chore: update changelog for version 2.0.4">
-      <option name="closed" value="true" />
-      <created>1739981955987</created>
-      <option name="number" value="00248" />
-      <option name="presentableId" value="LOCAL-00248" />
-      <option name="project" value="LOCAL" />
-      <updated>1739981955987</updated>
-    </task>
-    <task id="LOCAL-00249" summary="fix(workflow): update push configuration to only include branch 2.x">
-      <option name="closed" value="true" />
-      <created>1739982022576</created>
-      <option name="number" value="00249" />
-      <option name="presentableId" value="LOCAL-00249" />
-      <option name="project" value="LOCAL" />
-      <updated>1739982022576</updated>
-    </task>
-    <task id="LOCAL-00250" summary="chore: update Changelog.md for improved formatting&#10;&#10;- Adjusted formatting in the &quot;Fixed&quot; section to enhance readability.&#10;- Ensured consistent indentation for the updated file reference.">
-      <option name="closed" value="true" />
-      <created>1739982263136</created>
-      <option name="number" value="00250" />
-      <option name="presentableId" value="LOCAL-00250" />
-      <option name="project" value="LOCAL" />
-      <updated>1739982263136</updated>
-    </task>
-    <task id="LOCAL-00251" summary="fix(security): update login paths to use 'idm_user_login_web'&#10;&#10;Updated the login and check paths in the SecurityTrait to &#10;'idm_user_login_web' for both admin and main user configurations. &#10;This change ensures consistency across the authentication process.">
-      <option name="closed" value="true" />
-      <created>1739998056492</created>
-      <option name="number" value="00251" />
-      <option name="presentableId" value="LOCAL-00251" />
-      <option name="project" value="LOCAL" />
-      <updated>1739998056492</updated>
-    </task>
-    <task id="LOCAL-00252" summary="feat(UserBundle): add Doctrine YAML configuration for entity resolution&#10;&#10;- Added a new method `tplConfigDoctrineYaml` to configure &#10;  Doctrine ORM entity resolution for User, Premium, and &#10;  Connections entities.&#10;- Updated the `doctrine.yaml` file with the new entity &#10;  mappings based on the provided sources.">
-      <option name="closed" value="true" />
-      <created>1739998206114</created>
-      <option name="number" value="00252" />
-      <option name="presentableId" value="LOCAL-00252" />
-      <option name="project" value="LOCAL" />
-      <updated>1739998206114</updated>
-    </task>
-    <task id="LOCAL-00253" summary="fix: update instance version to 2.0.5 in writerside.cfg">
-      <option name="closed" value="true" />
-      <created>1739998216214</created>
-      <option name="number" value="00253" />
-      <option name="presentableId" value="LOCAL-00253" />
-      <option name="project" value="LOCAL" />
-      <updated>1739998216214</updated>
+      <workItem from="1742896787832" duration="28002000" />
     </task>
     <task id="LOCAL-00254" summary="feat: add ArrayUtilsTrait for recursive array merging functionality">
       <option name="closed" value="true" />
@@ -901,7 +798,111 @@
       <option name="project" value="LOCAL" />
       <updated>1742905132194</updated>
     </task>
-    <option name="localTasksCounter" value="290" />
+    <task id="LOCAL-00290" summary="fix(compose): update PHP image to version 8.3-xdebug">
+      <option name="closed" value="true" />
+      <created>1742906622002</created>
+      <option name="number" value="00290" />
+      <option name="presentableId" value="LOCAL-00290" />
+      <option name="project" value="LOCAL" />
+      <updated>1742906622003</updated>
+    </task>
+    <task id="LOCAL-00291" summary="fix(deps): add idmarinas/settings-bundle and stof/doctrine-extensions-bundle">
+      <option name="closed" value="true" />
+      <created>1742906636932</created>
+      <option name="number" value="00291" />
+      <option name="presentableId" value="LOCAL-00291" />
+      <option name="project" value="LOCAL" />
+      <updated>1742906636932</updated>
+    </task>
+    <task id="LOCAL-00292" summary="ide(config): added/updated automatically">
+      <option name="closed" value="true" />
+      <created>1742906653245</created>
+      <option name="number" value="00292" />
+      <option name="presentableId" value="LOCAL-00292" />
+      <option name="project" value="LOCAL" />
+      <updated>1742906653245</updated>
+    </task>
+    <task id="LOCAL-00293" summary="feat(services): add MakerSettingsBundle to service configuration">
+      <option name="closed" value="true" />
+      <created>1742909463237</created>
+      <option name="number" value="00293" />
+      <option name="presentableId" value="LOCAL-00293" />
+      <option name="project" value="LOCAL" />
+      <updated>1742909463237</updated>
+    </task>
+    <task id="LOCAL-00294" summary="feat(help): add MakeSettingsBundleFile.txt for IDMarinas Settings Bundle generation">
+      <option name="closed" value="true" />
+      <created>1742909468146</created>
+      <option name="number" value="00294" />
+      <option name="presentableId" value="LOCAL-00294" />
+      <option name="project" value="LOCAL" />
+      <updated>1742909468146</updated>
+    </task>
+    <task id="LOCAL-00295" summary="feat: add GenerateClasses class for class generation functionality">
+      <option name="closed" value="true" />
+      <created>1742909475770</created>
+      <option name="number" value="00295" />
+      <option name="presentableId" value="LOCAL-00295" />
+      <option name="project" value="LOCAL" />
+      <updated>1742909475770</updated>
+    </task>
+    <task id="LOCAL-00296" summary="feat(repository): add SettingRepository, SettingUserRepository, and SettingDomainRepository templates">
+      <option name="closed" value="true" />
+      <created>1742909499066</created>
+      <option name="number" value="00296" />
+      <option name="presentableId" value="LOCAL-00296" />
+      <option name="project" value="LOCAL" />
+      <updated>1742909499066</updated>
+    </task>
+    <task id="LOCAL-00297" summary="feat(entity): add Setting, SettingDomain, SettingLog, and SettingDomainLog templates">
+      <option name="closed" value="true" />
+      <created>1742909513454</created>
+      <option name="number" value="00297" />
+      <option name="presentableId" value="LOCAL-00297" />
+      <option name="project" value="LOCAL" />
+      <updated>1742909513454</updated>
+    </task>
+    <task id="LOCAL-00298" summary="feat(entity): add SettingUserLog entity template with ORM mappings">
+      <option name="closed" value="true" />
+      <created>1742912133402</created>
+      <option name="number" value="00298" />
+      <option name="presentableId" value="LOCAL-00298" />
+      <option name="project" value="LOCAL" />
+      <updated>1742912133402</updated>
+    </task>
+    <task id="LOCAL-00299" summary="feat(controller): add SettingCrudController and SettingDomainCrudController templates">
+      <option name="closed" value="true" />
+      <created>1742912491076</created>
+      <option name="number" value="00299" />
+      <option name="presentableId" value="LOCAL-00299" />
+      <option name="project" value="LOCAL" />
+      <updated>1742912491076</updated>
+    </task>
+    <task id="LOCAL-00300" summary="fix(GenerateClasses): throw specific exception for uninitialized property access">
+      <option name="closed" value="true" />
+      <created>1742912930888</created>
+      <option name="number" value="00300" />
+      <option name="presentableId" value="LOCAL-00300" />
+      <option name="project" value="LOCAL" />
+      <updated>1742912930888</updated>
+    </task>
+    <task id="LOCAL-00301" summary="fix(GenerateClasses): skip ignored sources in class generation process">
+      <option name="closed" value="true" />
+      <created>1742913246313</created>
+      <option name="number" value="00301" />
+      <option name="presentableId" value="LOCAL-00301" />
+      <option name="project" value="LOCAL" />
+      <updated>1742913246313</updated>
+    </task>
+    <task id="LOCAL-00302" summary="feat(entity): add SettingUser entity with ORM mappings and methods">
+      <option name="closed" value="true" />
+      <created>1742925441829</created>
+      <option name="number" value="00302" />
+      <option name="presentableId" value="LOCAL-00302" />
+      <option name="project" value="LOCAL" />
+      <updated>1742925441829</updated>
+    </task>
+    <option name="localTasksCounter" value="303" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -927,18 +928,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="fix: update instance version in writerside configuration&#10;&#10;Updated the instance version from 2.0.6 to 2.0.7 in the &#10;Writerside configuration file. This change ensures compatibility &#10;with the latest features and improvements." />
-    <MESSAGE value="fix(compose): update PHP service image to idmarinas/php:8.2-xdebug&#10;&#10;- Changed the PHP service configuration to use the new image&#10;  instead of the previous build context." />
-    <MESSAGE value="feat(user): add soft delete and unique constraints to User entity&#10;&#10;- Added SoftDeleteableEntity trait for soft deletion functionality.&#10;- Implemented UniqueEntity constraints for email and username fields &#10;  to ensure uniqueness." />
-    <MESSAGE value="fix(ProfileController): remove unused IsGranted attribute from profile route&#10;&#10;- Removed the IsGranted attribute from the ProfileController to clean up&#10;  the code and improve maintainability. This change does not affect the &#10;  functionality of the route, as access control is handled elsewhere." />
-    <MESSAGE value="refactor(contact): rename Log class to ContactLog for clarity" />
-    <MESSAGE value="feat(Contact): add constructor to initialize createdAt and updatedAt&#10;&#10;- Added a constructor to the Contact class to set createdAt and &#10;  updatedAt properties using the DateTime class." />
-    <MESSAGE value="feat(User): initialize createdAt and updatedAt in User entity&#10;&#10;- Added DateTime initialization for createdAt and updatedAt &#10;  properties in the User entity constructor. This ensures that &#10;  these fields are set to the current date and time upon &#10;  instantiation." />
-    <MESSAGE value="ci: add release trigger for documentation build workflow" />
-    <MESSAGE value="chore: update Writerside configuration and changelog for version 2.0.8&#10;&#10;- Updated instance version in writerside.cfg from 2.0.7 to 2.0.8.&#10;- Added changelog entries for version 2.0.8, detailing changes and fixes:&#10;  - Renamed `Log.tpl.php` to `ContactLog.tpl.php`.&#10;  - Modified `ProfileController.tpl.php` to remove `IsGranted`.&#10;  - Added `UniqueEntity` validators and `SoftDeleteable` in `User.tpl.php`.&#10;  - Fixed initialization errors in `Contact.tpl.php` and `User.tpl.php`." />
-    <MESSAGE value="fix: corrected badge label reference in README.md from 'testsuit' to 'testsuite'" />
-    <MESSAGE value="fix(labels): update color for version 2.0.0 and add version 2.1.0 label" />
-    <MESSAGE value="fix: update Symfony version requirement for project 2.x to ^7.1" />
     <MESSAGE value="feat: add instructions for creating IDMarinas Settings Bundle" />
     <MESSAGE value="feat(maker): add AbstractSources class for source generation functionality" />
     <MESSAGE value="refactor(User): replace sources.php with SourcesUserBundle class" />
@@ -951,8 +940,20 @@
     <MESSAGE value="refactor: change visibility of getSources method to protected" />
     <MESSAGE value="fix(UserBundle): update method names and improve file handling logic" />
     <MESSAGE value="refactor: update method calls in MakerCommonContact.php for clarity" />
+    <MESSAGE value="fix(compose): update PHP image to version 8.3-xdebug" />
+    <MESSAGE value="fix(deps): add idmarinas/settings-bundle and stof/doctrine-extensions-bundle" />
     <MESSAGE value="ide(config): added/updated automatically" />
-    <option name="LAST_COMMIT_MESSAGE" value="ide(config): added/updated automatically" />
+    <MESSAGE value="feat(services): add MakerSettingsBundle to service configuration" />
+    <MESSAGE value="feat(help): add MakeSettingsBundleFile.txt for IDMarinas Settings Bundle generation" />
+    <MESSAGE value="feat: add GenerateClasses class for class generation functionality" />
+    <MESSAGE value="feat(repository): add SettingRepository, SettingUserRepository, and SettingDomainRepository templates" />
+    <MESSAGE value="feat(entity): add Setting, SettingDomain, SettingLog, and SettingDomainLog templates" />
+    <MESSAGE value="feat(entity): add SettingUserLog entity template with ORM mappings" />
+    <MESSAGE value="feat(controller): add SettingCrudController and SettingDomainCrudController templates" />
+    <MESSAGE value="fix(GenerateClasses): throw specific exception for uninitialized property access" />
+    <MESSAGE value="fix(GenerateClasses): skip ignored sources in class generation process" />
+    <MESSAGE value="feat(entity): add SettingUser entity with ORM mappings and methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(entity): add SettingUser entity with ORM mappings and methods" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
