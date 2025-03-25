@@ -18,11 +18,15 @@
 		<def id="symfony-components" title="Symfony Components">
 			This project relies on these components for most of its features.
 		</def>
+		<def id="nette-php-generator" title="Nette PHP Code Generator">
+			Used to manipulate and update php classes.
+		</def>
 	</deflist>
 
 	<seealso>
 		<category ref="external">
 			<a href="https://symfony.com/components">Symfony Components</a>
+			<a href="https://doc.nette.org/en/php-generator">Nette PHP Code Generator</a>
 		</category>
 	</seealso>
 </topic>
