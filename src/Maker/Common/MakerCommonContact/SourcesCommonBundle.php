@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 25/03/2025, 11:39
+ * Last modified by "IDMarinas" on 25/03/2025, 13:16
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -23,7 +23,7 @@ use Idm\Bundle\Maker\Maker\AbstractSources;
 
 final class SourcesCommonBundle extends AbstractSources
 {
-	public static function getSources (): array
+	protected static function sourcesInternal (): array
 	{
 		return [
 			// Entities
