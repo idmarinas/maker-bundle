@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 25/03/2025, 11:36
+ * Last modified by "IDMarinas" on 25/03/2025, 13:17
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -82,9 +82,9 @@ final class MakerCommonContact extends AbstractMaker
 	public function generate (InputInterface $input, ConsoleStyle $io, Generator $generator): void
 	{
 		self::$generator = $generator;
-		SourcesCommonBundle::setGenerator($generator);
+		SourcesCommonBundle::initialize($generator);
 
-		$sources = SourcesCommonBundle::getSources();
+		$sources = SourcesCommonBundle::sources();
 
 		$this->generateClasses($sources);
 
