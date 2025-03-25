@@ -34,7 +34,7 @@
 		"easycorp/easyadmin-bundle": "^4.24",
 		"idmarinas/common-bundle": "^3.4",
 		"idmarinas/composer-plugin": "^1.0.0",
-		"idmarinas/settings-bundle": "1.x-dev",
+		"idmarinas/settings-bundle": "^1.0",
 		"idmarinas/user-bundle": "^2.0",
 		"phpunit/phpunit": "^9.6",
 		"rector/rector": "^1.2",
