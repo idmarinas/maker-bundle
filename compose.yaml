@@ -2,7 +2,7 @@ name: maker_bundle
 
 services:
   php:
-    image: idmarinas/php:8.2-xdebug
+    image: idmarinas/php:8.3-xdebug
     environment:
       SYMFONY_REQUIRE: '6.4.*'
     healthcheck:
