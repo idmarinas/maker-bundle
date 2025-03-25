@@ -26,5 +26,6 @@
 	<secondary-label id="beta" name="β" color="tangerine">Beta</secondary-label>
 
 	<secondary-label id="1.0.0" name="1.0.0" color="red">New in version 1.0.0</secondary-label>
-	<secondary-label id="2.0.0" name="2.0.0" color="blue">New in version 2.0.0</secondary-label>
+	<secondary-label id="2.0.0" name="2.0.0" color="red">New in version 2.0.0</secondary-label>
+	<secondary-label id="2.1.0" name="2.1.0" color="blue">New in version 2.1.0</secondary-label>
 </labels>
