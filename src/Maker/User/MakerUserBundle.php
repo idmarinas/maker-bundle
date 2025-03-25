@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 25/03/2025, 11:29
+ * Last modified by "IDMarinas" on 25/03/2025, 13:05
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -96,10 +96,10 @@ final class MakerUserBundle extends AbstractMaker
 	public function generate (InputInterface $input, ConsoleStyle $io, Generator $generator): void
 	{
 		self::$generator = $generator;
-		SourcesUserBundle::setGenerator($generator);
+		SourcesUserBundle::initialize($generator);
 
 		// Sources
-		$sources = SourcesUserBundle::getSources();
+		$sources = SourcesUserBundle::sources();
 
 		$this->generateClasses($sources);
 
@@ -123,6 +123,10 @@ final class MakerUserBundle extends AbstractMaker
 	private function configDoctrineYaml (array $sources): void
 	{
 		$doctrineYaml = 'config/packages/doctrine.yaml';
+
+		if (!$this->fileManager->fileExists($doctrineYaml)) {
+			$this->fileManager->dumpFile($doctrineYaml, Yaml::dump(['doctrine' => []]));
+		}
 
 		$manipulator = new YamlSourceManipulator($this->fileManager->getFileContents($doctrineYaml));
 		$data = $manipulator->getData();
@@ -233,7 +237,7 @@ final class MakerUserBundle extends AbstractMaker
 		$securityYaml = 'config/packages/security.yaml';
 
 		if (!$this->fileManager->fileExists($securityYaml)) {
-			self::$generator->dumpFile($securityYaml, Yaml::dump(['security' => []]));
+			$this->fileManager->dumpFile($securityYaml, Yaml::dump(['security' => []]));
 		}
 
 		$manipulator = new YamlSourceManipulator($this->fileManager->getFileContents($securityYaml));
