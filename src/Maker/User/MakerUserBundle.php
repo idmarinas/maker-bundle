@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 25/03/2025, 13:05
+ * Last modified by "IDMarinas" on 25/03/2025, 21:04
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -20,10 +20,10 @@
 namespace Idm\Bundle\Maker\Maker\User;
 
 use Exception;
+use Idm\Bundle\Maker\Maker\GenerateClasses;
 use Idm\Bundle\Maker\Maker\User\MakerUserBundle\SecurityTrait;
 use Idm\Bundle\Maker\Maker\User\MakerUserBundle\SourcesUserBundle;
 use Idm\Bundle\Maker\Traits\Maker\ArrayUtilsTrait;
-use Idm\Bundle\Maker\Traits\Maker\GenerateClassTrait;
 use Idm\Bundle\Maker\Traits\Maker\MakeHelpFileTrait;
 use Idm\Bundle\User\IdmUserBundle;
 use Idm\Bundle\User\Model\Entity\AbstractConnections;
@@ -48,8 +48,9 @@ final class MakerUserBundle extends AbstractMaker
 {
 	use ArrayUtilsTrait;
 	use MakeHelpFileTrait;
-	use GenerateClassTrait;
 	use SecurityTrait;
+
+	private static Generator $generator;
 
 	public function __construct (private readonly FileManager $fileManager) {}
 
@@ -101,7 +102,7 @@ final class MakerUserBundle extends AbstractMaker
 		// Sources
 		$sources = SourcesUserBundle::sources();
 
-		$this->generateClasses($sources);
+		GenerateClasses::generate($sources);
 
 		// Config files
 		$this->tplConfigRateLimiterYaml();
