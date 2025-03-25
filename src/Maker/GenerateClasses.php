@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 25/03/2025, 15:28
+ * Last modified by "IDMarinas" on 25/03/2025, 15:31
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -56,6 +56,10 @@ final class GenerateClasses
 		}
 
 		foreach ($sources as $name => $source) {
+			if ($source['ignore'] ?? false) {
+				continue;
+			}
+
 			$useStatements = new UseStatementGenerator(
 				array_map(fn($use) => $sources[$use]['class']->getFullName(), $source['use_statements'] ?? [])
 			);
