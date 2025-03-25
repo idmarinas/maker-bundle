@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 25/03/2025, 12:06
+ * Last modified by "IDMarinas" on 25/03/2025, 15:28
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -24,6 +24,7 @@ use Symfony\Bundle\MakerBundle\Generator;
 use Symfony\Bundle\MakerBundle\Util\ClassNameDetails;
 use Symfony\Bundle\MakerBundle\Util\UseStatementGenerator;
 use Symfony\Component\Filesystem\Path;
+use Symfony\Component\PropertyAccess\Exception\UninitializedPropertyException;
 use function Symfony\Component\String\u;
 
 final class GenerateClasses
@@ -45,7 +46,13 @@ final class GenerateClasses
 	public static function generate (array $sources): void
 	{
 		if (!self::$initialized) {
-			throw new Exception();
+			throw new UninitializedPropertyException(
+				sprintf(
+					'Need call to "%1$s::initialize()" before call "%1$s::%2$s()"',
+					u(self::class)->afterLast('\\')->toString(),
+					__FUNCTION__
+				)
+			);
 		}
 
 		foreach ($sources as $name => $source) {
