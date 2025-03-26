@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 25/03/2025, 15:31
+ * Last modified by "IDMarinas" on 26/03/2025, 23:57
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -30,7 +30,7 @@ use function Symfony\Component\String\u;
 final class GenerateClasses
 {
 	private static Generator $generator;
-	private static string    $templatesPath;
+	private static ?string   $templatesPath;
 	private static bool      $initialized = false;
 
 	public static function initialize (Generator $generator, string $templatesPath): void
