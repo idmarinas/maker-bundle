@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 25/03/2025, 13:16
+ * Last modified by "IDMarinas" on 26/03/2025, 23:38
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -56,19 +56,19 @@ final class SourcesCommonBundle extends AbstractSources
 	private static function getEntities (): array
 	{
 		return [
-			'Contact' => [
+			'Contact'    => [
 				'class'          => self::$generator->createClassNameDetails('Contact', 'Entity\\Contact'),
 				'use_statements' => [
 					'ContactRepository',
-					'Log',
+					'ContactLog',
 				],
 				'variables'      => [
 					'repository_class' => 'ContactRepository',
-					'log_entry_class'  => 'Log',
+					'log_entry_class'  => 'ContactLog',
 				],
 			],
-			'Log'     => [
-				'class' => self::$generator->createClassNameDetails('Log', 'Entity\\Contact'),
+			'ContactLog' => [
+				'class' => self::$generator->createClassNameDetails('ContactLog', 'Entity\\Contact'),
 			],
 		];
 	}
