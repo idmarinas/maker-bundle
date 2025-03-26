@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.1.1 - (2025-03-26)
+
+### Fixed {id="fixed_1"}
+
+* _Fixed_ Initialized GenerateClasses in MakerCommonContact and MakerUserBundle
+
 ## 2.1.0 - (2025-03-25)
 
 ### Added {id="added_2.1.0"}
