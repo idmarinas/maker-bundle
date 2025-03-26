@@ -1,8 +1,14 @@
 # Changelog
 
+## 2.1.2 - (2025-03-26)
+
+### Fixed {id="fixed_2.1.2"}
+
+* _Fixed_ Rename `Log` Entity to `ContactLog` in `SourcesCommonBundle`
+
 ## 2.1.1 - (2025-03-26)
 
-### Fixed {id="fixed_1"}
+### Fixed {id="fixed_2.1.1"}
 
 * _Fixed_ Initialized GenerateClasses in MakerCommonContact and MakerUserBundle
 
