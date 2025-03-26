@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 25/03/2025, 21:04
+ * Last modified by "IDMarinas" on 26/03/2025, 23:02
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -97,6 +97,7 @@ final class MakerUserBundle extends AbstractMaker
 	public function generate (InputInterface $input, ConsoleStyle $io, Generator $generator): void
 	{
 		self::$generator = $generator;
+		GenerateClasses::initialize($generator, '/templates/user/bundle/');
 		SourcesUserBundle::initialize($generator);
 
 		// Sources

@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 25/03/2025, 21:05
+ * Last modified by "IDMarinas" on 26/03/2025, 23:02
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -33,7 +33,6 @@ use Symfony\Bundle\MakerBundle\InputConfiguration;
 use Symfony\Bundle\MakerBundle\Maker\AbstractMaker;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Filesystem\Path;
 
 final class MakerCommonContact extends AbstractMaker
 {
@@ -80,6 +79,7 @@ final class MakerCommonContact extends AbstractMaker
 	 */
 	public function generate (InputInterface $input, ConsoleStyle $io, Generator $generator): void
 	{
+		GenerateClasses::initialize($generator, '/templates/common/contact/');
 		SourcesCommonBundle::initialize($generator);
 
 		$sources = SourcesCommonBundle::sources();
@@ -89,11 +89,5 @@ final class MakerCommonContact extends AbstractMaker
 		$generator->writeChanges();
 
 		$this->writeSuccessMessage($io);
-	}
-
-	/** @inheritdoc */
-	protected static function getTpl (string $file): string
-	{
-		return Path::canonicalize(dirname(__DIR__, 3) . '/templates/common/contact/' . $file);
 	}
 }
