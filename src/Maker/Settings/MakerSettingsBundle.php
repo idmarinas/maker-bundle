@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 25/03/2025, 19:38
+ * Last modified by "IDMarinas" on 27/03/2025, 14:51
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -19,6 +19,9 @@
 
 namespace Idm\Bundle\Maker\Maker\Settings;
 
+use App\Entity\Setting\Setting;
+use App\Entity\Setting\SettingDomain;
+use App\Entity\User\User;
 use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -27,9 +30,11 @@ use Exception;
 use Idm\Bundle\Maker\Maker\ClassManipulator;
 use Idm\Bundle\Maker\Maker\GenerateClasses;
 use Idm\Bundle\Maker\Maker\Settings\MakerSettingsBundle\SourcesSettingsBundle;
+use Idm\Bundle\Maker\Traits\Maker\ArrayUtilsTrait;
 use Idm\Bundle\Maker\Traits\Maker\MakeHelpFileTrait;
 use Idm\Bundle\Settings\Interfaces\Entity\EntityWithSettingsInterface;
 use Idm\Bundle\Settings\Model\Entity\AbstractSetting;
+use Idm\Bundle\Settings\Model\Entity\AbstractSettingDomain;
 use Nette\PhpGenerator\Type;
 use ReflectionException;
 use Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle;
@@ -39,12 +44,15 @@ use Symfony\Bundle\MakerBundle\Generator;
 use Symfony\Bundle\MakerBundle\InputConfiguration;
 use Symfony\Bundle\MakerBundle\Maker\AbstractMaker;
 use Symfony\Bundle\MakerBundle\Util\ClassNameDetails;
+use Symfony\Bundle\MakerBundle\Util\YamlSourceManipulator;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Filesystem\Path;
 
 final class MakerSettingsBundle extends AbstractMaker
 {
 	use MakeHelpFileTrait;
+	use ArrayUtilsTrait;
 
 	/**
 	 * @inheritDoc
@@ -97,11 +105,45 @@ final class MakerSettingsBundle extends AbstractMaker
 			ClassManipulator::destroy();
 		}
 
+		extract($this->configDoctrineYaml($sources));
+		$generator->dumpFile($doctrineYaml, $doctrineContents);
+
 		$generator->writeChanges();
 
 		$this->writeSuccessMessage($io);
 
 		GenerateClasses::destroy();
+	}
+
+	/** @internal */
+	private function configDoctrineYaml (array $sources): array
+	{
+		$doctrineYaml = 'config/packages/doctrine.yaml';
+
+		$manipulator = new YamlSourceManipulator(file_get_contents(Path::makeAbsolute($doctrineYaml, dirname(__DIR__, 3))));
+		$data = $manipulator->getData();
+
+		$entities = [
+			AbstractSetting::class       => $sources['Setting']['class']->getFullName(),
+			AbstractSettingDomain::class => $sources['SettingDomain']['class']->getFullName(),
+		];
+
+		if (isset($sources['User']['class'])) {
+			$entities[EntityWithSettingsInterface::class] = $sources['User']['class']->getFullName();
+		}
+
+		$data = self::arrayMergeRecursive($data, [
+			'doctrine' => [
+				'orm' => [
+					'resolve_target_entities' => $entities,
+				],
+			],
+		]);
+
+		$manipulator->setData($data);
+		$doctrineContents = $manipulator->getContents();
+
+		return compact('doctrineYaml', 'doctrineContents');
 	}
 
 	/**
