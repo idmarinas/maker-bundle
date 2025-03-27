@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.1.3 - (2025-03-27)
+
+### Fixed {id="fixed_2.1.3"}
+
+* Fixed, now added `resolve_target_entities` to doctrine.yaml config
+
 ## 2.1.2 - (2025-03-26)
 
 ### Fixed {id="fixed_2.1.2"}
