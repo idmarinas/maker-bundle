@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 27/03/2025, 14:51
+ * Last modified by "IDMarinas" on 26/05/2025, 19:01
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -19,9 +19,6 @@
 
 namespace Idm\Bundle\Maker\Maker\Settings;
 
-use App\Entity\Setting\Setting;
-use App\Entity\Setting\SettingDomain;
-use App\Entity\User\User;
 use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
