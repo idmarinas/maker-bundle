@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce13c8e3-6efa-4e26-9c06-19639cf69c99" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/settings/bundle/src/Entity/Setting/SettingDomain.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/settings/bundle/src/Entity/Setting/SettingDomain.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/bundle/src/Entity/User/User.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/bundle/src/Entity/User/User.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/topics/Changelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/Changelog.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -329,11 +325,6 @@
     "settings.editor.selected.configurable": "settings.sync",
     "vue.rearranger.settings.migration": "true",
     "writerside.last.selected.productIDMarinas Template Bundle": "itb"
-  },
-  "keyToStringList": {
-    "stardust.markdown.MarkdownSplitEditorSuppressor:keyList": [
-      "H://maker-bundle/Writerside/topics/Changelog.md"
-    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -521,39 +512,7 @@
       <workItem from="1743081501028" duration="2615000" />
       <workItem from="1743087739152" duration="58000" />
       <workItem from="1743358124071" duration="87000" />
-      <workItem from="1748277475083" duration="172000" />
-    </task>
-    <task id="LOCAL-00278" summary="feat(maker): add AbstractSources class for source generation functionality">
-      <option name="closed" value="true" />
-      <created>1742898676144</created>
-      <option name="number" value="00278" />
-      <option name="presentableId" value="LOCAL-00278" />
-      <option name="project" value="LOCAL" />
-      <updated>1742898676144</updated>
-    </task>
-    <task id="LOCAL-00279" summary="refactor(User): replace sources.php with SourcesUserBundle class">
-      <option name="closed" value="true" />
-      <created>1742898689028</created>
-      <option name="number" value="00279" />
-      <option name="presentableId" value="LOCAL-00279" />
-      <option name="project" value="LOCAL" />
-      <updated>1742898689028</updated>
-    </task>
-    <task id="LOCAL-00280" summary="feat(MakerUserBundle): refactor source retrieval in generate method">
-      <option name="closed" value="true" />
-      <created>1742898794347</created>
-      <option name="number" value="00280" />
-      <option name="presentableId" value="LOCAL-00280" />
-      <option name="project" value="LOCAL" />
-      <updated>1742898794347</updated>
-    </task>
-    <task id="LOCAL-00281" summary="refactor(contact): remove old sources.php and add SourcesCommonBundle.php">
-      <option name="closed" value="true" />
-      <created>1742899195726</created>
-      <option name="number" value="00281" />
-      <option name="presentableId" value="LOCAL-00281" />
-      <option name="project" value="LOCAL" />
-      <updated>1742899195726</updated>
+      <workItem from="1748277475083" duration="663000" />
     </task>
     <task id="LOCAL-00282" summary="feat(MakerCommonContact): refactor source handling in generate method">
       <option name="closed" value="true" />
@@ -915,7 +874,39 @@
       <option name="project" value="LOCAL" />
       <updated>1743083661207</updated>
     </task>
-    <option name="localTasksCounter" value="327" />
+    <task id="LOCAL-00327" summary="ide(config): update workspace and PHP config for version changes and VCS cleanup">
+      <option name="closed" value="true" />
+      <created>1748277668901</created>
+      <option name="number" value="00327" />
+      <option name="presentableId" value="LOCAL-00327" />
+      <option name="project" value="LOCAL" />
+      <updated>1748277668901</updated>
+    </task>
+    <task id="LOCAL-00328" summary="ide(config): update workspace and PHP config for version changes and VCS cleanup">
+      <option name="closed" value="true" />
+      <created>1748277677072</created>
+      <option name="number" value="00328" />
+      <option name="presentableId" value="LOCAL-00328" />
+      <option name="project" value="LOCAL" />
+      <updated>1748277677072</updated>
+    </task>
+    <task id="LOCAL-00329" summary="fix: update unique entity field in SettingDomain to 'name' instead of 'domain'">
+      <option name="closed" value="true" />
+      <created>1748277736769</created>
+      <option name="number" value="00329" />
+      <option name="presentableId" value="LOCAL-00329" />
+      <option name="project" value="LOCAL" />
+      <updated>1748277736769</updated>
+    </task>
+    <task id="LOCAL-00330" summary="fix: update unique entity field in User entity to 'displayName' instead of 'username'">
+      <option name="closed" value="true" />
+      <created>1748277745126</created>
+      <option name="number" value="00330" />
+      <option name="presentableId" value="LOCAL-00330" />
+      <option name="project" value="LOCAL" />
+      <updated>1748277745126</updated>
+    </task>
+    <option name="localTasksCounter" value="331" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -941,9 +932,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feat(entity): add SettingUserLog entity template with ORM mappings" />
-    <MESSAGE value="feat(controller): add SettingCrudController and SettingDomainCrudController templates" />
-    <MESSAGE value="fix(GenerateClasses): throw specific exception for uninitialized property access" />
     <MESSAGE value="fix(GenerateClasses): skip ignored sources in class generation process" />
     <MESSAGE value="feat(entity): add SettingUser entity with ORM mappings and methods" />
     <MESSAGE value="feat(dependencies): add nette/php-generator package requirement" />
@@ -966,7 +954,10 @@
     <MESSAGE value="refactor: change templatesPath to nullable type in GenerateClasses class" />
     <MESSAGE value="feat: add configDoctrineYaml method for YAML manipulation in MakerSettingsBundle" />
     <MESSAGE value="fix: update instance version to 2.1.3 in writerside.cfg" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: update instance version to 2.1.3 in writerside.cfg" />
+    <MESSAGE value="ide(config): update workspace and PHP config for version changes and VCS cleanup" />
+    <MESSAGE value="fix: update unique entity field in SettingDomain to 'name' instead of 'domain'" />
+    <MESSAGE value="fix: update unique entity field in User entity to 'displayName' instead of 'username'" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: update unique entity field in User entity to 'displayName' instead of 'username'" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
