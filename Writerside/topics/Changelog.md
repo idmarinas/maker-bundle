@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.1.5 - (2025-05-26)
+
+### Refactored {id="refactored_2.1.5"}
+
+* _Refactored_ Eliminadas importaciones no utilizadas en `MakerSettingsBundle`
+
 ## 2.1.4 - (2025-05-26)
 
 ### Fixed {id="fixed_2.1.4"}
