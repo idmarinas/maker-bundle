@@ -1,10 +1,17 @@
 # Changelog
 
+## 2.1.4 - (2025-05-26)
+
+### Fixed {id="fixed_2.1.4"}
+
+* _Fixed_ Update unique entity field in User entity to `displayName` instead of `username`
+* _Fixed_ Update unique entity field in SettingDomain to `name` instead of `domain`
+
 ## 2.1.3 - (2025-03-27)
 
 ### Fixed {id="fixed_2.1.3"}
 
-* Fixed, now added `resolve_target_entities` to doctrine.yaml config
+* _Fixed_, now added `resolve_target_entities` to doctrine.yaml config
 
 ## 2.1.2 - (2025-03-26)
 
@@ -36,35 +43,36 @@
 
 ### Changed {id="changed_2.0.8"}
 
-* Changed **Common Contact Templates**
+* _Changed_ **Common Contact Templates**
 	* Rename file `Log.tpl.php` to `ContactLog.tpl.php` and Entity name too
-* Changed **ProfileController.tpl.php Template** deleted `IsGranted`
-* Changed **User.tpl.php Template** Added `UniqueEntity` validators and `SoftDeleteable`
+* _Changed_ **ProfileController.tpl.php Template** deleted `IsGranted`
+* _Changed_ **User.tpl.php Template** Added `UniqueEntity` validators and `SoftDeleteable`
 
 ### Fixed {id="fixed_2.0.8"}
 
-* Fixed error in **Contact.tpl.php Entity Template**, now include a construct to initialized `createdAt` and `updatedAt`
-* Fixed error in **User.tpl.php Entity Template**, now include a construct to initialized `createdAt` and `updatedAt`
+* _Fixed_ error in **Contact.tpl.php Entity Template**, now include a construct to initialized `createdAt` and
+  `updatedAt`
+* _Fixed_ error in **User.tpl.php Entity Template**, now include a construct to initialized `createdAt` and `updatedAt`
 
 ## 2.0.7 - (2025-02-20)
 
 ### Changed
 
-* Changed **User Templates**
+* _Changed_ **User Templates**
 	* Table name for User Log entity
 	* Rename file `Log.tpl.php` to `UserLog.tpl.php` and Entity name too
 
 ### Fixed {id="fixed_2.0.7"}
 
 * **User Templates**
-	* Fixed template `ResetPasswordRequest.tpl.php` make `$user` attribute public
-* Fixed `MakerCommonContact.php` now search templates in correct dir
+	* _Fixed_ template `ResetPasswordRequest.tpl.php` make `$user` attribute public
+* _Fixed_ `MakerCommonContact.php` now search templates in correct dir
 
 ## 2.0.6 - (2025-02-20)
 
 ### Fixed {id="fixed_2.0.6"}
 
-* Fixed **User Make Command**
+* _Fixed_ **User Make Command**
 	* Replace `array_merge_recursive` for a custom method `ArrayUtilsTrait::arrayMergeRecursive()`
 	* With this, when merging array not convert non array value to array
 
