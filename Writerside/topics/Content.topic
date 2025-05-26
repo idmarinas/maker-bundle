@@ -12,19 +12,19 @@
 
 	<chapter id="common-contact-system" title="Make Contact System">
 		<secondary-label ref="2.0.0" />
-		Create necessary files for Contact System included in IDMarinas Common Bundle:
+		Create the necessary files for Contact System included in IDMarinas Common Bundle:
 		<code-block lang="console">php bin/console make:idm:common:contact</code-block>
 	</chapter>
 
 	<chapter id="user-bundle" title="Make User Bundle">
 		<secondary-label ref="2.0.0" />
-		Create necessary files for IDMarinas User Bundle:
+		Create the necessary files for IDMarinas User Bundle:
 		<code-block lang="Console">php bin/console make:idm:user:bundle</code-block>
 	</chapter>
 
 	<chapter id="settings-bundle" title="Make Settings Bundle">
 		<secondary-label ref="2.1.0" />
-		Create necessary files for IDMarinas Settings Bundle:
+		Create the necessary files for IDMarinas Settings Bundle:
 		<code-block lang="Console">php bin/console make:idm:settings:bundle</code-block>
 	</chapter>
 
