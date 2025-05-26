@@ -16,7 +16,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 #[Gedmo\SoftDeleteable()]
 #[Gedmo\Loggable(logEntryClass: <?= $log_entry_class ?>::class)]
 #[UniqueEntity('email', message: 'idm_user_bundle.email.not_unique')]
-#[UniqueEntity('username', message: 'idm_user_bundle.username.not_unique')]
+#[UniqueEntity('displayName', message: 'idm_user_bundle.username.not_unique')]
 class User extends AbstractUser
 {
 	use UserPremiumTrait;
