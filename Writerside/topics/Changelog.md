@@ -44,15 +44,15 @@
 ### Changed {id="changed_2.0.8"}
 
 * _Changed_ **Common Contact Templates**
-	* Rename file `Log.tpl.php` to `ContactLog.tpl.php` and Entity name too
+	* Rename the file `Log.tpl.php` to `ContactLog.tpl.php` and Entity name too
 * _Changed_ **ProfileController.tpl.php Template** deleted `IsGranted`
 * _Changed_ **User.tpl.php Template** Added `UniqueEntity` validators and `SoftDeleteable`
 
 ### Fixed {id="fixed_2.0.8"}
 
-* _Fixed_ error in **Contact.tpl.php Entity Template**, now include a construct to initialized `createdAt` and
+* _Fixed_ error in **Contact.tpl.php Entity Template**, now includes a construct to initialize `createdAt` and
   `updatedAt`
-* _Fixed_ error in **User.tpl.php Entity Template**, now include a construct to initialized `createdAt` and `updatedAt`
+* _Fixed_ error in **User.tpl.php Entity Template**, now includes a construct to initialize `createdAt` and `updatedAt`
 
 ## 2.0.7 - (2025-02-20)
 
@@ -60,13 +60,13 @@
 
 * _Changed_ **User Templates**
 	* Table name for User Log entity
-	* Rename file `Log.tpl.php` to `UserLog.tpl.php` and Entity name too
+	* Rename the file `Log.tpl.php` to `UserLog.tpl.php` and Entity name too
 
 ### Fixed {id="fixed_2.0.7"}
 
 * **User Templates**
 	* _Fixed_ template `ResetPasswordRequest.tpl.php` make `$user` attribute public
-* _Fixed_ `MakerCommonContact.php` now search templates in correct dir
+* _Fixed_ `MakerCommonContact.php` now search templates in the correct dir
 
 ## 2.0.6 - (2025-02-20)
 
@@ -74,7 +74,7 @@
 
 * _Fixed_ **User Make Command**
 	* Replace `array_merge_recursive` for a custom method `ArrayUtilsTrait::arrayMergeRecursive()`
-	* With this, when merging array not convert non array value to array
+	* With this, when merging an array doesn't convert a non-array value to array
 
 ## 2.0.5 - (2025-02-19)
 
@@ -84,7 +84,7 @@
 	* `security.yaml` updated route name for login
 	* `MakerUserBundle` add method for update `doctrine.yaml`
 	* This avoids the error
-	  `The class 'Idm\Bundle\User\Model\Entity\AbstractUser' was not found in the chain configured namespaces App\Entity`
+	  `The class 'Idm\Bundle\User\Model\Entity\AbstractUser' was not found in the chain-configured namespaces App\Entity`
 
 ## 2.0.4 - (2025-02-19)
 
@@ -103,13 +103,13 @@
 
 ### Fixed
 
-* Fixed **Commands** now find templates.
+* Fixed **Commands** now finds templates.
 
 ## 2.0.0 - (2025-02-18)
 
 ### Release highlights
 
-Added new make commands and removed old command for create a bundle.
+Added new make commands and removed the old command for create a bundle.
 
 ### Added
 
@@ -118,5 +118,5 @@ Added new make commands and removed old command for create a bundle.
 
 ### Breaking changes
 
-* Removed **Command** for create a bundle.
+* Removed **Command** to create a bundle.
   Use [IDMarinas Template Bundle](https://www.github.com/idmarinas/template-bundle) instead
