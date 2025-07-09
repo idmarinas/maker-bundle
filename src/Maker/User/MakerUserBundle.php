@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 26/03/2025, 23:02
+ * Last modified by "IDMarinas" on 26/05/2025, 19:57
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -23,6 +23,7 @@ use Exception;
 use Idm\Bundle\Maker\Maker\GenerateClasses;
 use Idm\Bundle\Maker\Maker\User\MakerUserBundle\SecurityTrait;
 use Idm\Bundle\Maker\Maker\User\MakerUserBundle\SourcesUserBundle;
+use Idm\Bundle\Maker\Service\FileManager;
 use Idm\Bundle\Maker\Traits\Maker\ArrayUtilsTrait;
 use Idm\Bundle\Maker\Traits\Maker\MakeHelpFileTrait;
 use Idm\Bundle\User\IdmUserBundle;
@@ -32,7 +33,6 @@ use Idm\Bundle\User\Model\Entity\AbstractUser;
 use Symfony\Bundle\MakerBundle\ConsoleStyle;
 use Symfony\Bundle\MakerBundle\DependencyBuilder;
 use Symfony\Bundle\MakerBundle\Exception\RuntimeCommandException;
-use Symfony\Bundle\MakerBundle\FileManager;
 use Symfony\Bundle\MakerBundle\Generator;
 use Symfony\Bundle\MakerBundle\InputConfiguration;
 use Symfony\Bundle\MakerBundle\Maker\AbstractMaker;
