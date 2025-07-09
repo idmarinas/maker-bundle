@@ -2,7 +2,7 @@
 /**
  * Copyright 2022-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 25/03/2025, 14:23
+ * Last modified by "IDMarinas" on 26/05/2025, 20:48
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -22,13 +22,14 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 use Idm\Bundle\Maker\Maker\Common\MakerCommonContact;
 use Idm\Bundle\Maker\Maker\Settings\MakerSettingsBundle;
 use Idm\Bundle\Maker\Maker\User\MakerUserBundle;
+use Idm\Bundle\Maker\Service\FileManager;
 
 return function (ContainerConfigurator $container) {
 	// @formatter:off
 	$container->services()
 		->set('idm_maker.make.user_bundle.files', MakerUserBundle::class)
 			->args([
-				'$fileManager' => service('maker.file_manager')
+				'$fileManager' => service('idm_maker.service.file_manager')
 			])
 			->tag('maker.command')
 
@@ -37,6 +38,13 @@ return function (ContainerConfigurator $container) {
 
 		->set('idm_maker.make.settings_bundle.files', MakerSettingsBundle::class)
 			->tag('maker.command')
+
+		->set('idm_maker.service.file_manager', FileManager::class)
+			->private()
+			->args([
+				'$rootDir' => param('kernel.project_dir'),
+				'$fs' => service('filesystem'),
+			])
 	;
 	// @formatter::on
 };
