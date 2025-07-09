@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.1.6 - (2025-07-09)
+
+### Fixed {id="fixed_2.1.6"}
+
+- _Fixed_ Pass `$fileManager` argument to `MakerSettingsBundle` service in the service configuration to ensure proper dependency injection.
+
 ## 2.1.5 - (2025-07-09)
 
 ### Refactored {id="refactored_2.1.5"}
