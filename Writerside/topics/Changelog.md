@@ -4,7 +4,9 @@
 
 ### Refactored {id="refactored_2.1.5"}
 
-* _Refactored_ Eliminadas importaciones no utilizadas en `MakerSettingsBundle`
+* _Refactored_ Elimination of imports not used in `MakerSettingsBundle`
+* _Refactored_ Changed usage of Symfony MakerBundle FileManager for a custom version in `MakerSettingsBundle` and
+  `MakerUserBundle`
 
 ## 2.1.4 - (2025-05-26)
 
