@@ -2,7 +2,7 @@
 /**
  * Copyright 2022-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 09/07/2025, 15:11
+ * Last modified by "IDMarinas" on 09/07/2025, 15:17
  *
  * @project IDMarinas Maker Bundle
  * @see     https://github.com/idmarinas/maker-bundle
@@ -34,12 +34,12 @@ return function (ContainerConfigurator $container) {
 			->tag('maker.command')
 
 		->set('idm_maker.make.common_bundle.contact', MakerCommonContact::class)
-			->args([
-				'$fileManager' => service('idm_maker.service.file_manager')
-			])
 			->tag('maker.command')
 
 		->set('idm_maker.make.settings_bundle.files', MakerSettingsBundle::class)
+			->args([
+				'$fileManager' => service('idm_maker.service.file_manager')
+			])
 			->tag('maker.command')
 
 		->set('idm_maker.service.file_manager', FileManager::class)
