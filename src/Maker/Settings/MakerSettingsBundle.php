@@ -27,6 +27,7 @@ use Exception;
 use Idm\Bundle\Maker\Maker\ClassManipulator;
 use Idm\Bundle\Maker\Maker\GenerateClasses;
 use Idm\Bundle\Maker\Maker\Settings\MakerSettingsBundle\SourcesSettingsBundle;
+use Idm\Bundle\Maker\Service\FileManager;
 use Idm\Bundle\Maker\Traits\Maker\ArrayUtilsTrait;
 use Idm\Bundle\Maker\Traits\Maker\MakeHelpFileTrait;
 use Idm\Bundle\Settings\Interfaces\Entity\EntityWithSettingsInterface;
@@ -44,12 +45,13 @@ use Symfony\Bundle\MakerBundle\Util\ClassNameDetails;
 use Symfony\Bundle\MakerBundle\Util\YamlSourceManipulator;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Filesystem\Path;
 
 final class MakerSettingsBundle extends AbstractMaker
 {
 	use MakeHelpFileTrait;
 	use ArrayUtilsTrait;
+
+	public function __construct (private readonly FileManager $fileManager) {}
 
 	/**
 	 * @inheritDoc
@@ -117,7 +119,7 @@ final class MakerSettingsBundle extends AbstractMaker
 	{
 		$doctrineYaml = 'config/packages/doctrine.yaml';
 
-		$manipulator = new YamlSourceManipulator(file_get_contents(Path::makeAbsolute($doctrineYaml, dirname(__DIR__, 3))));
+		$manipulator = new YamlSourceManipulator($this->fileManager->getFileContents($doctrineYaml));
 		$data = $manipulator->getData();
 
 		$entities = [
