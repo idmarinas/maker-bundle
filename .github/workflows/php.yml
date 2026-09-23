@@ -55,6 +55,7 @@ jobs:
       - name: Download dependencies
         env:
           SYMFONY_REQUIRE: ${{ matrix.symfony }}
+          COMPOSER_NO_SECURITY_BLOCKING: 1
         uses: ramsey/composer-install@v3
 
       - name: Run test suite on PHP ${{ matrix.php }} and Symfony ${{ matrix.symfony }}
